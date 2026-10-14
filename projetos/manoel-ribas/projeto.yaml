@@ -1,0 +1,48 @@
+documento: PCA
+sistema: SES
+projeto_sanepar: '73349'
+municipio: Manoel Ribas
+localidade: null
+uf: PR
+cod_ibge: 4114500
+empreendedor:
+  razao_social: Companhia de Saneamento do Paraná – Sanepar
+  nome_fantasia: Sanepar
+  cnpj: 76.484.013/0001-45
+  inscricao_estadual: null
+  endereco_correspondencia: Rua Engenheiros Rebouças, nº 1376 – Rebouças – Curitiba/PR
+  responsavel: null
+  telefone: null
+  email: null
+endereco_unidade_principal: null
+area:
+  total_m2: null
+  construida_m2: null
+  livre_m2: null
+unidades:
+- nome: Manoel Ribas - ETE
+  descricao: null
+  geometria: Polygon
+  area_m2: 15959.57
+imoveis_terceiros: null
+populacao:
+  inicio_plano_ano: null
+  inicio_plano_hab: null
+  final_plano_ano: null
+  final_plano_hab: null
+  demanda_m3_dia: null
+ete:
+  vazao_media_ls: null
+  vazao_maxima_ls: null
+  processo: null
+  eficiencia_dbo_pct: null
+corpo_receptor:
+  nome: null
+  bacia: null
+  classe: null
+  outorga_lancamento: null
+responsavel_tecnico:
+  empresa: null
+  nome: null
+  registro: null
+  art: null

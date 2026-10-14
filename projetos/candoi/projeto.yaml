@@ -1,0 +1,92 @@
+documento: MCE
+sistema: SAA
+projeto_sanepar: '73349'
+municipio: Candói
+localidade: null
+uf: PR
+cod_ibge: 4104428
+municipio_info:
+  cod_ibge: 4104428
+  nome_oficial: Candói
+  uf: PR
+  mesorregiao: Centro-Sul Paranaense
+  microrregiao: Guarapuava
+  regiao_imediata: Guarapuava
+  regiao_intermediaria: Guarapuava
+  populacao_2022: 14973
+  area_km2: 1512.79
+  densidade_hab_km2: 9.9
+  limitrofes:
+  - Cantagalo
+  - Chopinzinho
+  - Foz do Jordão
+  - Guarapuava
+  - Pinhão
+  - Porto Barreiro
+  - Virmond
+  fonte: IBGE – Censo Demográfico 2022 (SIDRA 4714); API de Localidades e Malhas
+empreendedor:
+  responsavel: null
+  telefone: null
+  email: null
+cnae: 3600-6/01 (Captação, tratamento e distribuição de água)
+area_influencia: null
+acessos: null
+endereco_unidade_principal: null
+area:
+  total_m2: null
+  construida_m2: null
+  livre_m2: null
+unidades:
+- nome: Candói - Nova Captação
+  descricao: null
+  geometria: Polygon
+  area_m2: 2304.51
+- nome: Candói - AAB
+  descricao: null
+  geometria: LineString
+  extensao_m: 9386.29
+- nome: Candói - ETA
+  descricao: null
+  geometria: Polygon
+  area_m2: 1489.3
+- nome: Candói - AAT
+  descricao: null
+  geometria: LineString
+  extensao_m: 3400.4
+- nome: Candói - Reservação
+  descricao: null
+  geometria: Polygon
+  area_m2: 741.84
+- nome: Candói - Adutora - PAZ
+  descricao: null
+  geometria: LineString
+  extensao_m: 13253.36
+- nome: Candói - Adutora - Espraiado
+  descricao: null
+  geometria: LineString
+  extensao_m: 12866.67
+imoveis_terceiros: null
+populacao:
+  inicio_plano_ano: null
+  inicio_plano_hab: null
+  final_plano_ano: null
+  final_plano_hab: null
+  demanda_m3_dia: null
+manancial:
+  nome: null
+  tipo: null
+  bacia: null
+  classe: null
+  outorga_captacao: null
+eta:
+  capacidade_nominal_ls: null
+  capacidade_maxima_ls: null
+  regime_operacao_h_dia: null
+  processo: null
+outorga_lancamento: null
+responsavel_tecnico:
+  empresa: null
+  nome: null
+  registro: null
+  art: null

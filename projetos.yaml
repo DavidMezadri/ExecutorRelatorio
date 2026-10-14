@@ -1,0 +1,81 @@
+# Registro dos empreendimentos. Caminhos relativos à raiz do repositório.
+# kmz_pasta = nome da pasta (Folder) dentro do KMZ que contém as unidades do empreendimento.
+# cod_ibge vazio é preenchido automaticamente por `iniciar_projeto` (API IBGE).
+
+# Correções aplicadas aos nomes de feições do KMZ (erros de digitação na origem).
+correcoes_nomes:
+  "Candoí": "Candói"
+  "Imabú": "Imbaú"
+
+projetos:
+  candoi:
+    documento: MCE
+    sistema: SAA
+    municipio: Candói
+    cod_ibge: 4104428
+    projeto_sanepar: "73349"
+    pasta_fontes: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/PROJETO SANEPAR SAA CANDÓI"
+    kmz: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/Sanepar 73349 .kmz"
+    kmz_pasta: "Candói SAA"
+
+  imbau:
+    documento: MCE
+    sistema: SAA
+    municipio: Imbaú
+    cod_ibge:
+    projeto_sanepar: "73349"
+    pasta_fontes: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/PROJETO SANEPAR SAA IMBAÚ"
+    kmz: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/Sanepar 73349 .kmz"
+    kmz_pasta: "Imbaú SAA"
+
+  general-carneiro:
+    documento: MCE
+    sistema: SAA
+    municipio: General Carneiro
+    localidade: Jangada do Sul
+    cod_ibge:
+    projeto_sanepar: "73349"
+    pasta_fontes: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/PROJETO SANEPAR SAA JANGADA DO SUL - GENERAL CARNEIRO"
+    kmz: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/Sanepar 73349 .kmz"
+    kmz_pasta: "Jangada do sul SAA"
+
+  ortigueira:
+    documento: MCE
+    sistema: SAA
+    municipio: Ortigueira
+    localidade: Lajeado Bonito
+    cod_ibge:
+    projeto_sanepar: "73349"
+    pasta_fontes: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/PROJETO SANEPAR SAA ORTIGUEIRA"
+    kmz: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/Sanepar 73349 .kmz"
+    kmz_pasta: "Ortigueira SAA"
+
+  manoel-ribas:
+    documento: PCA
+    sistema: SES
+    municipio: Manoel Ribas
+    cod_ibge:
+    projeto_sanepar: "73349"
+    pasta_fontes: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/PROJETO SANEPAR SES MANOEL RIBAS"
+    kmz: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/Sanepar 73349 .kmz"
+    kmz_pasta: "Manoel Ribas SES"
+
+  sao-joao-do-triunfo:
+    documento: MCE
+    sistema: SES
+    municipio: São João do Triunfo
+    cod_ibge:
+    projeto_sanepar: "73349"
+    pasta_fontes: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/PROJETO SANEPAR SES SÃO JOAO DO TRIUNFO"
+    kmz: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/Sanepar 73349 .kmz"
+    kmz_pasta: "São João do Triunfo SES"
+
+  telemaco-borba:
+    documento: MCE
+    sistema: SES
+    municipio: Telêmaco Borba
+    cod_ibge:
+    projeto_sanepar: "73349"
+    pasta_fontes: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/PROJETO SANEPAR SES TELÊMACO BORBA"
+    kmz: "Jordana-20261013T182534Z-1-001/PROJETOS SANEPAR 73349/Sanepar 73349 .kmz"
+    kmz_pasta: "Telêmaco Borba SES"

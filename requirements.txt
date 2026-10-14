@@ -1,0 +1,24 @@
+# Documentos
+python-docx>=1.1
+docxtpl>=0.18
+openpyxl>=3.1
+pyyaml>=6.0
+
+# PDF
+pymupdf>=1.24
+pdfplumber>=0.11
+
+# Geo
+geopandas>=1.0
+shapely>=2.0
+pyproj>=3.6
+rasterio>=1.4
+contextily>=1.6
+matplotlib>=3.9
+
+# Automação do Word (finalizar: atualizar sumário e gerar PDF) – só Windows
+pywin32>=306; sys_platform == "win32"
+
+# Imagens / web
+pillow>=10.0
+requests>=2.32

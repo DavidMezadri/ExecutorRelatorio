@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Dados recebidos do cliente (grandes/confidenciais) – ficam fora do repositório
+Jordana-*/
+
+# Cache de downloads (malha IBGE etc.)
+dados_comuns/cache/
+
+# Projetos: versiona só a ficha e os textos; o resto é regenerável
+projetos/*/dados/
+projetos/*/extraido/
+projetos/*/saida/
+projetos/*/.cache/
+projetos/*/INVENTARIO.md
+
+# Arquivos temporários do Office
+~$*
