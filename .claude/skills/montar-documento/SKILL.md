@@ -35,6 +35,9 @@ valor num comentário YAML (`# fonte: memorial descritivo p. 12`).
   `fonte="Google Earth Pro, adaptado pelo autor, ANO."`. Pontos marcados pela equipe no GE entram com
   `google_earth importar` e viram `dados/pontos_ge.xlsx` (travessias, acessos etc. com UTM).
 - Sintaxe dos textos: ver CLAUDE.md.
+- Embasamento externo (fauna/flora, leis, estudos de caso, páginas de órgãos): usar a skill `pesquisar-fontes`.
+  Rodar ao menos `python -m ferramentas.garimpo.especies entorno <chave>` para o meio biótico. Toda citação
+  precisa estar no catálogo do projeto; a seção Referências (`!referencias`) é automática.
 
 ## 4. Montar, finalizar e conferir
 ```

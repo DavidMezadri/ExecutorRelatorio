@@ -68,6 +68,9 @@ def main():
         dst.write_text(preencher(src.read_text(encoding="utf-8"), ficha), encoding="utf-8")
         print(f"  criado   {dst.name}")
     print(f"Textos em {destino}")
+    from ferramentas.garimpo import biblio
+    chaves = biblio.semear(a.chave, estrutura.name)
+    print(f"Referências base no projeto: {len(chaves)} (projetos/{a.chave}/referencias.yaml)")
 
 
 if __name__ == "__main__":

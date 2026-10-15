@@ -6,8 +6,11 @@ __pycache__/
 # Dados recebidos do cliente (grandes/confidenciais) – ficam fora do repositório
 Jordana-*/
 
-# Cache de downloads (malha IBGE etc.)
+# Cache de downloads (malha IBGE, páginas web, lista MMA etc.)
 dados_comuns/cache/
+
+# PDFs de artigos baixados (direitos autorais/tamanho); o texto extraído (.md) e a referência ficam
+referencias/literatura/*.pdf
 
 # Projetos: versiona só a ficha e os textos; o resto é regenerável
 projetos/*/dados/

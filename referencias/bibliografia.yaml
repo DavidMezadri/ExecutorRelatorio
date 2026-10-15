@@ -1,0 +1,288 @@
+abnt-nbr-12208-2020:
+  tipo: base
+  abnt: 'ABNT – ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 12208: Projeto de estações elevatórias de esgoto sanitário. Rio de Janeiro: ABNT, 2020.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: ABNT, 2020
+  verificado: false
+abnt-nbr-12209-2011:
+  tipo: base
+  abnt: 'ABNT – ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 12209: Elaboração de projetos hidráulico-sanitários de estações de tratamento de esgotos sanitários. Rio de Janeiro: ABNT, 2011.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: ABNT, 2011
+  verificado: false
+brasil-portaria-mma-148-2022:
+  tipo: lei
+  abnt: 'BRASIL. Ministério do Meio Ambiente. Portaria MMA nº 148, de 7 de junho de 2022. Altera os Anexos da Portaria nº 443, de 17 de dezembro de 2014, da Portaria nº 444, de 17 de dezembro de 2014, e
+    da Portaria nº 445, de 17 de dezembro de 2014, referentes à atualização da Lista Nacional de Espécies Ameaçadas de Extinção. Disponível em: https://www.in.gov.br/en/web/dou/-/portaria-mma-n-148-de-7-de-junho-de-2022-406272733.
+    Acesso em: 15 out. 2026.'
+  url: https://www.in.gov.br/en/web/dou/-/portaria-mma-n-148-de-7-de-junho-de-2022-406272733
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2022
+  verificado: false
+cerh-pr-49-2006:
+  tipo: base
+  abnt: PARANÁ. Conselho Estadual de Recursos Hídricos. Resolução CERH/PR nº 49, de 20 de dezembro de 2006. Dispõe sobre a instituição de Regiões Hidrográficas, Bacias Hidrográficas e Unidades Hidrográficas
+    de Gerenciamento de Recursos Hídricos do Estado do Paraná. Curitiba, 2006.
+  url: null
+  acesso: '2026-10-15'
+  citacao: PARANÁ, 2006
+  verificado: false
+conama-307-2002:
+  tipo: base
+  abnt: BRASIL. Conselho Nacional do Meio Ambiente. Resolução CONAMA nº 307, de 5 de julho de 2002. Estabelece diretrizes, critérios e procedimentos para a gestão dos resíduos da construção civil. Brasília,
+    DF, 2002.
+  url: null
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2002
+  verificado: false
+conama-430-2011:
+  tipo: base
+  abnt: BRASIL. Conselho Nacional do Meio Ambiente. Resolução CONAMA nº 430, de 13 de maio de 2011. Dispõe sobre as condições e padrões de lançamento de efluentes, complementa e altera a Resolução nº 357,
+    de 17 de março de 2005, do Conselho Nacional do Meio Ambiente - CONAMA. Brasília, DF, 2011.
+  url: null
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2011
+  verificado: false
+doi-10-1590-2175-7860201566411:
+  tipo: artigo
+  abnt: 'ZAPPI, Daniela C. et al. Growing knowledge: an overview of Seed Plant diversity in Brazil. Rodriguésia, v. 66, n. 4, p. 1085-1113, 2015. DOI: 10.1590/2175-7860201566411. Disponível em: https://doi.org/10.1590/2175-7860201566411.
+    Acesso em: 15 out. 2026.'
+  url: https://doi.org/10.1590/2175-7860201566411
+  acesso: '2026-10-15'
+  citacao: ZAPPI et al., 2015
+  verificado: true
+  titulo: 'Growing knowledge: an overview of Seed Plant diversity in Brazil'
+flora-e-funga-do-brasil:
+  tipo: base
+  abnt: 'FLORA E FUNGA DO BRASIL. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br/. Acesso em: 15 out. 2026.'
+  url: http://floradobrasil.jbrj.gov.br/
+  acesso: '2026-10-15'
+  citacao: FLORA E FUNGA DO BRASIL, 2026
+  verificado: true
+gbif-candoi-animais:
+  tipo: base
+  abnt: 'GBIF.ORG. GBIF Occurrence Search: ocorrências de Animalia em raio de 10 km do empreendimento em Candói/PR. Copenhague: GBIF Secretariat, 2026. Disponível em: https://www.gbif.org/occurrence/search.
+    Acesso em: 15 out. 2026.'
+  url: https://www.gbif.org/occurrence/search?geometry=POLYGON+%28%28-52.21861752436819+-25.808743931121743%2C+-52.184476631104985+-25.80354320796558%2C+-52.10963785248698+-25.7724646173522%2C+-52.05702386369912+-25.738598182574588%2C+-51.97190328104815+-25.66130753905818%2C+-51.96226026518139+-25.64515513140028%2C+-51.95533251407484+-25.62412047582551%2C+-51.94710575297953+-25.571432574902886%2C+-51.94718057950093+-25.553649618115774%2C+-51.95869725004776+-25.51983367347043%2C+-51.96968961338101+-25.50511158802398%2C+-51.98789093891973+-25.488993428120665%2C+-52.086121678849636+-25.43855048317475%2C+-52.10516270436362+-25.432195689080416%2C+-52.13097583340968+-25.428561967666884%2C+-52.1595334028425+-25.43051383137398%2C+-52.1871230046825+-25.439801887291683%2C+-52.2092457038682+-25.45455454664562%2C+-52.228551155501314+-25.47533895247607%2C+-52.31455584392173+-25.677992575524843%2C+-52.319883627029455+-25.69461348114511%2C+-52.32212732354929+-25.72113407094306%2C+-52.31187194130164+-25.757621647150067%2C+-52.289039921329454+-25.785357390924517%2C+-52.25635384421142+-25.803276721844536%2C+-52.21861752436819+-25.808743931121743%29%29&taxon_key=1&has_coordinate=true&has_geospatial_issue=false
+  acesso: '2026-10-15'
+  citacao: GBIF.ORG, 2026
+  verificado: true
+  obs: URL completa da busca no campo url. Para publicação formal, o GBIF recomenda citar o DOI de um download
+gbif-candoi-plantas:
+  tipo: base
+  abnt: 'GBIF.ORG. GBIF Occurrence Search: ocorrências de Plantae em raio de 10 km do empreendimento em Candói/PR. Copenhague: GBIF Secretariat, 2026. Disponível em: https://www.gbif.org/occurrence/search.
+    Acesso em: 15 out. 2026.'
+  url: https://www.gbif.org/occurrence/search?geometry=POLYGON+%28%28-52.21861752436819+-25.808743931121743%2C+-52.184476631104985+-25.80354320796558%2C+-52.10963785248698+-25.7724646173522%2C+-52.05702386369912+-25.738598182574588%2C+-51.97190328104815+-25.66130753905818%2C+-51.96226026518139+-25.64515513140028%2C+-51.95533251407484+-25.62412047582551%2C+-51.94710575297953+-25.571432574902886%2C+-51.94718057950093+-25.553649618115774%2C+-51.95869725004776+-25.51983367347043%2C+-51.96968961338101+-25.50511158802398%2C+-51.98789093891973+-25.488993428120665%2C+-52.086121678849636+-25.43855048317475%2C+-52.10516270436362+-25.432195689080416%2C+-52.13097583340968+-25.428561967666884%2C+-52.1595334028425+-25.43051383137398%2C+-52.1871230046825+-25.439801887291683%2C+-52.2092457038682+-25.45455454664562%2C+-52.228551155501314+-25.47533895247607%2C+-52.31455584392173+-25.677992575524843%2C+-52.319883627029455+-25.69461348114511%2C+-52.32212732354929+-25.72113407094306%2C+-52.31187194130164+-25.757621647150067%2C+-52.289039921329454+-25.785357390924517%2C+-52.25635384421142+-25.803276721844536%2C+-52.21861752436819+-25.808743931121743%29%29&taxon_key=6&has_coordinate=true&has_geospatial_issue=false
+  acesso: '2026-10-15'
+  citacao: GBIF.ORG, 2026
+  verificado: true
+  obs: URL completa da busca no campo url. Para publicação formal, o GBIF recomenda citar o DOI de um download
+iat-in-37-2025:
+  tipo: base
+  abnt: 'PARANÁ. Instituto Água e Terra. Instrução Normativa nº 37, de 28 de abril de 2025. Estabelece critérios e procedimentos para o licenciamento ambiental de empreendimentos de saneamento. Curitiba:
+    IAT, 2025.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: IAT, 2025
+  verificado: false
+ibge-2012-vegetacao:
+  tipo: base
+  abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Manual Técnico da Vegetação Brasileira. 2. ed. Rio de Janeiro: IBGE, 2012.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: IBGE, 2012
+  verificado: true
+ibge-2023-censo:
+  tipo: base
+  abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Censo Demográfico 2022: população e domicílios. Rio de Janeiro: IBGE, 2023. Tabela 4714. Disponível em: https://sidra.ibge.gov.br/tabela/4714.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: IBGE, 2022
+  verificado: true
+iucn-red-list:
+  tipo: base
+  abnt: 'IUCN. The IUCN Red List of Threatened Species. Disponível em: https://www.iucnredlist.org. Acesso em: 15 out. 2026.'
+  url: https://www.iucnredlist.org
+  acesso: '2026-10-15'
+  citacao: IUCN, 2026
+  verificado: true
+maack-1968:
+  tipo: base
+  abnt: 'MAACK, R. Geografia Física do Estado do Paraná. Curitiba: Banco de Desenvolvimento do Estado do Paraná, Universidade Federal do Paraná e Instituto de Geologia e Pesquisas Tecnológicas, 1968.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: MAACK, 1968
+  verificado: true
+mendes-2002:
+  tipo: base
+  abnt: 'MENDES, Ester A. A. et al. Mananciais subterrâneos no Estado do Paraná. In: CONGRESSO BRASILEIRO DE ÁGUAS SUBTERRÂNEAS, 12., 2002, Florianópolis. Anais [...]. São Paulo: ABAS, 2002. Disponível
+    em: https://aguassubterraneas.abas.org/asubterraneas/article/download/22845/14995/82630.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: MENDES et al., 2002
+  verificado: true
+norma-decreto-6660-2008:
+  tipo: lei
+  abnt: 'BRASIL. Decreto nº 6.660, de 21 de novembro de 2008. Regulamenta dispositivos da Lei nº 11.428, de 22 de dezembro de 2006, que dispõe sobre a utilização e proteção da vegetação nativa do Bioma
+    Mata Atlântica. Brasília, DF: Presidência da República, [2008]. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6660.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6660.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2008
+  verificado: true
+  titulo: Decreto nº 6.660, de 21 de novembro de 2008
+norma-lc-140-2011:
+  tipo: lei
+  abnt: 'BRASIL. Lei Complementar nº 140, de 8 de dezembro de 2011. Fixa normas, nos termos dos incisos III, VI e VII do caput e do parágrafo único do art. 23 da Constituição Federal, para a cooperação
+    entre a União, os Estados, o Distrito Federal e os Municípios nas ações administrativas decorrentes do exercício da competência comum relativas à proteção das paisagens naturais notáveis, à proteção
+    do meio ambiente, ao combate à poluição em qualquer de suas formas e à preservação das florestas, da fauna e da flora; e altera a Lei nº 6.938, de 31 de agosto de 1981. Brasília, DF: Presidência da
+    República, [2011]. Disponível em: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp140.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp140.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2011
+  verificado: true
+  titulo: Lei Complementar nº 140, de 8 de dezembro de 2011
+norma-lei-11428-2006:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 11.428, de 22 de dezembro de 2006. Dispõe sobre a utilização e proteção da vegetação nativa do Bioma Mata Atlântica, e dá outras providências. Brasília, DF: Presidência da República,
+    [2006]. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11428.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11428.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2006
+  verificado: true
+  titulo: Lei nº 11.428, de 22 de dezembro de 2006
+norma-lei-11445-2007:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 11.445, de 5 de janeiro de 2007. Estabelece as diretrizes nacionais para o saneamento básico; cria o Comitê Interministerial de Saneamento Básico; altera as Leis nºs 6.766, de 19
+    de dezembro de 1979, 8.666, de 21 de junho de 1993, e 8.987, de 13 de fevereiro de 1995; e revoga a Lei nº 6.528, de 11 de maio de 1978. Brasília, DF: Presidência da República, [2007]. Disponível em:
+    https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11445.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11445.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2007
+  verificado: true
+  titulo: Lei nº 11.445, de 5 de janeiro de 2007
+norma-lei-12305-2010:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 12.305, de 2 de agosto de 2010. Institui a Política Nacional de Resíduos Sólidos; altera a Lei nº 9.605, de 12 de fevereiro de 1998; e dá outras providências. Brasília, DF: Presidência
+    da República, [2010]. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2010
+  verificado: true
+  titulo: Lei nº 12.305, de 2 de agosto de 2010
+norma-lei-12651-2012:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 12.651, de 25 de maio de 2012. Dispõe sobre a proteção da vegetação nativa; altera as Leis nºs 6.938, de 31 de agosto de 1981, 9.393, de 19 de dezembro de 1996, e 11.428, de 22 de
+    dezembro de 2006; revoga as Leis nºs 4.771, de 15 de setembro de 1965, e 7.754, de 14 de abril de 1989, e a Medida Provisória nº 2.166-67, de 24 de agosto de 2001; e dá outras providências. Brasília,
+    DF: Presidência da República, [2012]. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2012
+  verificado: true
+  titulo: Lei nº 12.651, de 25 de maio de 2012
+norma-lei-14026-2020:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 14.026, de 15 de julho de 2020. Atualiza o marco legal do saneamento básico e altera a Lei nº 9.984, de 17 de julho de 2000, para atribuir à Agência Nacional de Águas e Saneamento
+    Básico (ANA) competência para editar normas de referência sobre o serviço de saneamento, a Lei nº 10.768, de 19 de novembro de 2003, para alterar o nome e as atribuições do cargo de Especialista em
+    Recursos Hídricos, a Lei nº 11.107, de 6 de abril de 2005, para vedar a prestação por contrato de programa dos serviços públicos de que trata o art. 175 da Constituição Federal, a Lei nº 11.445, de
+    5 de janeiro de 2007, para aprimorar as condições estruturais do saneamento básico no País, a Lei nº 12.305, de 2 de agosto de 2010, para tratar dos prazos para a disposição final ambientalmente adequada
+    dos rejeitos, a Lei nº 13.089, de 12 de janeiro de 2015 (Estatuto da Metrópole), para estender seu âmbito de aplicação às microrregiões, e a Lei nº 13.529, de 4 de dezembro de 2017, para autorizar a
+    União a participar de fundo com a finalidade exclusiva de financiar serviços técnicos especializados. Brasília, DF: Presidência da República, [2020]. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14026.htm.
+    Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14026.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2020
+  verificado: true
+  titulo: Lei nº 14.026, de 15 de julho de 2020
+norma-lei-3924-1961:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 3.924, de 26 de julho de 1961. Dispõe sôbre os monumentos arqueológicos e pré-históricos. Brasília, DF: Presidência da República, [1961]. Disponível em: https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3924.htm.
+    Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3924.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 1961
+  verificado: true
+  titulo: Lei nº 3.924, de 26 de julho de 1961
+norma-lei-5197-1967:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 5.197, de 3 de janeiro de 1967. Dispõe sobre a proteção à fauna e dá outras providências. Brasília, DF: Presidência da República, [1967]. Disponível em: https://www.planalto.gov.br/ccivil_03/leis/l5197.htm.
+    Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/leis/l5197.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 1967
+  verificado: true
+  titulo: Lei nº 5.197, de 3 de janeiro de 1967
+norma-lei-6496-1977:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 6.496, de 7 de dezembro de 1977. Institui a "Anotação de Responsabilidade Técnica" na prestação de serviços de engenharia, de arquitetura e agronomia; autoriza a criação, pelo Conselho
+    Federal de Engenharia, Arquitetura e Agronomia - CONFEA, de uma Mútua de Assistência Profissional; e dá outras providências. Brasília, DF: Presidência da República, [1977]. Disponível em: https://www.planalto.gov.br/ccivil_03/leis/l6496.htm.
+    Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/leis/l6496.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 1977
+  verificado: true
+  titulo: Lei nº 6.496, de 7 de dezembro de 1977
+norma-lei-6938-1981:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 6.938, de 31 de agosto de 1981. Dispõe sobre a Política Nacional do Meio Ambiente, seus fins e mecanismos de formulação e aplicação, e dá outras providências. Brasília, DF: Presidência
+    da República, [1981]. Disponível em: https://www.planalto.gov.br/ccivil_03/leis/l6938.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/leis/l6938.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 1981
+  verificado: true
+  titulo: Lei nº 6.938, de 31 de agosto de 1981
+norma-lei-9433-1997:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 9.433, de 8 de janeiro de 1997. Institui a Política Nacional de Recursos Hídricos, cria o Sistema Nacional de Gerenciamento de Recursos Hídricos, regulamenta o inciso XIX do art.
+    21 da Constituição Federal, e altera o art. 1º da Lei nº 8.001, de 13 de março de 1990, que modificou a Lei nº 7.990, de 28 de dezembro de 1989. Brasília, DF: Presidência da República, [1997]. Disponível
+    em: https://www.planalto.gov.br/ccivil_03/leis/l9433.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/leis/l9433.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 1997
+  verificado: true
+  titulo: Lei nº 9.433, de 8 de janeiro de 1997
+norma-lei-9605-1998:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 9.605, de 12 de fevereiro de 1998. Dispõe sobre as sanções penais e administrativas derivadas de condutas e atividades lesivas ao meio ambiente, e dá outras providências. Brasília,
+    DF: Presidência da República, [1998]. Disponível em: https://www.planalto.gov.br/ccivil_03/leis/l9605.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/leis/l9605.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 1998
+  verificado: true
+  titulo: Lei nº 9.605, de 12 de fevereiro de 1998
+norma-lei-9985-2000:
+  tipo: lei
+  abnt: 'BRASIL. Lei nº 9.985, de 18 de julho de 2000. Regulamenta o art. 225, § 1o, incisos I, II, III e VII da Constituição Federal, institui o Sistema Nacional de Unidades de Conservação da Natureza
+    e dá outras providências. Brasília, DF: Presidência da República, [2000]. Disponível em: https://www.planalto.gov.br/ccivil_03/leis/l9985.htm. Acesso em: 15 out. 2026.'
+  url: https://www.planalto.gov.br/ccivil_03/leis/l9985.htm
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2000
+  verificado: true
+  titulo: Lei nº 9.985, de 18 de julho de 2000
+oka-fiori-2006:
+  tipo: base
+  abnt: 'OKA-FIORI, C. et al. Atlas geomorfológico do estado do Paraná: escala base 1:250.000, modelos reduzidos 1:500.000. Curitiba: Minerais do Paraná – MINEROPAR; Universidade Federal do Paraná, 2006.
+    59 p.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: MINEROPAR/UFPR, 2006
+  verificado: true
+web-pr-geologia-do-parana-historia-evolutiva:
+  tipo: web
+  abnt: 'PARANÁ. Instituto Água e Terra. Geologia do Paraná - História Evolutiva. Curitiba: IAT, [20--]. Disponível em: https://www.iat.pr.gov.br/Pagina/Geologia-do-Parana-Historia-Evolutiva. Acesso em:
+    15 out. 2026.'
+  url: https://www.iat.pr.gov.br/Pagina/Geologia-do-Parana-Historia-Evolutiva
+  acesso: '2026-10-15'
+  citacao: PARANÁ, [20--]
+  verificado: false
+  titulo: Geologia do Paraná - História Evolutiva
+web-www-latossolos-vermelhos:
+  tipo: web
+  abnt: 'SANTOS, Humberto Gonçalves dos; ZARONI, Maria José. Latossolos Vermelhos. Brasília, DF: Embrapa, 2021. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-vermelhos.
+    Acesso em: 15 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-vermelhos
+  acesso: '2026-10-15'
+  citacao: SANTOS; ZARONI, 2021
+  verificado: true
+  titulo: Latossolos Vermelhos

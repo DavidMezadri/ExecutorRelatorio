@@ -1,0 +1,71 @@
+# Referências clássicas semeadas em todo projeto novo (esqueleto) conforme o tipo de documento.
+# verificado: true = conferida (veio do MCE modelo Palmeira, revisado pela equipe); false = conferir antes de protocolar.
+# docs: estruturas em que entra (mce_saa, mce_ses, pca_saa, pca_ses).
+referencias:
+  maack-1968:
+    abnt: "MAACK, R. Geografia Física do Estado do Paraná. Curitiba: Banco de Desenvolvimento do Estado do Paraná, Universidade Federal do Paraná e Instituto de Geologia e Pesquisas Tecnológicas, 1968."
+    citacao: "MAACK, 1968"
+    verificado: true
+    docs: [mce_saa, mce_ses, pca_saa, pca_ses]
+  mendes-2002:
+    abnt: "MENDES, Ester A. A. et al. Mananciais subterrâneos no Estado do Paraná. In: CONGRESSO BRASILEIRO DE ÁGUAS SUBTERRÂNEAS, 12., 2002, Florianópolis. Anais [...]. São Paulo: ABAS, 2002. Disponível em: https://aguassubterraneas.abas.org/asubterraneas/article/download/22845/14995/82630."
+    citacao: "MENDES et al., 2002"
+    verificado: true
+    docs: [mce_saa, mce_ses]
+  oka-fiori-2006:
+    abnt: "OKA-FIORI, C. et al. Atlas geomorfológico do estado do Paraná: escala base 1:250.000, modelos reduzidos 1:500.000. Curitiba: Minerais do Paraná – MINEROPAR; Universidade Federal do Paraná, 2006. 59 p."
+    citacao: "MINEROPAR/UFPR, 2006"
+    verificado: true
+    docs: [mce_saa, mce_ses, pca_saa, pca_ses]
+  ibge-2012-vegetacao:
+    abnt: "IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Manual Técnico da Vegetação Brasileira. 2. ed. Rio de Janeiro: IBGE, 2012."
+    citacao: "IBGE, 2012"
+    verificado: true
+    docs: [mce_saa, mce_ses, pca_saa, pca_ses]
+  ibge-2023-censo:
+    abnt: "IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Censo Demográfico 2022: população e domicílios. Rio de Janeiro: IBGE, 2023. Tabela 4714. Disponível em: https://sidra.ibge.gov.br/tabela/4714."
+    citacao: "IBGE, 2022"
+    verificado: true
+    docs: [mce_saa, mce_ses, pca_saa, pca_ses]
+  iat-in-37-2025:
+    abnt: "PARANÁ. Instituto Água e Terra. Instrução Normativa nº 37, de 28 de abril de 2025. Estabelece critérios e procedimentos para o licenciamento ambiental de empreendimentos de saneamento. Curitiba: IAT, 2025."
+    citacao: "IAT, 2025"
+    verificado: false
+    docs: [mce_saa, mce_ses, pca_saa, pca_ses]
+  cerh-pr-49-2006:
+    abnt: "PARANÁ. Conselho Estadual de Recursos Hídricos. Resolução CERH/PR nº 49, de 20 de dezembro de 2006. Dispõe sobre a instituição de Regiões Hidrográficas, Bacias Hidrográficas e Unidades Hidrográficas de Gerenciamento de Recursos Hídricos do Estado do Paraná. Curitiba, 2006."
+    citacao: "PARANÁ, 2006"
+    verificado: false
+    docs: [mce_saa, mce_ses]
+  conama-430-2011:
+    abnt: "BRASIL. Conselho Nacional do Meio Ambiente. Resolução CONAMA nº 430, de 13 de maio de 2011. Dispõe sobre as condições e padrões de lançamento de efluentes, complementa e altera a Resolução nº 357, de 17 de março de 2005, do Conselho Nacional do Meio Ambiente - CONAMA. Brasília, DF, 2011."
+    citacao: "BRASIL, 2011"
+    verificado: false
+    docs: [pca_ses, mce_ses]
+  conama-307-2002:
+    abnt: "BRASIL. Conselho Nacional do Meio Ambiente. Resolução CONAMA nº 307, de 5 de julho de 2002. Estabelece diretrizes, critérios e procedimentos para a gestão dos resíduos da construção civil. Brasília, DF, 2002."
+    citacao: "BRASIL, 2002"
+    verificado: false
+    docs: [pca_ses, pca_saa]
+  abnt-nbr-12208-2020:
+    abnt: "ABNT – ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 12208: Projeto de estações elevatórias de esgoto sanitário. Rio de Janeiro: ABNT, 2020."
+    citacao: "ABNT, 2020"
+    verificado: false
+    docs: [pca_ses]
+  abnt-nbr-12209-2011:
+    abnt: "ABNT – ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 12209: Elaboração de projetos hidráulico-sanitários de estações de tratamento de esgotos sanitários. Rio de Janeiro: ABNT, 2011."
+    citacao: "ABNT, 2011"
+    verificado: false
+    docs: [pca_ses]
+  abnt-nbr-12216-1992:
+    abnt: "ABNT – ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 12216: Projeto de estação de tratamento de água para abastecimento público. Rio de Janeiro: ABNT, 1992."
+    citacao: "ABNT, 1992"
+    verificado: false
+    docs: [pca_saa]
+  ms-portaria-888-2021:
+    abnt: "BRASIL. Ministério da Saúde. Portaria GM/MS nº 888, de 4 de maio de 2021. Altera o Anexo XX da Portaria de Consolidação GM/MS nº 5, de 28 de setembro de 2017, para dispor sobre os procedimentos de controle e de vigilância da qualidade da água para consumo humano e seu padrão de potabilidade. Brasília, DF, 2021."
+    citacao: "BRASIL, 2021"
+    verificado: false
+    docs: [pca_saa]
+# Normas federais (Lei 12.651 etc.) não ficam aqui: o esqueleto busca no Planalto via garimpo.legislacao
+# (referência montada a partir da página oficial). Ver NORMAS_POR_DOC em garimpo/biblio.py.

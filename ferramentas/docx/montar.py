@@ -18,6 +18,7 @@ Sintaxe suportada (resumo também no CLAUDE.md):
     ::: quadro {#qua:id fonte="Sanepar, 2026"} Legenda      (tabela Markdown dentro, fecha com :::)
     ::: paisagem                                           (conteúdo em página paisagem, fecha com :::)
     \\newpage
+    !referencias                                          lista ABNT ordenada (catálogo do projeto + bases oficiais)
     <!-- comentários são ignorados -->
 """
 import argparse
@@ -123,6 +124,8 @@ def parse(texto):
             flush()
         elif s == "\\newpage":
             flush(); blocos.append(("pagina",))
+        elif s == "!referencias":
+            flush(); blocos.append(("referencias",))
         elif m := re.match(r"^(#{1,4})\s+(.*?)\s*(\{-\})?$", s):
             flush(); blocos.append(("titulo", len(m.group(1)), m.group(2), m.group(3) is None))
         elif m := RE_FIG.match(s):
@@ -275,6 +278,18 @@ class Montador:
         p.append(run_texto("Fonte:", negrito=True, tamanho=10))
         self._runs(p, " " + (texto or FONTE_PADRAO).strip(), tamanho=10)
         self.add(paragrafo())
+
+    # --- referências (catálogo do garimpo + bases oficiais), ABNT: alinhadas à esquerda, espaço simples
+    def referencias(self):
+        from ferramentas.garimpo.biblio import lista_abnt_dir
+        refs = lista_abnt_dir(self.base, detalhada=True)
+        if not refs:
+            self.par("[A VERIFICAR: nenhuma referência no catálogo do projeto – usar ferramentas.garimpo]")
+            return
+        for abnt, verificado in refs:
+            p = self.add(paragrafo(alinhamento="left", recuo_primeira=0, simples=True))
+            self._runs(p, abnt if verificado else f"{abnt} [A VERIFICAR: conferir referência]")
+            self.add(paragrafo(recuo_primeira=0, simples=True))
 
     # --- figuras
     def _imagem_otimizada(self, caminho: Path) -> Path:

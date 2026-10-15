@@ -50,6 +50,27 @@ python-qgis.bat ferramentas\geo\qgis_projeto.py projetos\<chave>   # projeto .qg
 ```
 Serviços sem acesso automático: CAR/SICAR (baixar shapes manualmente → `dados/car/`); UCs vêm da ANA.
 
+## Garimpo de fontes oficiais (sempre com referência ABNT precisa)
+Toda informação externa entra no texto **com citação (AUTOR, ano) e referência no catálogo** – nunca escrever
+referência "de memória". Catálogo: `referencias/bibliografia.yaml`; por projeto: `projetos/<chave>/referencias.yaml`;
+a seção Referências usa `!referencias` (lista ABNT automática, ordenada; não conferidas saem marcadas).
+```
+python -m ferramentas.garimpo.especies entorno <chave> [--raio-km 10]      # fauna/flora GBIF + ameaça MMA 148/2022 + IUCN + Flora do Brasil
+python -m ferramentas.garimpo.especies lista "Sp1" "Sp2" --projeto <chave>  # enriquece lista (ex.: inventário florestal)
+python -m ferramentas.garimpo.especies especie "Nome científico"
+python -m ferramentas.garimpo.legislacao catalogo | buscar <norma> | artigo <norma> 4 --inciso I | procurar <norma> "termo"
+python -m ferramentas.garimpo.legislacao adicionar <chave> <url> --jurisdicao PARANÁ --orgao "..."   # nova norma
+python -m ferramentas.garimpo.literatura buscar "tema" --brasil --desde 2010 [--aberto]   # estudos de caso (OpenAlex)
+python -m ferramentas.garimpo.literatura doi <doi> --projeto <chave> [--baixar]          # ABNT via Crossref + PDF aberto
+python -m ferramentas.garimpo.pagina <url> --projeto <chave>                            # página/PDF oficial -> texto + ABNT
+python -m ferramentas.garimpo.biblio abnt --projeto <chave> | usar <chave> CHAVE | listar
+```
+- Leis: o texto vem do Planalto **sem a redação revogada** (riscada); citar artigo com `legislacao artigo`.
+- Espécies do GBIF são registros secundários (ocorrência potencial) – dizer isso no texto; não substituem campo.
+- Referência marcada [CONFERIR]/`verificado: false`: conferir na fonte antes de protocolar.
+- Textos garimpados para leitura: `referencias/legislacao/`, `referencias/web/`, `referencias/literatura/` (PDFs fora do git).
+- Sem acesso automático: LexML e SciELO (bloqueio antirrobô – usar OpenAlex), speciesLink (exige chave), SALVE/ICMBio.
+
 ## Sintaxe dos textos (texto/*.md)
 - `# Título` … `####` – numerados automaticamente (3.1, 3.5.2…); `{-}` no fim = sem número. Nível 1 vira MAIÚSCULAS.
 - `**negrito**`, `*itálico*`, `- item`, `a) item`, `\newpage`, `<!-- comentário/instrução (ignorado) -->`.

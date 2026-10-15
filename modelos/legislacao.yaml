@@ -1,0 +1,35 @@
+# Catálogo de normas para MCE/PCA. A referência ABNT é montada a partir da página oficial (url) pelo
+# ferramentas.garimpo.legislacao; aqui ficam só a identificação, o tema e onde buscar.
+# jurisdicao: autor da referência ABNT (BRASIL / PARANÁ). orgao: subdivisão (ex.: Conselho Nacional do Meio Ambiente).
+normas:
+  lei-12651-2012: {titulo: "Lei nº 12.651/2012 – Código Florestal (APP, Reserva Legal)", jurisdicao: BRASIL, temas: [app, flora, reserva-legal],
+                   url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"}
+  lei-6938-1981: {titulo: "Lei nº 6.938/1981 – Política Nacional do Meio Ambiente", jurisdicao: BRASIL, temas: [licenciamento],
+                  url: "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm"}
+  lei-9433-1997: {titulo: "Lei nº 9.433/1997 – Política Nacional de Recursos Hídricos (outorga)", jurisdicao: BRASIL, temas: [recursos-hidricos, outorga],
+                  url: "https://www.planalto.gov.br/ccivil_03/leis/l9433.htm"}
+  lei-9605-1998: {titulo: "Lei nº 9.605/1998 – Crimes Ambientais", jurisdicao: BRASIL, temas: [fauna, flora],
+                  url: "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"}
+  lei-11428-2006: {titulo: "Lei nº 11.428/2006 – Lei da Mata Atlântica", jurisdicao: BRASIL, temas: [flora, supressao],
+                   url: "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11428.htm"}
+  decreto-6660-2008: {titulo: "Decreto nº 6.660/2008 – Regulamenta a Lei da Mata Atlântica", jurisdicao: BRASIL, temas: [flora, supressao],
+                      url: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6660.htm"}
+  lei-11445-2007: {titulo: "Lei nº 11.445/2007 – Diretrizes nacionais para o saneamento básico", jurisdicao: BRASIL, temas: [saneamento],
+                   url: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11445.htm"}
+  lei-14026-2020: {titulo: "Lei nº 14.026/2020 – Novo Marco Legal do Saneamento", jurisdicao: BRASIL, temas: [saneamento],
+                   url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14026.htm"}
+  lei-12305-2010: {titulo: "Lei nº 12.305/2010 – Política Nacional de Resíduos Sólidos", jurisdicao: BRASIL, temas: [residuos],
+                   url: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm"}
+  lei-9985-2000: {titulo: "Lei nº 9.985/2000 – SNUC (Unidades de Conservação)", jurisdicao: BRASIL, temas: [unidades-conservacao],
+                  url: "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm"}
+  lei-3924-1961: {titulo: "Lei nº 3.924/1961 – Monumentos arqueológicos e pré-históricos", jurisdicao: BRASIL, temas: [patrimonio],
+                  url: "https://www.planalto.gov.br/ccivil_03/leis/1950-1969/l3924.htm"}
+  lei-6496-1977: {titulo: "Lei nº 6.496/1977 – Anotação de Responsabilidade Técnica (ART)", jurisdicao: BRASIL, temas: [art],
+                  url: "https://www.planalto.gov.br/ccivil_03/leis/l6496.htm"}
+  lc-140-2011: {titulo: "Lei Complementar nº 140/2011 – Competências em licenciamento", jurisdicao: BRASIL, temas: [licenciamento],
+                url: "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp140.htm"}
+  lei-5197-1967: {titulo: "Lei nº 5.197/1967 – Proteção à fauna", jurisdicao: BRASIL, temas: [fauna],
+                  url: "https://www.planalto.gov.br/ccivil_03/leis/l5197.htm"}
+# Resoluções CONAMA, legislação do Paraná e portarias: acrescentar com
+#   python -m ferramentas.garimpo.legislacao adicionar CHAVE URL --jurisdicao BRASIL --orgao "Conselho Nacional do Meio Ambiente" --temas efluentes
+# (a página oficial precisa estar acessível; senão a referência fica marcada como [CONFERIR]).

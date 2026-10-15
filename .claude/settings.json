@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -m ferramentas.garimpo.especies especie \"Araucaria angustifolia\")",
+      "PowerShell(python -m ferramentas.garimpo.especies especie \"Leopardus guttulus\")",
+      "PowerShell(python -m ferramentas.garimpo.biblio listar)"
+    ]
+  }
+}
