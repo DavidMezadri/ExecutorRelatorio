@@ -1,0 +1,80 @@
+documento: MCE
+sistema: SES
+projeto_sanepar: '73349'
+municipio: São João do Triunfo
+localidade: null
+uf: PR
+cod_ibge: 4125100
+municipio_info:
+  cod_ibge: 4125100
+  nome_oficial: São João do Triunfo
+  uf: PR
+  mesorregiao: Sudeste Paranaense
+  microrregiao: São Mateus do Sul
+  regiao_imediata: Ponta Grossa
+  regiao_intermediaria: Ponta Grossa
+  populacao_2022: 13726
+  area_km2: 720.41
+  densidade_hab_km2: 19.05
+  limitrofes:
+  - Antônio Olinto
+  - Fernandes Pinheiro
+  - Lapa
+  - Palmeira
+  - Rebouças
+  - São Mateus do Sul
+  - Teixeira Soares
+  fonte: IBGE – Censo Demográfico 2022 (SIDRA 4714); API de Localidades e Malhas
+empreendedor:
+  responsavel: null
+  telefone: null
+  email: null
+cnae: 3701-1/00 (Gestão de redes de esgoto)
+area_influencia: null
+acessos: null
+endereco_unidade_principal: null
+area:
+  total_m2: null
+  construida_m2: null
+  livre_m2: null
+unidades:
+- nome: São João do Triunfo - ETE
+  descricao: null
+  geometria: Polygon
+  area_m2: 6376.44
+imoveis_terceiros: null
+populacao:
+  inicio_plano_ano: null
+  inicio_plano_hab: null
+  final_plano_ano: null
+  final_plano_hab: null
+  demanda_m3_dia: null
+ete:
+  vazao_media_ls: null
+  vazao_maxima_ls: null
+  vazao_fim_plano_ls: null
+  processo: null
+  eficiencia_dbo_pct: null
+  lodo: null
+  distancia_nucleo_populacional_m: null
+corpo_receptor:
+  nome: null
+  bacia: null
+  classe: null
+  outorga_lancamento: null
+  vazao_outorgada_ls: null
+  ponto_lancamento_utm_e: null
+  ponto_lancamento_utm_n: null
+elevatorias: null
+manancial:
+  nome: null
+  outorga_captacao: null
+  vazao_outorgada_ls: null
+horizonte_projeto_anos: null
+bairros_atendidos: null
+responsavel_tecnico:
+  empresa: null
+  nome: null
+  cpf: null
+  registro: null
+  art: null
