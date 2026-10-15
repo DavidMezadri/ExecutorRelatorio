@@ -16,6 +16,8 @@ Gera: `dados/` (coordenadas, unidades, bases oficiais, RESUMO_TEMATICO.md, **DOS
 `extraido/*.md` (planilhas e PDFs do cliente) e `texto/*.md` (só cria os que não existem).
 
 ## 2. Preencher a ficha `projetos/<chave>/projeto.yaml`
+Primeiro: `python -m ferramentas.ingestao.memorial <chave> --aplicar` (candidatos com página em
+`dados/EXTRACAO_MEMORIAL.md`) e, se houver `cad/`, `python -m ferramentas.ingestao.cad <chave>` (extensões por DN).
 Ler TUDO em `extraido/` (memoriais, planilha "Lista de documentos e informações", matriz) e preencher os campos
 `null` com valores que tenham fonte. Nunca inventar: sem fonte, manter `null`. Registrar a origem de cada
 valor num comentário YAML (`# fonte: memorial descritivo p. 12`).

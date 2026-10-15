@@ -50,6 +50,28 @@ python-qgis.bat ferramentas\geo\qgis_projeto.py projetos\<chave>   # projeto .qg
 ```
 Serviços sem acesso automático: CAR/SICAR (baixar shapes manualmente → `dados/car/`); UCs vêm da ANA.
 
+## Dados do cliente: memoriais (PDF) e AutoCAD
+```
+python -m ferramentas.ingestao.memorial <chave> [--aplicar]   # vazões, população, horizonte, per capita, K1/K2, portarias,
+                                                              # DN, extensões, volumes, kW, Hm, processo, DBO, matrículas, rios
+python -m ferramentas.ingestao.cad <chave>                    # projetos/<chave>/cad/*.dxf|*.dwg -> camadas, extensão por DN,
+                                                              # blocos (PV...), textos; se em UTM: cad_*.gpkg + comparação c/ KMZ
+```
+- Memorial: lê `extraido/*.md` (PDFs convertidos) -> `dados/EXTRACAO_MEMORIAL.md` com valor, trecho e página. `--aplicar`
+  só preenche no projeto.yaml campos vazios com candidato ÚNICO (horizonte, portaria, capacidade nominal/máxima) e
+  registra em `dados/EXTRACAO_APLICADA.md`. Os demais: a IA escolhe lendo o trecho, citando a página.
+- AutoCAD: DWG precisa do ODA File Converter (gratuito) ou exportar como DXF. Quantitativos em `dados/cad_quantitativos.xlsx`.
+
+## Redação automática e conferências
+- `python -m ferramentas.redacao.redator <chave>` (etapa `redacao`): parágrafos com citação a partir dos dados ->
+  `dados/redacao.yaml` = `{{auto.pedologia|uso_solo|geomorfologia|geologia|hidrogeologia|hidrologia|fitogeografia|app|`
+  `erosao|alagadicos|supressao|entorno|territorios|ucs|impactos_especificos}}`. Revisar/refinar no texto (pode substituir
+  a variável pelo texto editado).
+- `python -m ferramentas.conferencia.citacoes <chave>` (etapa `citacoes`): citação sem referência, referência não citada,
+  não conferidas -> `saida/CITACOES.md`.
+- `python -m ferramentas.docx.declaracoes <chave> [--lac]`: Anexos II–V da IN 37 pré-preenchidos em `saida/declaracoes/`.
+- `dados_comuns/equipe.yaml`: responsável técnico e representante da Sanepar – preencher uma vez (vale p/ todos os projetos).
+
 ## Dossiê padrão da localidade (igual para todo município)
 `python -m ferramentas.dossie.gerar <chave> [--so bloco]` (também é etapa `dossie` do pipeline). Blocos fixos:
 socioeconomia (IBGE: população, área, regiões, limítrofes, PIB), saneamento (Censo 2022 tabelas 6803/6805/6892: água,

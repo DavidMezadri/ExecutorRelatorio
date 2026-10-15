@@ -21,7 +21,7 @@ import yaml
 from ferramentas.util import console_utf8, projeto
 from ferramentas.garimpo import biblio
 
-CIT = {"ibge": "IBGE, 2023", "sgb": "SGB, [20--]", "mapbiomas": "PROJETO MAPBIOMAS, 2024", "dem": "ESA, 2021",
+CIT = {"ibge": "IBGE, 2023", "sgb": "SGB, [20--]", "mapbiomas": "PROJETO MAPBIOMAS, 2024", "dem": "EUROPEAN SPACE AGENCY, 2021",
        "ana": "ANA, [20--]", "lei12651": "BRASIL, 2012", "embrapa79": "EMBRAPA, 1979", "conama357": "BRASIL, 2005"}
 NATURAL = {"Formação Florestal", "Formação Savânica", "Floresta Alagável", "Restinga Arbórea", "Campo Alagado e Área Pantanosa",
            "Formação Campestre", "Outras Formações não Florestais", "Mangue", "Restinga Herbácea"}

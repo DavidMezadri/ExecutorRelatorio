@@ -33,6 +33,7 @@ ETAPAS = {
     "montar": ["ferramentas.docx.montar"],
     "finalizar": ["ferramentas.docx.finalizar"],
     "matriz": ["ferramentas.conferencia.matriz"],
+    "citacoes": ["ferramentas.conferencia.citacoes"],
 }
 
 
@@ -41,7 +42,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("chave")
     ap.add_argument("--de", choices=list(ETAPAS), default="iniciar")
-    ap.add_argument("--ate", choices=list(ETAPAS), default="matriz")
+    ap.add_argument("--ate", choices=list(ETAPAS), default="citacoes")
     ap.add_argument("--sem-word", action="store_true")
     ap.add_argument("--refazer-ficha", action="store_true")
     a = ap.parse_args()

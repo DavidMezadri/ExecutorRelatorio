@@ -35,3 +35,7 @@ projetos/*/audios/**/*.wma
 
 # Arquivos temporários do Office
 ~$*
+
+# Projetos AutoCAD do cliente (grandes/confidenciais)
+projetos/*/cad/*.dwg
+projetos/*/cad/*.dxf
