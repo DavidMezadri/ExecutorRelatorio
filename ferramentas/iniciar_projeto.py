@@ -72,11 +72,21 @@ def ficha_inicial(cfg: dict, quadro, info_mun: dict) -> dict:
                         "regime_operacao_h_dia": None, "processo": None}
         ficha["outorga_lancamento"] = None
     else:
-        ficha["ete"] = {"vazao_media_ls": None, "vazao_maxima_ls": None, "processo": None,
-                        "eficiencia_dbo_pct": None}
-        ficha["corpo_receptor"] = {"nome": None, "bacia": None, "classe": None,
-                                   "outorga_lancamento": None}
-    ficha["responsavel_tecnico"] = {"empresa": None, "nome": None, "registro": None, "art": None}
+        ficha["ete"] = {"vazao_media_ls": None, "vazao_maxima_ls": None, "vazao_fim_plano_ls": None,
+                        "processo": None, "eficiencia_dbo_pct": None, "lodo": None,
+                        "distancia_nucleo_populacional_m": None}
+        ficha["corpo_receptor"] = {"nome": None, "bacia": None, "classe": None, "outorga_lancamento": None,
+                                   "vazao_outorgada_ls": None, "ponto_lancamento_utm_e": None,
+                                   "ponto_lancamento_utm_n": None}
+        ficha["elevatorias"] = None
+        ficha["manancial"] = {"nome": None, "outorga_captacao": None, "vazao_outorgada_ls": None}
+    ficha["horizonte_projeto_anos"] = None
+    ficha["bairros_atendidos"] = None
+    if cfg["documento"] == "PCA":
+        ficha["pca"] = {"mao_de_obra_implantacao": None, "mao_de_obra_operacao": None,
+                        "cronograma_meses": None, "produtos_quimicos": None, "residuos_operacao": None,
+                        "drenagem_pluvial": None, "cortes_aterros": None, "pmsb": None}
+    ficha["responsavel_tecnico"] = {"empresa": None, "nome": None, "cpf": None, "registro": None, "art": None}
     return ficha
 
 

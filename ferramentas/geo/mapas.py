@@ -238,6 +238,8 @@ class Mapa:
         return [pos.x0 + pos.width * 0.1, pos.y0 + pos.height * 0.21, pos.width * 0.8, pos.height * 0.2]
 
     def salvar(self, nome):
+        self.ax.set_xlabel("")  # o geopandas recoloca "Easting/Northing" a cada plot
+        self.ax.set_ylabel("")
         self._norte()
         self._escala()
         self._painel()
@@ -470,6 +472,10 @@ def contexto(cfg, dpi=200):
     rios, nasc, fonte_r = hidrografia(cfg, epsg)
     of = cfg["dir"] / "dados" / "oficiais"
     x0, y0, x1, y1 = u.total_bounds
+    # extensão mínima de 4 km: projetos de uma só unidade pequena (ex.: ETE) precisam mostrar o entorno
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    x0, x1 = min(x0, cx - 2000), max(x1, cx + 2000)
+    y0, y1 = min(y0, cy - 2000), max(y1, cy + 2000)
     pad = min(max(0.08 * max(x1 - x0, y1 - y0), 500), 2500)
     janela = box(x0 - pad * 3, y0 - pad * 3, x1 + pad * 3, y1 + pad * 3)
     uf = gpd.read_file(of / "municipios_uf.gpkg").to_crs(epsg)

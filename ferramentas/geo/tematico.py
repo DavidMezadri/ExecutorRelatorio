@@ -161,6 +161,16 @@ def resumir(cfg) -> dict:
     if (of / "mapbiomas.tif").exists():
         from rasterio.enums import Resampling
         mb, tr, nd = raster.para_utm(of / "mapbiomas.tif", epsg, reamostragem=Resampling.nearest)
+        # distância até a área urbanizada mais próxima (IN 37 Anexo XI 2.1 g – ETE x núcleos populacionais)
+        from rasterio.transform import xy
+        lin, col = np.nonzero(mb == 24)
+        if lin.size:
+            xs, ys = xy(tr, lin, col)
+            urb = gpd.GeoSeries(gpd.points_from_xy(xs, ys), crs=epsg)
+            for _, row in u.iterrows():
+                if not row.geometry.geom_type.endswith("LineString"):
+                    d = float(urb.distance(row.geometry).min())
+                    res["unidades"][row["nome"]]["distancia_area_urbana_m"] = round(max(0, d - 15))
         for _, row in u.iterrows():
             v = raster.valores_na_geometria(mb, tr, row["area_ref"], 0)
             if v.size:

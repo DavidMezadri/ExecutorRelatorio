@@ -5,15 +5,32 @@ municipio: Manoel Ribas
 localidade: null
 uf: PR
 cod_ibge: 4114500
+municipio_info:
+  cod_ibge: 4114500
+  nome_oficial: Manoel Ribas
+  uf: PR
+  mesorregiao: Norte Central Paranaense
+  microrregiao: Ivaiporã
+  regiao_imediata: Ivaiporã
+  regiao_intermediaria: Londrina
+  populacao_2022: 14240
+  area_km2: 571.13
+  densidade_hab_km2: 24.93
+  limitrofes:
+  - Arapuã
+  - Ariranha do Ivaí
+  - Cândido de Abreu
+  - Ivaiporã
+  - Nova Tebas
+  - Pitanga
+  fonte: IBGE – Censo Demográfico 2022 (SIDRA 4714); API de Localidades e Malhas
 empreendedor:
-  razao_social: Companhia de Saneamento do Paraná – Sanepar
-  nome_fantasia: Sanepar
-  cnpj: 76.484.013/0001-45
-  inscricao_estadual: null
-  endereco_correspondencia: Rua Engenheiros Rebouças, nº 1376 – Rebouças – Curitiba/PR
   responsavel: null
   telefone: null
   email: null
+cnae: 3701-1/00 (Gestão de redes de esgoto)
+area_influencia: null
+acessos: null
 endereco_unidade_principal: null
 area:
   total_m2: null
@@ -34,15 +51,38 @@ populacao:
 ete:
   vazao_media_ls: null
   vazao_maxima_ls: null
+  vazao_fim_plano_ls: null
   processo: null
   eficiencia_dbo_pct: null
+  lodo: null
+  distancia_nucleo_populacional_m: null
 corpo_receptor:
   nome: null
   bacia: null
   classe: null
   outorga_lancamento: null
+  vazao_outorgada_ls: null
+  ponto_lancamento_utm_e: null
+  ponto_lancamento_utm_n: null
+elevatorias: null
+manancial:
+  nome: null
+  outorga_captacao: null
+  vazao_outorgada_ls: null
+horizonte_projeto_anos: null
+bairros_atendidos: null
+pca:
+  mao_de_obra_implantacao: null
+  mao_de_obra_operacao: null
+  cronograma_meses: null
+  produtos_quimicos: null
+  residuos_operacao: null
+  drenagem_pluvial: null
+  cortes_aterros: null
+  pmsb: null
 responsavel_tecnico:
   empresa: null
   nome: null
+  cpf: null
   registro: null
   art: null

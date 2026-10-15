@@ -53,7 +53,7 @@ def finalizar(docx_path: Path, pdf=True) -> Path | None:
     finally:
         try:
             word.Quit()
-        except AttributeError:  # Word 2007: a instância já encerrou ao fechar o último documento
+        except Exception:  # Word 2007: a instância já encerrou ao fechar o último documento (RPC/atributo)
             pass
     return pdf_path
 
