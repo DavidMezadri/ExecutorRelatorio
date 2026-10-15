@@ -114,7 +114,7 @@ No âmbito local, o corpo receptor do efluente tratado é o {{corpo_receptor.nom
 
 As áreas com vegetação nativa existentes no entorno do empreendimento desempenham importante função ecológica, atuando como corredores ecológicos que favorecem o deslocamento da fauna, promovem o fluxo gênico entre populações, contribuem para a conservação da biodiversidade, a proteção dos recursos hídricos, a estabilidade geológica, a conservação do solo e a manutenção da paisagem.
 
-A delimitação das Áreas de Preservação Permanente (APP) e da Reserva Legal foi realizada com base nas informações constantes no Cadastro Ambiental Rural (SICAR) e nos critérios da Lei nº 12.651/2012, sendo apresentada na @fig:app.
+A delimitação das Áreas de Preservação Permanente (APP) e da Reserva Legal foi realizada com base nas informações constantes no Cadastro Ambiental Rural (SICAR) e nos critérios da Lei nº 12.651/2012, sendo apresentada na @fig:app. [A VERIFICAR: ocorrência de Reserva Legal nos imóveis afetados, conforme CAR/SICAR – colocar os arquivos do CAR em dados/car/ e regenerar o mapa.]
 
 ::: paisagem
 ![Reservas Legais e Áreas de Preservação Permanente do empreendimento](mapas/app_rl.png){#fig:app fonte="SICAR; IAT; elaborado pelo autor, {{ano}}."}

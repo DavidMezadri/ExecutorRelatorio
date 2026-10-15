@@ -1,0 +1,51 @@
+# Matriz de atendimento – IN IAT 37/2025, Anexo XI (PCA SES)
+anexo: Anexo XI
+titulo: Termo de Referência de Plano de Controle Ambiental Simplificado (PCA) para SES
+itens:
+  - {grupo: "0. Exigências gerais", item: "0.1", exigencia: "ART do responsável técnico (Lei 6.496/77)", secao: "ART"}
+  - {grupo: "1. Informações cadastrais", item: "1.1", exigencia: "Identificação do empreendedor (nome, razão social, endereço, CNPJ/IE, contato)", secao: "Identificação do Empreendedor"}
+  - {grupo: "1. Informações cadastrais", item: "1.2", exigencia: "Empresa responsável pelo estudo e equipe técnica (CPF, registro, ART)", secao: "Empresa Responsável pela Elaboração"}
+  - {grupo: "2. Caracterização", item: "2.1 a", exigencia: "Nome do SES", secao: "Descrição Resumida", rotulo: "Nome do SES"}
+  - {grupo: "2. Caracterização", item: "2.1 b", exigencia: "Características técnicas das unidades (ETE, emissário, EEE, UGL)", secao: "Descrição Resumida", rotulo: "Características técnicas|^\\|"}
+  - {grupo: "2. Caracterização", item: "2.1 c", exigencia: "Bairros a serem atendidos", secao: "Descrição Resumida", rotulo: "Bairros"}
+  - {grupo: "2. Caracterização", item: "2.1 d", exigencia: "Horizonte de alcance do projeto (anos)", secao: "Descrição Resumida", rotulo: "Horizonte"}
+  - {grupo: "2. Caracterização", item: "2.1 e", exigencia: "Vazão de alcance de plano da ETE (L/s)", secao: "Descrição Resumida", rotulo: "Vazão de alcance"}
+  - {grupo: "2. Caracterização", item: "2.1 f", exigencia: "Vazão outorgada de lançamento (L/s)", secao: "Descrição Resumida", rotulo: "Vazão outorgada"}
+  - {grupo: "2. Caracterização", item: "2.1 g", exigencia: "Distância da ETE a núcleos populacionais", secao: "Descrição Resumida", rotulo: "Distância da ETE"}
+  - {grupo: "2. Caracterização", item: "2.1 h", exigencia: "População de alcance de projeto", secao: "Descrição Resumida", rotulo: "População de alcance"}
+  - {grupo: "2. Caracterização", item: "2.1 i", exigencia: "População de fim de plano", secao: "Descrição Resumida", rotulo: "População de fim"}
+  - {grupo: "2. Caracterização", item: "2.1 j", exigencia: "Forma de disposição final do efluente", secao: "Descrição Resumida", rotulo: "disposição final"}
+  - {grupo: "2. Caracterização", item: "2.1 k", exigencia: "Coordenadas do ponto de lançamento (UTM SIRGAS 2000)", secao: "Descrição Resumida", rotulo: "ponto de lançamento"}
+  - {grupo: "2. Caracterização", item: "2.1 l", exigencia: "Localização das EEE e ETE (rua, coordenadas, situação da área)", secao: "Descrição Resumida", rotulo: "Localização das EEE"}
+  - {grupo: "2. Caracterização", item: "2.2", exigencia: "Plantas: área, recursos hídricos/APP, bacias de esgotamento, faixa de domínio, unidades, acessos, lançamento", secao: "Plantas do Sistema"}
+  - {grupo: "2. Caracterização", item: "2.3", exigencia: "Estimativa de populações e vazões ano a ano", secao: "Estimativa de População"}
+  - {grupo: "2. Caracterização", item: "2.4", exigencia: "Água de fornecimento (manancial, captação, vazão, parâmetros)", secao: "Água de Fornecimento"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.1", exigencia: "Uso e ocupação do solo", secao: "Uso e Ocupação"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.2", exigencia: "Área do empreendimento e vizinhança", secao: "Vizinhança"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.3", exigencia: "Recursos hídricos existentes na área", secao: "Recursos Hídricos"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.4", exigencia: "Descrição geológico-geotécnica da área da ETE", secao: "Geológico-Geotécnica"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.5", exigencia: "Terrenos alagadiços ou sujeitos a inundação", secao: "Alagadiços"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.6", exigencia: "Suscetibilidade do terreno à erosão", secao: "Erosão"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.7", exigencia: "Geomorfologia / relevo", secao: "Geomorfologia"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.8", exigencia: "Cobertura vegetal na área de intervenção", secao: "Cobertura Vegetal"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.9", exigencia: "Áreas de Preservação Permanente", secao: "Áreas de Preservação Permanente"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.10", exigencia: "Reserva Legal", secao: "Reserva Legal"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.11", exigencia: "Unidades de Conservação", secao: "Unidades de Conservação"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.12", exigencia: "Vestígios arqueológicos, históricos ou artísticos", secao: "Arqueológicos"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.13", exigencia: "Reservas indígenas, quilombolas, monumentos naturais e bens tombados", secao: "Indígenas"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.14", exigencia: "Áreas passíveis de desapropriação", secao: "Desapropriação"}
+  - {grupo: "3. Diagnóstico ambiental", item: "3.15", exigencia: "Compatibilidade com a legislação e o Plano Municipal de Saneamento", secao: "Compatibilidade"}
+  - {grupo: "4. Projeto básico", item: "4.1", exigencia: "Descrição do sistema de esgotos", secao: "Descrição do Sistema de Esgotos"}
+  - {grupo: "4. Projeto básico", item: "4.2", exigencia: "Bacias de esgotamento", secao: "Bacias de Esgotamento"}
+  - {grupo: "4. Projeto básico", item: "4.3", exigencia: "Estimativa de populações e vazões", secao: "Estimativa de Populações"}
+  - {grupo: "4. Projeto básico", item: "4.4", exigencia: "Características dos esgotos sanitários", secao: "Características dos Esgotos"}
+  - {grupo: "4. Projeto básico", item: "4.5", exigencia: "Identificação e caracterização do corpo receptor", secao: "Corpo Receptor"}
+  - {grupo: "4. Projeto básico", item: "4.6", exigencia: "ETE (NBR 12209): topografia, sondagens, sistema, dimensionamento, lodo", secao: "Estação de Tratamento de Esgoto"}
+  - {grupo: "4. Projeto básico", item: "4.7", exigencia: "EEE e linhas de recalque (NBR 12208)", secao: "Elevatórias de Esgoto"}
+  - {grupo: "4. Projeto básico", item: "4.8", exigencia: "Unidades de transporte", secao: "Unidades de Transporte"}
+  - {grupo: "4. Projeto básico", item: "4.9", exigencia: "Emissário final", secao: "Emissário Final"}
+  - {grupo: "5. Controle ambiental", item: "5.1", exigencia: "Efluentes líquidos (caracterização, tratamento, drenagem)", secao: "Efluentes Líquidos"}
+  - {grupo: "5. Controle ambiental", item: "5.2", exigencia: "Resíduos sólidos (identificação, gerenciamento, armazenamento)", secao: "Resíduos Sólidos"}
+  - {grupo: "5. Controle ambiental", item: "5.3", exigencia: "Atividades de apoio (produtos químicos, cortes/aterros, mão de obra, cronograma)", secao: "Atividades de Apoio"}
+  - {grupo: "6. Impactos", item: "6", exigencia: "Impactos ambientais e medidas mitigadoras ou compensatórias", secao: "Impactos Ambientais"}
+  - {grupo: "7. Conclusão", item: "7", exigencia: "Conclusão quanto à viabilidade ambiental", secao: "Conclusão"}

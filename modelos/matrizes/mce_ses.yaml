@@ -1,0 +1,38 @@
+# Matriz de atendimento – IN IAT 37/2025, Anexo VII (MCE SES)
+anexo: Anexo VII
+titulo: Termo de Referência para Elaboração do MCE para Sistema de Esgotamento Sanitário (SES)
+itens:
+  - {grupo: "0. Exigências gerais", item: "0.1", exigencia: "MCE elaborado por técnico habilitado", secao: "Empresa Responsável", rotulo: "Responsável técnico"}
+  - {grupo: "0. Exigências gerais", item: "0.2", exigencia: "Anotação de Responsabilidade Técnica (ART)", secao: "ART"}
+  - {grupo: "I. Informações cadastrais", item: "I.1", exigencia: "Razão social", secao: "Identificação do Empreendimento", rotulo: "Razão Social"}
+  - {grupo: "I. Informações cadastrais", item: "I.2", exigencia: "Nome fantasia", secao: "Identificação do Empreendimento", rotulo: "Nome Fantasia"}
+  - {grupo: "I. Informações cadastrais", item: "I.3", exigencia: "CNPJ e Inscrição Estadual", secao: "Identificação do Empreendimento", rotulo: "CNPJ|Inscrição Estadual"}
+  - {grupo: "I. Informações cadastrais", item: "I.4", exigencia: "Endereço completo da unidade a ser licenciada", secao: "Identificação do Empreendimento", rotulo: "localizada em"}
+  - {grupo: "I. Informações cadastrais", item: "I.5", exigencia: "Endereço para correspondência", secao: "Identificação do Empreendimento", rotulo: "Correspondência"}
+  - {grupo: "I. Informações cadastrais", item: "I.6", exigencia: "Nome do responsável, telefone", secao: "Identificação do Empreendimento", rotulo: "^\\|"}
+  - {grupo: "I. Informações cadastrais", item: "I.7", exigencia: "E-mail", secao: "Identificação do Empreendimento", rotulo: "E-mail"}
+  - {grupo: "II. Caracterização da área", item: "II.1", exigencia: "Área onde será implantada a atividade (total, construída e livre)", secao: "Área Onde será Implantada"}
+  - {grupo: "II. Caracterização da área", item: "II.2", exigencia: "Coordenadas geográficas e UTM", secao: "Coordenadas Geográficas"}
+  - {grupo: "II. Caracterização da área", item: "II.3", exigencia: "Tipo e característica do solo", secao: "Pedologia"}
+  - {grupo: "II. Caracterização da área", item: "II.4", exigencia: "Topografia", secao: "Geomorfologia"}
+  - {grupo: "II. Caracterização da área", item: "II.5", exigencia: "Recursos hídricos (nascentes, olhos d'água, cursos d'água)", secao: "Hidrologia"}
+  - {grupo: "II. Caracterização da área", item: "II.6", exigencia: "Geologia / hidrogeologia / geotecnia", secao: "Geologia|Hidrogeologia"}
+  - {grupo: "II. Caracterização da área", item: "II.7", exigencia: "Cobertura vegetal", secao: "Meio Biótico"}
+  - {grupo: "II. Caracterização da área", item: "II.8", exigencia: "Acessos (alternativas, condições de tráfego)", secao: "Acessos"}
+  - {grupo: "II. Caracterização da área", item: "II.9", exigencia: "Características do entorno (uso do solo, residências, áreas de interesse ambiental)", secao: "Uso do Solo|Residências"}
+  - {grupo: "III. Croqui de localização", item: "III.1", exigencia: "Implantação da Estação de Tratamento de Esgoto", secao: "Coordenadas Geográficas", rotulo: "Localização das unidades"}
+  - {grupo: "III. Croqui de localização", item: "III.2", exigencia: "Traçado das unidades de transporte (rede, coletor tronco, interceptores, recalque, emissário)", secao: "Projetos das Unidades|Anexo"}
+  - {grupo: "III. Croqui de localização", item: "III.3", exigencia: "Implantação das Estações Elevatórias de Esgoto", secao: "Descrição das Unidades", rotulo: "Elevatórias"}
+  - {grupo: "III. Croqui de localização", item: "III.4", exigencia: "Delimitação de imóveis de terceiros afetados (nº da matrícula)", secao: "Descritivo da Obra", rotulo: "Desapropriação"}
+  - {grupo: "III. Croqui de localização", item: "III.5", exigencia: "Cursos hídricos", secao: "Hidrologia", rotulo: "Bacia hidrográfica do empreendimento"}
+  - {grupo: "III. Croqui de localização", item: "III.6", exigencia: "Cobertura florestal das áreas afetadas", secao: "Meio Biótico"}
+  - {grupo: "III. Croqui de localização", item: "III.7", exigencia: "Áreas de Preservação Permanente", secao: "Áreas de Preservação Permanente"}
+  - {grupo: "III. Croqui de localização", item: "III.8", exigencia: "Reserva legal e demais áreas relevantes", secao: "Reserva Legal"}
+  - {grupo: "IV. Caracterização do empreendimento", item: "IV.1", exigencia: "Tipo de atividade – CNAE", secao: "Tipo de Atividade"}
+  - {grupo: "IV. Caracterização do empreendimento", item: "IV.2", exigencia: "Descritivo da obra e intervenções necessárias", secao: "Descritivo da Obra"}
+  - {grupo: "IV. Caracterização do empreendimento", item: "IV.3", exigencia: "População de alcance do plano e alcance de plano", secao: "População de Alcance"}
+  - {grupo: "IV. Caracterização do empreendimento", item: "IV.4", exigencia: "Corpo receptor", secao: "Corpo Receptor"}
+  - {grupo: "IV. Caracterização do empreendimento", item: "IV.5", exigencia: "Portaria de outorga para lançamento de efluentes", secao: "Outorga para Lançamento"}
+  - {grupo: "IV. Caracterização do empreendimento", item: "IV.6", exigencia: "Descrição das unidades (rede, interceptores, recalque, EEE, ETE, emissário)", secao: "Descrição das Unidades"}
+  - {grupo: "IV. Caracterização do empreendimento", item: "IV.7", exigencia: "Descrição do sistema de tratamento adotado", secao: "Sistema de Tratamento"}
+  - {grupo: "IV. Caracterização do empreendimento", item: "IV.8", exigencia: "Intervenções: supressão de vegetação, escavações, alterações de solo", secao: "Descritivo da Obra", rotulo: "Supressão|escavações"}
