@@ -45,6 +45,14 @@ conama-307-2002:
   acesso: '2026-10-15'
   citacao: BRASIL, 2002
   verificado: false
+conama-357-2005:
+  tipo: lei
+  abnt: BRASIL. Conselho Nacional do Meio Ambiente. Resolução CONAMA nº 357, de 17 de março de 2005. Dispõe sobre a classificação dos corpos de água e diretrizes ambientais para o seu enquadramento, bem
+    como estabelece as condições e padrões de lançamento de efluentes, e dá outras providências. Brasília, DF, 2005.
+  url: null
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2005
+  verificado: false
 conama-430-2011:
   tipo: base
   abnt: BRASIL. Conselho Nacional do Meio Ambiente. Resolução CONAMA nº 430, de 13 de maio de 2011. Dispõe sobre as condições e padrões de lançamento de efluentes, complementa e altera a Resolução nº 357,
@@ -62,6 +70,13 @@ doi-10-1590-2175-7860201566411:
   citacao: ZAPPI et al., 2015
   verificado: true
   titulo: 'Growing knowledge: an overview of Seed Plant diversity in Brazil'
+embrapa-1979-sumula:
+  tipo: base
+  abnt: 'EMBRAPA. Serviço Nacional de Levantamento e Conservação de Solos. Súmula da 10ª Reunião Técnica de Levantamento de Solos. Rio de Janeiro: EMBRAPA-SNLCS, 1979. 83 p.'
+  url: null
+  acesso: '2026-10-15'
+  citacao: EMBRAPA, 1979
+  verificado: false
 flora-e-funga-do-brasil:
   tipo: base
   abnt: 'FLORA E FUNGA DO BRASIL. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br/. Acesso em: 15 out. 2026.'
@@ -181,6 +196,14 @@ ms-cnes:
 nasa-power-candoi:
   tipo: base
   abnt: 'NASA – NATIONAL AERONAUTICS AND SPACE ADMINISTRATION. Prediction Of Worldwide Energy Resources (POWER): climatologia mensal (1991-2020) no ponto -25.5399, -52.1045. Hampton: NASA Langley Research
+    Center. Disponível em: https://power.larc.nasa.gov. Acesso em: 15 out. 2026.'
+  url: https://power.larc.nasa.gov
+  acesso: '2026-10-15'
+  citacao: NASA, 2026
+  verificado: true
+nasa-power-manoel-ribas:
+  tipo: base
+  abnt: 'NASA – NATIONAL AERONAUTICS AND SPACE ADMINISTRATION. Prediction Of Worldwide Energy Resources (POWER): climatologia mensal (1991-2020) no ponto -24.5209, -51.6534. Hampton: NASA Langley Research
     Center. Disponível em: https://power.larc.nasa.gov. Acesso em: 15 out. 2026.'
   url: https://power.larc.nasa.gov
   acesso: '2026-10-15'

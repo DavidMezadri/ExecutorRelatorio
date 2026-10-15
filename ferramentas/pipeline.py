@@ -3,7 +3,9 @@
 Uso:
     python -m ferramentas.pipeline candoi [--de mapas] [--ate montar] [--sem-word] [--refazer-ficha]
 
-Etapas: iniciar -> oficiais -> tematico -> dossie -> mapas -> kmz -> esqueleto -> montar -> finalizar -> matriz
+Etapas: iniciar -> oficiais -> tematico -> dossie -> especies -> redacao -> mapas -> kmz -> esqueleto -> montar
+        -> finalizar -> matriz
+(redacao = parágrafos automáticos do diagnóstico em dados/redacao.yaml -> {{auto.<bloco>}} nos textos)
 (dossie = informações padrão da localidade: IBGE, saneamento do Censo, clima, acessos, entorno, territórios)
 (kmz = saida/<chave>_google_earth.kmz para conferir no Google Earth Pro e salvar as vistas como figuras)
 - iniciar não sobrescreve projeto.yaml (use --refazer-ficha para recriar)
@@ -23,6 +25,8 @@ ETAPAS = {
     "oficiais": ["ferramentas.fontes.oficiais"],
     "tematico": ["ferramentas.geo.tematico"],
     "dossie": ["ferramentas.dossie.gerar"],
+    "especies": ["ferramentas.garimpo.especies", "entorno"],
+    "redacao": ["ferramentas.redacao.redator"],
     "mapas": ["ferramentas.geo.mapas"],
     "kmz": ["ferramentas.geo.google_earth", "exportar"],
     "esqueleto": ["ferramentas.docx.esqueleto"],

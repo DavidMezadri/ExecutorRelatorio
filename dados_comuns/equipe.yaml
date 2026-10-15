@@ -1,0 +1,33 @@
+# Dados fixos da equipe – preencher UMA vez; valem para todos os projetos.
+# O montador usa estes valores quando o campo do projeto (projeto.yaml) estiver vazio.
+# Campos vazios saem como "______" nas declarações (para completar à mão) e [A VERIFICAR] no documento.
+
+responsavel_tecnico:            # responsável técnico (Biocerne) – assina MCE/PCA, ART e declarações
+  nome:
+  cpf:
+  rg:                           # nº e órgão expedidor/UF, ex.: "1.234.567-8 SESP/PR"
+  nacionalidade: brasileiro(a)
+  estado_civil:
+  profissao:                    # ex.: Engenheiro Florestal / Biólogo / Engenheiro Ambiental
+  registro:                     # ex.: CREA-SC 123456/D
+  endereco:                     # rua, nº, complemento, bairro, cidade/UF
+  telefone:
+  email:
+  art:                          # nº da ART (normalmente muda por projeto: preencher no projeto.yaml)
+
+representante_sanepar:          # quem assina pela Sanepar (declarações do empreendedor)
+  nome:
+  cpf:
+  rg:
+  nacionalidade: brasileiro(a)
+  estado_civil:
+  cargo:
+  endereco:
+  telefone:
+  email:
+
+equipe_tecnica:                 # demais membros (quadro de equipe do PCA)
+  - nome:
+    formacao:
+    registro:
+    funcao:

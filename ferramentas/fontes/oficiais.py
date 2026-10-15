@@ -60,11 +60,11 @@ CAMADAS = {
                   "IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Banco de Dados de Informações Ambientais (BDiA): "
                   "Vegetação 1:250.000. Rio de Janeiro: IBGE, 2023. Disponível em: https://bdiaweb.ibge.gov.br. Acesso em: {acesso}."),
     "litoestratigrafia": ("wfs", SGB, "geosgb:litoestratigrafia_1m",
-                          "SGB – SERVIÇO GEOLÓGICO DO BRASIL. Litoestratigrafia 1:1.000.000 (GeoSGB). Brasília: SGB/CPRM. "
+                          "SGB – SERVIÇO GEOLÓGICO DO BRASIL. Litoestratigrafia 1:1.000.000 (GeoSGB). Brasília: SGB/CPRM, [20--]. "
                           "Disponível em: https://geosgb.sgb.gov.br. Acesso em: {acesso}."),
     "hidrogeologia": ("wfs", SGB, "hidrogeologia:dominios_hidrogeologicos_2_5m",
                       "SGB – SERVIÇO GEOLÓGICO DO BRASIL. Domínios e subdomínios hidrogeológicos do Brasil, escala 1:2.500.000. "
-                      "Brasília: SGB/CPRM. Disponível em: https://geosgb.sgb.gov.br. Acesso em: {acesso}."),
+                      "Brasília: SGB/CPRM, [20--]. Disponível em: https://geosgb.sgb.gov.br. Acesso em: {acesso}."),
     "drenagem": ("wfs", IBGE_CCAR, "CCAR:BC250_2023_Trecho_Drenagem_L",
                  "IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Base Cartográfica Contínua do Brasil, escala "
                  "1:250.000 – BC250, versão 2023. Rio de Janeiro: IBGE, 2023. Acesso em: {acesso}."),
@@ -72,20 +72,20 @@ CAMADAS = {
                     "IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Base Cartográfica Contínua do Brasil, escala "
                     "1:250.000 – BC250, versão 2023. Rio de Janeiro: IBGE, 2023. Acesso em: {acesso}."),
     "uph": ("ana", ANA + "Unidade_de_Planejamento_Hídrico_UPH/MapServer/0", None,
-            "ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Unidades de Planejamento Hídrico (UPH). Brasília: ANA. "
+            "ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Unidades de Planejamento Hídrico (UPH). Brasília: ANA, [20--]. "
             "Disponível em: https://metadados.snirh.gov.br. Acesso em: {acesso}."),
     "rios_ana": ("ana", ANA + "Hidrografia_nível_5/MapServer/0", None,
                  "ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Base Hidrográfica Ottocodificada – hidrografia nível 5. "
-                 "Brasília: ANA. Disponível em: https://metadados.snirh.gov.br. Acesso em: {acesso}."),
+                 "Brasília: ANA, [20--]. Disponível em: https://metadados.snirh.gov.br. Acesso em: {acesso}."),
     "ucs": ("ana", ANA + "Unidade_de_Conservação/MapServer/0", None,
-            "ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Unidades de Conservação (base MMA/CNUC). Brasília: ANA. "
+            "ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Unidades de Conservação (base MMA/CNUC). Brasília: ANA, [20--]. "
             "Disponível em: https://metadados.snirh.gov.br. Acesso em: {acesso}."),
     "dem": ("dem", None, None,
             "EUROPEAN SPACE AGENCY. Copernicus Global Digital Elevation Model (GLO-30). Distribuído por OpenTopography/AWS, "
             "2021. DOI: 10.5069/G9028PQB. Acesso em: {acesso}."),
     "mapbiomas": ("mapbiomas", None, 2023,
                   "PROJETO MAPBIOMAS. Coleção 9 da Série Anual de Mapas de Cobertura e Uso da Terra do Brasil. "
-                  "Disponível em: https://brasil.mapbiomas.org. Acesso em: {acesso}."),
+                  "[S.l.]: MapBiomas, 2024. Disponível em: https://brasil.mapbiomas.org. Acesso em: {acesso}."),
 }
 
 
@@ -220,6 +220,19 @@ def baixar(cfg, margem_km=5.0, so=None, forcar=False):
     return destino
 
 
+def atualizar_citacoes(cfg):
+    """Reescreve as citações ABNT do FONTES.yaml a partir de CAMADAS (sem baixar de novo)."""
+    arq = cfg["dir"] / "dados" / "oficiais" / "FONTES.yaml"
+    fontes = yaml.safe_load(arq.read_text(encoding="utf-8")) if arq.exists() else {}
+    for nome, (_, _, _, citacao) in CAMADAS.items():
+        if nome in fontes and fontes[nome].get("arquivo"):
+            acesso = fontes[nome].get("acesso")
+            d = dt.date.fromisoformat(acesso) if acesso else HOJE
+            txt = f"{d.day} {['jan.', 'fev.', 'mar.', 'abr.', 'maio', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.'][d.month - 1]} {d.year}"
+            fontes[nome]["citacao"] = citacao.format(acesso=txt)
+    arq.write_text(yaml.safe_dump(fontes, allow_unicode=True, sort_keys=False, width=200), encoding="utf-8")
+
+
 def main():
     console_utf8()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -227,7 +240,12 @@ def main():
     ap.add_argument("--margem-km", type=float, default=5.0)
     ap.add_argument("--so", help="lista separada por vírgula (ex.: solos,dem)")
     ap.add_argument("--forcar", action="store_true")
+    ap.add_argument("--so-citacoes", action="store_true", help="só atualiza as citações ABNT do FONTES.yaml")
     a = ap.parse_args()
+    if a.so_citacoes:
+        atualizar_citacoes(projeto(a.chave))
+        print("Citações atualizadas.")
+        return
     d = baixar(projeto(a.chave), a.margem_km, a.so.split(",") if a.so else None, a.forcar)
     print(f"Bases em {d}")
 

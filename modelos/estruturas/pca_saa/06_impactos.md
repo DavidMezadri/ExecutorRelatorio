@@ -5,6 +5,8 @@
 
 O @qua:impactos apresenta os principais impactos ambientais associados às fases de implantação e operação do empreendimento e as respectivas medidas mitigadoras, de controle ou compensatórias. [A VERIFICAR: validar a matriz frente às características do empreendimento.]
 
+{{auto.impactos_especificos}}
+
 ::: quadro {#qua:impactos fonte="Elaborado pelo autor, {{ano}}."} Impactos ambientais e medidas mitigadoras ou compensatórias
 | Fase | Impacto | Natureza | Medidas mitigadoras / compensatórias |
 |---|---|---|---|

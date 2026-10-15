@@ -525,6 +525,22 @@ def carregar_ficha(dir_proj: Path) -> dict:
     dossie = dir_proj / "dados" / "dossie.yaml"  # {{dossie.<bloco>.<campo>}} (ferramentas.dossie.gerar)
     if dossie.exists():
         ficha.setdefault("dossie", yaml.safe_load(dossie.read_text(encoding="utf-8")))
+    # dados fixos da equipe (dados_comuns/equipe.yaml) preenchem o que estiver vazio no projeto
+    equipe = ficha.get("equipe") or {}
+    rt = ficha.setdefault("responsavel_tecnico", {}) or {}
+    for k, v in (equipe.get("responsavel_tecnico") or {}).items():
+        if rt.get(k) in (None, "") and v not in (None, ""):
+            rt[k] = v
+    ficha["responsavel_tecnico"] = rt
+    emp = ficha.setdefault("empreendedor", {}) or {}
+    rep = equipe.get("representante_sanepar") or {}
+    for k_emp, k_rep in (("responsavel", "nome"), ("telefone", "telefone"), ("email", "email")):
+        if emp.get(k_emp) in (None, "") and rep.get(k_rep):
+            emp[k_emp] = rep[k_rep]
+    ficha["empreendedor"] = emp
+    redacao = dir_proj / "dados" / "redacao.yaml"  # {{auto.<bloco>}} (ferramentas.redacao.redator)
+    if redacao.exists():
+        ficha.setdefault("auto", yaml.safe_load(redacao.read_text(encoding="utf-8")))
     ficha.setdefault("ano", ANO)
     ficha.setdefault("hoje", dt.date.today().strftime("%d/%m/%Y"))
     return ficha

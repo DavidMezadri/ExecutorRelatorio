@@ -54,13 +54,13 @@ O município dista aproximadamente {{dossie.acesso.distancia_capital_km|num:0}} 
 
 <!-- Mapa de solos (fase 3: Embrapa/IAT). Descrever as classes que ocorrem na área (SiBCS/Embrapa),
      seguindo o padrão do modelo: características, limitações, suscetibilidade à erosão. -->
-[A VERIFICAR: classes de solo que ocorrem na área do empreendimento e respectiva caracterização (EMBRAPA, 2021).]
+{{auto.pedologia}}
 
 ![Mapa de solos da área do empreendimento](mapas/solos.png){#fig:solos fonte="Embrapa; IAT; elaborado pelo autor, {{ano}}."}
 
 #### Uso do Solo
 
-[A VERIFICAR: usos do solo atravessados pelo empreendimento (pastagem, floresta nativa, área urbana, silvicultura...).] O uso do solo na área do empreendimento é apresentado na @fig:uso-solo.
+{{auto.uso_solo}} O uso do solo na área do empreendimento é apresentado na @fig:uso-solo.
 
 ![Uso do solo na área do empreendimento](mapas/uso_solo.png){#fig:uso-solo fonte="MapBiomas, Coleção 9; elaborado pelo autor, {{ano}}."}
 
@@ -68,7 +68,7 @@ O município dista aproximadamente {{dossie.acesso.distancia_capital_km|num:0}} 
 
 O território paranaense é constituído por três grandes unidades morfoestruturais: o Cinturão Orogênico do Atlântico, a Bacia Sedimentar do Paraná, que se estende pela porção central e ocidental do Estado, e as Bacias Sedimentares Cenozóicas e Depressões Tectônicas. Na sua configuração, predomina o relevo de planalto, sendo reconhecidos cinco compartimentos geomorfológicos (grandes unidades morfoesculturais): Litoral, Serra do Mar, Primeiro Planalto, Segundo Planalto e Terceiro Planalto Paranaense (MAACK, 1968).
 
-[A VERIFICAR: compartimento e subunidade morfoescultural onde o empreendimento se insere, altitudes, grau de dissecação, formas de topo/vertente/vale (MINEROPAR/UFPR, 2006).]
+{{auto.geomorfologia}}
 
 ![Geomorfologia da área do empreendimento](mapas/geomorfologia.png){#fig:geomorfologia fonte="MINEROPAR/UFPR, 2006; elaborado pelo autor, {{ano}}."}
 
@@ -88,17 +88,19 @@ O município de {{municipio}}, onde se insere o empreendimento, está compreendi
 
 No âmbito local, o corpo receptor do efluente tratado é o {{corpo_receptor.nome}}, enquadrado na {{corpo_receptor.classe}}. [A VERIFICAR: vazão de referência do corpo receptor e cursos d'água interceptados pelas unidades lineares.]
 
+{{auto.hidrologia}}
+
 ![Bacia hidrográfica do empreendimento](mapas/bacia.png){#fig:bacia fonte="ANA; IAT; elaborado pelo autor, {{ano}}."}
 
 ### Geologia
 
-[A VERIFICAR: unidade geológica (Bacia Sedimentar do Paraná / Grupo Serra Geral / Escudo), formações aflorantes na área e feições relevantes (geossítios), com base em SGB/CPRM e IAT.]
+{{auto.geologia}}
 
 ![Geologia das áreas do empreendimento](mapas/geologia.png){#fig:geologia fonte="SGB/CPRM; elaborado pelo autor, {{ano}}."}
 
 ### Hidrogeologia
 
-[A VERIFICAR: sistema aquífero onde se insere o empreendimento e características (MENDES et al., 2002).]
+{{auto.hidrogeologia}}
 
 ![Hidrogeologia das áreas do empreendimento](mapas/hidrogeologia.png){#fig:hidrogeologia fonte="SGB/CPRM; elaborado pelo autor, {{ano}}."}
 
@@ -106,7 +108,7 @@ No âmbito local, o corpo receptor do efluente tratado é o {{corpo_receptor.nom
 
 <!-- IN 37: cobertura vegetal. Enquadramento fitogeográfico (IBGE, 2012; IAT, 2023), aspectos de campo,
      espécies registradas (do Inventário Florestal, se houver), fotos. -->
-[A VERIFICAR: enquadramento fitogeográfico da região (Floresta Ombrófila Mista / Estepe / Floresta Estacional) e aspectos da cobertura vegetal observados em campo.]
+{{auto.fitogeografia}}
 
 ![Enquadramento fitogeográfico da área do empreendimento](mapas/fitogeografia.png){#fig:fitogeografia fonte="Adaptado de IAT, 2023."}
 
@@ -115,6 +117,8 @@ No âmbito local, o corpo receptor do efluente tratado é o {{corpo_receptor.nom
 As áreas com vegetação nativa existentes no entorno do empreendimento desempenham importante função ecológica, atuando como corredores ecológicos que favorecem o deslocamento da fauna, promovem o fluxo gênico entre populações, contribuem para a conservação da biodiversidade, a proteção dos recursos hídricos, a estabilidade geológica, a conservação do solo e a manutenção da paisagem.
 
 A delimitação das Áreas de Preservação Permanente (APP) e da Reserva Legal foi realizada com base nas informações constantes no Cadastro Ambiental Rural (SICAR) e nos critérios da Lei nº 12.651/2012, sendo apresentada na @fig:app. [A VERIFICAR: ocorrência de Reserva Legal nos imóveis afetados, conforme CAR/SICAR – colocar os arquivos do CAR em dados/car/ e regenerar o mapa.]
+
+{{auto.app}}
 
 ::: paisagem
 ![Reservas Legais e Áreas de Preservação Permanente do empreendimento](mapas/app_rl.png){#fig:app fonte="SICAR; IAT; elaborado pelo autor, {{ano}}."}
@@ -127,4 +131,4 @@ A delimitação das Áreas de Preservação Permanente (APP) e da Reserva Legal 
 <!-- IN 37: características do entorno (uso do solo, residências, áreas de interesse ambiental).
      Padrão do modelo: percorrer o traçado do início ao fim descrevendo propriedades, estradas,
      residências, escolas, igrejas, com fotos de campo. -->
-[A VERIFICAR: descrição do entorno ao longo do traçado, com registros fotográficos.]
+{{auto.entorno}}

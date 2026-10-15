@@ -17,7 +17,7 @@ Segundo o Censo Demográfico 2022, {{dossie.saneamento.esgoto_rede_pct|num:1}}% 
 
 A implantação do empreendimento demandará as seguintes intervenções:
 
-- Supressão de vegetação: [A VERIFICAR: área (ha), tipologia e se há intervenção em APP];
+- Supressão de vegetação: {{auto.supressao}};
 - Desapropriação/servidão: {{imoveis_terceiros}};
 - [A VERIFICAR: escavações de valas, travessias de cursos d'água, acessos e interligações].
 

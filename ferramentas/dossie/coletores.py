@@ -339,6 +339,55 @@ def territorios(ctx, raio_km=10, busca_km=50):
     return {"titulo": "Territórios protegidos", "dados": dados, "linhas": linhas, "fontes": fontes, "pendencias": pend}
 
 
+def hidrologia(ctx):
+    """Rio nomeado mais próximo das unidades-chave (captação/ETE), bacia (UPH ANA) e classe por regra da CONAMA 357."""
+    of = ctx["cfg"]["dir"] / "dados" / "oficiais"
+    u = ctx["unidades_utm"]
+    chave = u[u["nome"].str.contains(r"capta|ETE|ETA", case=False, regex=True)]
+    alvo = chave if len(chave) else u
+    rios = []
+    for arq, campo in ((of / "rios_ana.gpkg", "NORIOCOMP"), (of / "drenagem.gpkg", "nome")):
+        if arq.exists():
+            g = gpd.read_file(arq).to_crs(u.crs)
+            g = g[g[campo].notna() & (g[campo].astype(str).str.strip() != "")]
+            rios += [(str(r[campo]).strip(), r.geometry, arq.stem) for _, r in g.iterrows()]
+    dados, linhas = {"por_unidade": {}}, []
+    for _, row in alvo.iterrows():
+        if not rios:
+            break
+        nome, geom, fonte = min(rios, key=lambda r: r[1].distance(row.geometry))
+        d = round(geom.distance(row.geometry))
+        dados["por_unidade"][row["nome"]] = {"rio_mais_proximo": nome, "distancia_m": d, "base": fonte}
+        linhas.append(f"- {row['nome']}: rio nomeado mais próximo **{nome}** a {d:,} m ({'ANA' if 'ana' in fonte else 'IBGE BC250'})".replace(",", "."))
+    nomes = sorted({v["rio_mais_proximo"] for v in dados["por_unidade"].values()})
+    dados["rio_principal"] = nomes[0] if len(nomes) == 1 else None
+    uph = of / "uph.gpkg"
+    if uph.exists():
+        g = gpd.read_file(uph).to_crs(u.crs)
+        g["a"] = g.geometry.intersection(u.geometry.buffer(15).union_all()).area
+        top = g.sort_values("a", ascending=False).iloc[0]
+        dados["uph"] = str(top.get("UPH_SG"))
+        linhas.append(f"- Unidade de Planejamento Hídrico (ANA): {dados['uph']}")
+    rios_ana = of / "rios_ana.gpkg"
+    if rios_ana.exists():
+        g = gpd.read_file(rios_ana).to_crs(u.crs)
+        if "COBACIA" in g:
+            i = g.distance(alvo.geometry.union_all()).idxmin()
+            dados["ottobacia"] = str(g.loc[i, "COBACIA"])
+            linhas.append(f"- Ottobacia (código ANA) do curso d'água mais próximo: {dados['ottobacia']}")
+    dados["classe_sugerida"] = "Classe 2"
+    linhas.append("- Classe do corpo hídrico: **Classe 2** por regra geral (Resolução CONAMA nº 357/2005, art. 42: enquanto "
+                  "não aprovado o enquadramento, as águas doces são consideradas classe 2, salvo se as condições de "
+                  "qualidade atuais forem melhores)")
+    abnt = ("BRASIL. Conselho Nacional do Meio Ambiente. Resolução CONAMA nº 357, de 17 de março de 2005. Dispõe sobre a "
+            "classificação dos corpos de água e diretrizes ambientais para o seu enquadramento, bem como estabelece as "
+            "condições e padrões de lançamento de efluentes, e dá outras providências. Brasília, DF, 2005.")
+    fontes = [biblio.registrar("conama-357-2005", abnt, "lei", None, "BRASIL, 2005", verificado=False)]
+    return {"titulo": "Hidrologia (manancial / corpo receptor)", "dados": dados, "linhas": linhas, "fontes": fontes,
+            "pendencias": ["Confirmar com a Sanepar/outorga o nome do manancial ou corpo receptor (o rio mais próximo é só candidato).",
+                           "Verificar no IAT se há enquadramento específico do curso d'água (Portarias SUREHMA/IAP por bacia)."]}
+
+
 def consultas_manuais(ctx):
     mun = ctx["cfg"]["municipio"]
     itens = {
@@ -357,5 +406,5 @@ def consultas_manuais(ctx):
 
 COLETORES = {  # ordem padrão do dossiê – igual para toda localidade
     "socioeconomia": socioeconomia, "saneamento": saneamento, "clima": clima, "acesso": acesso,
-    "entorno": entorno, "territorios": territorios, "consultas_manuais": consultas_manuais,
+    "entorno": entorno, "territorios": territorios, "hidrologia": hidrologia, "consultas_manuais": consultas_manuais,
 }
