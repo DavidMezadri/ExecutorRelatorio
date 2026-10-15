@@ -43,6 +43,9 @@ python -m ferramentas.geo.mapas <chave> [--so solos] # 12 mapas PNG (leiaute com
 python -m ferramentas.imagens.fotos <chave>          # fotos/brutas -> fotos/ (EXIF/GPS, unidade, contato, mapa)
 python -m ferramentas.imagens.web "termo" --projeto <chave>   # Wikimedia Commons, só licença livre
 python -m ferramentas.conferencia.matriz <chave>    # matriz de atendimento ao TR (xlsx)
+python -m ferramentas.geo.google_earth exportar <chave>   # KMZ p/ Google Earth Pro: unidades, vistas p/ figuras, APP, travessias, fotos
+python -m ferramentas.geo.google_earth importar <chave> ARQ.kmz [--pasta X]   # pontos marcados no GE -> dados/pontos_ge.xlsx
+python -m ferramentas.geo.google_earth importar <chave> --meus-lugares        # lê o "Meus lugares" do GE Pro
 python-qgis.bat ferramentas\geo\qgis_projeto.py projetos\<chave>   # projeto .qgz (PC com QGIS; não testado)
 ```
 Serviços sem acesso automático: CAR/SICAR (baixar shapes manualmente → `dados/car/`); UCs vêm da ANA.

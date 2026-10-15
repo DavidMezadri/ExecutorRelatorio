@@ -3,7 +3,8 @@
 Uso:
     python -m ferramentas.pipeline candoi [--de mapas] [--ate montar] [--sem-word] [--refazer-ficha]
 
-Etapas: iniciar -> oficiais -> tematico -> mapas -> esqueleto -> montar -> finalizar -> matriz
+Etapas: iniciar -> oficiais -> tematico -> mapas -> kmz -> esqueleto -> montar -> finalizar -> matriz
+(kmz = saida/<chave>_google_earth.kmz para conferir no Google Earth Pro e salvar as vistas como figuras)
 - iniciar não sobrescreve projeto.yaml (use --refazer-ficha para recriar)
 - esqueleto não sobrescreve textos já existentes
 - finalizar precisa do Word (Windows); --sem-word pula
@@ -21,6 +22,7 @@ ETAPAS = {
     "oficiais": ["ferramentas.fontes.oficiais"],
     "tematico": ["ferramentas.geo.tematico"],
     "mapas": ["ferramentas.geo.mapas"],
+    "kmz": ["ferramentas.geo.google_earth", "exportar"],
     "esqueleto": ["ferramentas.docx.esqueleto"],
     "montar": ["ferramentas.docx.montar"],
     "finalizar": ["ferramentas.docx.finalizar"],

@@ -30,6 +30,10 @@ valor num comentário YAML (`# fonte: memorial descritivo p. 12`).
 - Fotos: se houver `fotos/brutas/`, rodar `python -m ferramentas.imagens.fotos <chave>`, ver as folhas
   `fotos/contato_*.png` (Read) e escrever legendas reais nas diretivas de `fotos/FOTOS.md` antes de usá-las.
 - Usar as fontes de `mapas/MAPAS.md` no `fonte=` de cada figura de mapa.
+- Google Earth: `saida/<chave>_google_earth.kmz` traz vistas prontas; se existirem `imagens/ge_*.jpg`
+  (salvas pela equipe, ver `saida/GE_VISTAS.md`), usá-las nas figuras de localização de cada unidade com
+  `fonte="Google Earth Pro, adaptado pelo autor, ANO."`. Pontos marcados pela equipe no GE entram com
+  `google_earth importar` e viram `dados/pontos_ge.xlsx` (travessias, acessos etc. com UTM).
 - Sintaxe dos textos: ver CLAUDE.md.
 
 ## 4. Montar, finalizar e conferir
