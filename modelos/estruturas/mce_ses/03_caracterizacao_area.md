@@ -44,7 +44,7 @@ O Paraná está inserido na Região Sul do território brasileiro, fazendo divis
 
 O município de {{municipio}} está localizado na mesorregião {{municipio_info.mesorregiao}}, na Região Geográfica Imediata de {{municipio_info.regiao_imediata}}. Possui área territorial de aproximadamente {{municipio_info.area_km2|num:0}} km² e população de {{municipio_info.populacao_2022|num:0}} habitantes (IBGE, 2022). Faz divisa com os municípios de {{municipio_info.limitrofes|lista}}.
 
-[A VERIFICAR: rodovias de acesso ao município, distância de Curitiba e condições de tráfego.]
+O município dista aproximadamente {{dossie.acesso.distancia_capital_km|num:0}} km de Curitiba por via rodoviária (OSRM, 2026), sendo servido, na região do empreendimento, pelas rodovias {{dossie.acesso.rodovias_15km|lista}} (OPENSTREETMAP, 2026). [A VERIFICAR: rodovia de acesso principal e condições de tráfego/pavimentação até as unidades.]
 
 [A VERIFICAR: alternativas de acesso a cada unidade (urbana e rural), com figuras.]
 

@@ -12,6 +12,14 @@ abnt-nbr-12209-2011:
   acesso: '2026-10-15'
   citacao: ABNT, 2011
   verificado: false
+alvares-2013-koppen:
+  tipo: artigo
+  abnt: 'ALVARES, Clayton Alcarde et al. Köppen''s climate classification map for Brazil. Meteorologische Zeitschrift, v. 22, n. 6, p. 711-728, 2013. DOI: 10.1127/0941-2948/2013/0507. Disponível em: https://doi.org/10.1127/0941-2948/2013/0507.
+    Acesso em: 15 out. 2026.'
+  url: https://doi.org/10.1127/0941-2948/2013/0507
+  acesso: '2026-10-15'
+  citacao: ALVARES et al., 2013
+  verificado: true
 brasil-portaria-mma-148-2022:
   tipo: lei
   abnt: 'BRASIL. Ministério do Meio Ambiente. Portaria MMA nº 148, de 7 de junho de 2022. Altera os Anexos da Portaria nº 443, de 17 de dezembro de 2014, da Portaria nº 444, de 17 de dezembro de 2014, e
@@ -61,6 +69,13 @@ flora-e-funga-do-brasil:
   acesso: '2026-10-15'
   citacao: FLORA E FUNGA DO BRASIL, 2026
   verificado: true
+funai-tis:
+  tipo: base
+  abnt: 'FUNAI – FUNDAÇÃO NACIONAL DOS POVOS INDÍGENAS. Terras indígenas (polígonos): serviço WFS. Brasília, DF: FUNAI. Disponível em: https://geoserver.funai.gov.br. Acesso em: 15 out. 2026.'
+  url: https://geoserver.funai.gov.br
+  acesso: '2026-10-15'
+  citacao: FUNAI, 2026
+  verificado: true
 gbif-candoi-animais:
   tipo: base
   abnt: 'GBIF.ORG. GBIF Occurrence Search: ocorrências de Animalia em raio de 10 km do empreendimento em Candói/PR. Copenhague: GBIF Secretariat, 2026. Disponível em: https://www.gbif.org/occurrence/search.
@@ -101,6 +116,38 @@ ibge-2023-censo:
   acesso: '2026-10-15'
   citacao: IBGE, 2022
   verificado: true
+ibge-sidra-5938:
+  tipo: base
+  abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Produto Interno Bruto dos Municípios. Tabela 5938. Rio de Janeiro: IBGE, 2025. Disponível em: https://sidra.ibge.gov.br/tabela/5938. Acesso
+    em: 15 out. 2026.'
+  url: https://sidra.ibge.gov.br/tabela/5938
+  acesso: '2026-10-15'
+  citacao: IBGE, 2025
+  verificado: true
+ibge-sidra-6803:
+  tipo: base
+  abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Censo Demográfico 2022. Tabela 6803: Domicílios particulares permanentes ocupados, por existência de ligação à rede geral de distribuição
+    de água e principal forma de abastecimento de água. Rio de Janeiro: IBGE, 2023. Disponível em: https://sidra.ibge.gov.br/tabela/6803. Acesso em: 15 out. 2026.'
+  url: https://sidra.ibge.gov.br/tabela/6803
+  acesso: '2026-10-15'
+  citacao: IBGE, 2023
+  verificado: true
+ibge-sidra-6805:
+  tipo: base
+  abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Censo Demográfico 2022. Tabela 6805: Domicílios particulares permanentes ocupados, por tipo de esgotamento sanitário. Rio de Janeiro: IBGE,
+    2023. Disponível em: https://sidra.ibge.gov.br/tabela/6805. Acesso em: 15 out. 2026.'
+  url: https://sidra.ibge.gov.br/tabela/6805
+  acesso: '2026-10-15'
+  citacao: IBGE, 2023
+  verificado: true
+ibge-sidra-6892:
+  tipo: base
+  abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Censo Demográfico 2022. Tabela 6892: Domicílios particulares permanentes ocupados, por destino do lixo. Rio de Janeiro: IBGE, 2023. Disponível
+    em: https://sidra.ibge.gov.br/tabela/6892. Acesso em: 15 out. 2026.'
+  url: https://sidra.ibge.gov.br/tabela/6892
+  acesso: '2026-10-15'
+  citacao: IBGE, 2023
+  verificado: true
 iucn-red-list:
   tipo: base
   abnt: 'IUCN. The IUCN Red List of Threatened Species. Disponível em: https://www.iucnredlist.org. Acesso em: 15 out. 2026.'
@@ -122,6 +169,30 @@ mendes-2002:
   url: null
   acesso: '2026-10-15'
   citacao: MENDES et al., 2002
+  verificado: true
+ms-cnes:
+  tipo: base
+  abnt: 'BRASIL. Ministério da Saúde. Cadastro Nacional de Estabelecimentos de Saúde (CNES): API de dados abertos. Brasília, DF: Ministério da Saúde. Disponível em: https://apidadosabertos.saude.gov.br.
+    Acesso em: 15 out. 2026.'
+  url: https://apidadosabertos.saude.gov.br
+  acesso: '2026-10-15'
+  citacao: BRASIL, 2026
+  verificado: true
+nasa-power-candoi:
+  tipo: base
+  abnt: 'NASA – NATIONAL AERONAUTICS AND SPACE ADMINISTRATION. Prediction Of Worldwide Energy Resources (POWER): climatologia mensal (1991-2020) no ponto -25.5399, -52.1045. Hampton: NASA Langley Research
+    Center. Disponível em: https://power.larc.nasa.gov. Acesso em: 15 out. 2026.'
+  url: https://power.larc.nasa.gov
+  acesso: '2026-10-15'
+  citacao: NASA, 2026
+  verificado: true
+nasa-power-sao-joao-do-triunfo:
+  tipo: base
+  abnt: 'NASA – NATIONAL AERONAUTICS AND SPACE ADMINISTRATION. Prediction Of Worldwide Energy Resources (POWER): climatologia mensal (1991-2020) no ponto -25.6777, -50.2882. Hampton: NASA Langley Research
+    Center. Disponível em: https://power.larc.nasa.gov. Acesso em: 15 out. 2026.'
+  url: https://power.larc.nasa.gov
+  acesso: '2026-10-15'
+  citacao: NASA, 2026
   verificado: true
 norma-decreto-6660-2008:
   tipo: lei
@@ -267,6 +338,20 @@ oka-fiori-2006:
   url: null
   acesso: '2026-10-15'
   citacao: MINEROPAR/UFPR, 2006
+  verificado: true
+openstreetmap:
+  tipo: base
+  abnt: 'OPENSTREETMAP CONTRIBUTORS. OpenStreetMap. Cambridge: OpenStreetMap Foundation, 2026. Disponível em: https://www.openstreetmap.org. Acesso em: 15 out. 2026.'
+  url: https://www.openstreetmap.org
+  acesso: '2026-10-15'
+  citacao: OPENSTREETMAP, 2026
+  verificado: true
+osrm:
+  tipo: base
+  abnt: 'OSRM – OPEN SOURCE ROUTING MACHINE. Rota rodoviária entre o empreendimento e Curitiba/PR. [S.l.]: Project OSRM, 2026. Disponível em: https://project-osrm.org. Acesso em: 15 out. 2026.'
+  url: https://project-osrm.org
+  acesso: '2026-10-15'
+  citacao: OSRM, 2026
   verificado: true
 web-pr-geologia-do-parana-historia-evolutiva:
   tipo: web

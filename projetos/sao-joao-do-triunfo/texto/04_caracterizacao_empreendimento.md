@@ -13,7 +13,7 @@ O empreendimento consiste na [A VERIFICAR: implantação/ampliação] do sistema
 <!-- Contexto: índice de atendimento atual, problema, concepção do sistema. Intervenções: supressão de
      vegetação (ha, APP?), desapropriações/servidões (matrículas), escavações de valas, travessias,
      acessos à ETE. Usar dados/RESUMO_TEMATICO.md para extensão em APP e travessias. -->
-[A VERIFICAR: contexto do sistema existente (índice de atendimento) e concepção do sistema projetado.]
+Segundo o Censo Demográfico 2022, {{dossie.saneamento.esgoto_rede_pct|num:1}}% dos domicílios particulares permanentes de {{municipio}} estão ligados à rede geral ou pluvial de esgoto, enquanto {{dossie.saneamento.esgoto_fossa_rudimentar_pct|num:1}}% utilizam fossa rudimentar ou buraco (IBGE, 2023), o que evidencia a demanda pelo sistema de esgotamento sanitário. [A VERIFICAR: índice de atendimento atual da Sanepar e concepção do sistema projetado.]
 
 A implantação do empreendimento demandará as seguintes intervenções:
 

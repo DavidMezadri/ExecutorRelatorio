@@ -13,7 +13,7 @@ O empreendimento consiste na [A VERIFICAR: implantação/ampliação] do sistema
 <!-- Contexto do sistema existente (capacidade, déficit, problema) + concepção do novo sistema.
      Intervenções: supressão de vegetação (ha, se em APP), desapropriação/servidão (matrículas – IN 37 III),
      escavações, travessias, estradas de acesso, interligações. -->
-[A VERIFICAR: contexto do sistema existente e concepção do sistema projetado.]
+Segundo o Censo Demográfico 2022, {{dossie.saneamento.agua_rede_pct|num:1}}% dos domicílios particulares permanentes de {{municipio}} têm na rede geral de distribuição a forma principal de abastecimento de água (IBGE, 2023). [A VERIFICAR: contexto do sistema existente (capacidade, déficit) e concepção do sistema projetado.]
 
 A implantação do empreendimento demandará as seguintes intervenções:
 

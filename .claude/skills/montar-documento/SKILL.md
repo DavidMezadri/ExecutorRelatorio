@@ -12,7 +12,7 @@ Se o empreendimento não estiver cadastrado, use a skill `novo-projeto` antes.
 ```
 python -m ferramentas.pipeline <chave> --ate esqueleto
 ```
-Gera: `dados/` (coordenadas, unidades, bases oficiais, RESUMO_TEMATICO.md), `mapas/*.png` + `MAPAS.md`,
+Gera: `dados/` (coordenadas, unidades, bases oficiais, RESUMO_TEMATICO.md, **DOSSIE.md** da localidade), `mapas/*.png` + `MAPAS.md`,
 `extraido/*.md` (planilhas e PDFs do cliente) e `texto/*.md` (só cria os que não existem).
 
 ## 2. Preencher a ficha `projetos/<chave>/projeto.yaml`
@@ -22,6 +22,9 @@ valor num comentário YAML (`# fonte: memorial descritivo p. 12`).
 
 ## 3. Redigir `texto/*.md`
 - Ler `referencias/modelo_mce_saa_palmeira.md` para imitar o estilo (técnico, impessoal, frases completas).
+- `dados/DOSSIE.md`: socioeconomia, saneamento do Censo 2022, clima, acessos, entorno por unidade (escolas, igrejas,
+  saúde), terras indígenas – usar com a citação indicada em "Citar como"; itens de "Consultas manuais" ficam como
+  pendência para o usuário.
 - Substituir cada `[A VERIFICAR: ...]` por texto com fonte, usando: `dados/RESUMO_TEMATICO.md` (solos, geologia,
   geomorfologia, vegetação, uso do solo, declividade, altitude, APP, travessias por unidade), `dados/oficiais/FONTES.yaml`
   (citações ABNT → acrescentar em Referências), `extraido/*.md` e o `projeto.yaml`.

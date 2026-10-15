@@ -23,7 +23,16 @@ def obter(url, params=None, json=False, cache_horas=24 * 7, timeout=90, cabecalh
     if arq.exists() and time.time() - arq.stat().st_mtime < cache_horas * 3600:
         dados = arq.read_bytes()
     else:
-        r = requests.get(url, params=params, headers=cabecalhos or (API if json else NAVEGADOR), timeout=timeout)
+        cab = cabecalhos or (API if json else NAVEGADOR)
+        try:
+            r = requests.get(url, params=params, headers=cab, timeout=timeout)
+        except requests.exceptions.SSLError:
+            # alguns servidores públicos (IBGE, FUNAI) às vezes têm a cadeia de certificados incompleta;
+            # para LEITURA de dado público refaz sem verificar e avisa.
+            import urllib3
+            urllib3.disable_warnings()
+            print(f"  (aviso: certificado SSL inválido em {url.split('/')[2]}; leitura sem verificação)")
+            r = requests.get(url, params=params, headers=cab, timeout=timeout, verify=False)
         r.raise_for_status()
         dados = r.content
         CACHE.mkdir(parents=True, exist_ok=True)

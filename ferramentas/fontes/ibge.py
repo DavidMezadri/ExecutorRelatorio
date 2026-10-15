@@ -13,6 +13,7 @@ import geopandas as gpd
 import requests
 
 from ferramentas.util import console_utf8, slug, RAIZ
+from ferramentas.garimpo import web  # GET com cache e tolerância a certificado SSL inválido
 
 CACHE = RAIZ / "dados_comuns" / "cache"
 UF_COD = {"PR": 41, "SC": 42, "RS": 43, "SP": 35}
@@ -24,7 +25,7 @@ def municipios(uf="PR") -> list[dict]:
     if not arq.exists():
         CACHE.mkdir(parents=True, exist_ok=True)
         url = f"https://servicodados.ibge.gov.br/api/v1/localidades/estados/{uf}/municipios"
-        arq.write_text(requests.get(url, timeout=TIMEOUT).text, encoding="utf-8")
+        arq.write_text(web.obter(url, cache_horas=0), encoding="utf-8")
     return json.loads(arq.read_text(encoding="utf-8"))
 
 
@@ -40,7 +41,7 @@ def malha_municipal(uf="PR") -> gpd.GeoDataFrame:
         CACHE.mkdir(parents=True, exist_ok=True)
         url = (f"https://servicodados.ibge.gov.br/api/v3/malhas/estados/{UF_COD[uf]}"
                "?formato=application/vnd.geo+json&intrarregiao=municipio&qualidade=intermediaria")
-        arq.write_text(requests.get(url, timeout=TIMEOUT).text, encoding="utf-8")
+        arq.write_text(web.obter(url, cache_horas=0), encoding="utf-8")
     g = gpd.read_file(arq)
     if g.crs is None:
         g = g.set_crs("EPSG:4674")
@@ -52,7 +53,7 @@ def malha_municipal(uf="PR") -> gpd.GeoDataFrame:
 
 def censo2022(cod: int) -> dict:
     url = f"https://apisidra.ibge.gov.br/values/t/4714/n6/{cod}/v/93,6318,614/p/2022"
-    dados = requests.get(url, timeout=TIMEOUT).json()[1:]
+    dados = web.obter(url, json=True, cache_horas=24 * 30)[1:]
     out = {}
     for x in dados:
         v = x["V"]

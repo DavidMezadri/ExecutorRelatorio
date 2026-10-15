@@ -105,12 +105,25 @@ def wfs(endpoint, camada, bb) -> gpd.GeoDataFrame:
     x0, y0, x1, y1 = bb
     params = {"service": "WFS", "version": "1.1.0", "request": "GetFeature", "typeName": camada,
               "outputFormat": "application/json", "bbox": f"{y0},{x0},{y1},{x1},urn:ogc:def:crs:EPSG:4674"}
-    r = requests.get(endpoint, params=params, timeout=TIMEOUT)
-    r.raise_for_status()
+    r = _get(endpoint, params)
     g = gpd.read_file(io.BytesIO(r.content))
     if g.crs is None:
         g = g.set_crs("EPSG:4674")
     return g
+
+
+def _get(url, params):
+    """GET com tolerância a certificado SSL inválido (servidores públicos com cadeia incompleta)."""
+    from ferramentas.garimpo.web import NAVEGADOR  # alguns geoservers (FUNAI) bloqueiam clientes sem cabeçalho de navegador
+    try:
+        r = requests.get(url, params=params, timeout=TIMEOUT, headers=NAVEGADOR)
+    except requests.exceptions.SSLError:
+        import urllib3
+        urllib3.disable_warnings()
+        print(f"  (aviso: certificado SSL inválido em {url.split('/')[2]}; leitura sem verificação)")
+        r = requests.get(url, params=params, timeout=TIMEOUT, verify=False, headers=NAVEGADOR)
+    r.raise_for_status()
+    return r
 
 
 def ana(url_camada, bb) -> gpd.GeoDataFrame:

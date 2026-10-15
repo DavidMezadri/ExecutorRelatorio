@@ -50,6 +50,16 @@ python-qgis.bat ferramentas\geo\qgis_projeto.py projetos\<chave>   # projeto .qg
 ```
 Serviços sem acesso automático: CAR/SICAR (baixar shapes manualmente → `dados/car/`); UCs vêm da ANA.
 
+## Dossiê padrão da localidade (igual para todo município)
+`python -m ferramentas.dossie.gerar <chave> [--so bloco]` (também é etapa `dossie` do pipeline). Blocos fixos:
+socioeconomia (IBGE: população, área, regiões, limítrofes, PIB), saneamento (Censo 2022 tabelas 6803/6805/6892: água,
+esgoto, lixo), clima (NASA POWER + Köppen calculado), acesso (OSRM até Curitiba + rodovias OSM), entorno (OSM por
+unidade: escolas, igrejas, saúde, comércio, edificações + CNES), territórios (FUNAI terras indígenas, UCs) e
+consultas manuais (IPHAN, INCRA/Palmares, Plano Diretor, PMSB, CAR → viram pendências com link).
+-> `dados/DOSSIE.md` (com "Citar como") e `dados/dossie.yaml` = variáveis `{{dossie.saneamento.esgoto_rede_pct|num:1}}`,
+`{{dossie.acesso.distancia_capital_km}}`, `{{dossie.clima.koppen}}`... Referências entram sozinhas no catálogo do projeto.
+Para incluir um novo dado padrão em todo município: novo coletor em `ferramentas/dossie/coletores.py` + `COLETORES`.
+
 ## Áudios de campo (transcrição local, Whisper)
 Áudios em `projetos/<chave>/audios/AAAA-MM-DD/` (m4a, mp3, ogg/opus do WhatsApp, wav...). Skill `audio-campo`.
 ```

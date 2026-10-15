@@ -522,6 +522,9 @@ def carregar_ficha(dir_proj: Path) -> dict:
     ficha = yaml.safe_load(f.read_text(encoding="utf-8")) if f.exists() else {}
     for comum in sorted((RAIZ / "dados_comuns").glob("*.yaml")):
         ficha.setdefault(comum.stem, yaml.safe_load(comum.read_text(encoding="utf-8")))
+    dossie = dir_proj / "dados" / "dossie.yaml"  # {{dossie.<bloco>.<campo>}} (ferramentas.dossie.gerar)
+    if dossie.exists():
+        ficha.setdefault("dossie", yaml.safe_load(dossie.read_text(encoding="utf-8")))
     ficha.setdefault("ano", ANO)
     ficha.setdefault("hoje", dt.date.today().strftime("%d/%m/%Y"))
     return ficha
