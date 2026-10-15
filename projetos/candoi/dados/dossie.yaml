@@ -1,0 +1,259 @@
+socioeconomia:
+  populacao_2022: 14973
+  area_km2: 1512.79
+  densidade_hab_km2: 9.9
+  mesorregiao: Centro-Sul Paranaense
+  microrregiao: Guarapuava
+  regiao_imediata: Guarapuava
+  regiao_intermediaria: Guarapuava
+  limitrofes:
+  - Cantagalo
+  - Chopinzinho
+  - Foz do Jordão
+  - Guarapuava
+  - Pinhão
+  - Porto Barreiro
+  - Virmond
+  pib_mil_rs: 901449.0
+  pib_ano: 2023
+  pib_per_capita_rs: null
+saneamento:
+  agua:
+    domicilios: 5317
+    distribuicao_pct:
+      Possui ligação à rede geral e a utiliza como forma principal: 60.3
+      Possui ligação à rede geral, mas utiliza principalmente outra forma: 2.8
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço profundo ou artesiano: 1.1
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço raso, freático ou cacimba: 0.3
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Fonte, nascente ou mina: 1.4
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Outra: 0.0
+      Não possui ligação com a rede geral: 36.9
+      Não possui ligação com a rede geral - Poço profundo ou artesiano: 6.3
+      Não possui ligação com a rede geral - Poço raso, freático ou cacimba: 4.8
+      Não possui ligação com a rede geral - Fonte, nascente ou mina: 25.7
+      Não possui ligação com a rede geral - Rios, açudes, córregos, lagos e igarapés: 0.0
+      Não possui ligação com a rede geral - Outra: 0.0
+  esgoto:
+    domicilios: 5317
+    distribuicao_pct:
+      Rede geral, rede pluvial ou fossa ligada à rede: 35.2
+      Rede geral ou pluvial: 34.8
+      Fossa séptica ou fossa filtro ligada à rede: 0.4
+      Fossa séptica ou fossa filtro não ligada à rede: 22.1
+      Fossa rudimentar ou buraco: 42.5
+      Vala: 0.1
+      Outra forma: 0.2
+  lixo:
+    domicilios: 5317
+    distribuicao_pct:
+      Coletado: 77.5
+      Coletado no domicílio por serviço de limpeza: 75.8
+      Depositado em caçamba de serviço de limpeza: 1.7
+      Queimado na propriedade: 19.0
+      Enterrado na propriedade: 2.6
+      Jogado em terreno baldio, encosta ou área pública: 0.1
+      Outro destino: 0.9
+  esgoto_rede_pct: 34.8
+  esgoto_adequado_pct: 35.2
+  esgoto_fossa_rudimentar_pct: 42.5
+  agua_rede_pct: 60.3
+clima:
+  temp_media_anual_c: 18.1
+  temp_mes_mais_quente_c: 21.66
+  temp_mes_mais_frio_c: 13.2
+  temp_max_media_c: 33.99
+  temp_min_media_c: -5.28
+  precipitacao_anual_mm: 1657
+  precipitacao_mensal_mm:
+    jan: 179
+    fev: 155
+    mar: 127
+    abr: 105
+    mai: 140
+    jun: 131
+    jul: 100
+    ago: 89
+    set: 122
+    out: 197
+    nov: 145
+    dez: 167
+  koppen: Cfb
+  altitude_modelo_m: 926.26
+acesso:
+  distancia_capital_km: 332
+  tempo_capital_h: 4.5
+  rodovias_15km:
+  - BR-277
+  - BR-373
+  - PR-662
+territorios:
+  terras_indigenas:
+  - Mangueirinha
+  ti_mais_proxima:
+    nome: Mangueirinha
+    distancia_km: 3.1
+    etnia_nome: Guaraní,Kaingang
+    fase_ti: Regularizada
+    municipio_nome: Mangueirinha,Coronel Vivida,Chopinzinho
+  unidades_conservacao: []
+consultas_manuais:
+  lista:
+  - IPHAN – sítios arqueológicos (CNSA/SICG)
+  - IPHAN – bens tombados
+  - INCRA – territórios quilombolas
+  - Fundação Cultural Palmares – comunidades certificadas
+  - Plano Diretor / zoneamento de Candói
+  - Plano Municipal de Saneamento Básico de Candói
+  - CAR/SICAR – imóveis e Reserva Legal
+_gerado_em: '2026-10-15'
+entorno:
+  Candói - Nova Captação:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 0
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  Candói - AAB:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 0
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  Candói - ETA:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 0
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  Candói - AAT:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 3
+      nomes: []
+    comercio:
+      quantidade: 1
+      nomes:
+      - Panificadora Arco-Íris
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  Candói - Reservação:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 1
+      nomes: []
+    comercio:
+      quantidade: 1
+      nomes:
+      - Panificadora Arco-Íris
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  Candói - Adutora - PAZ:
+    escola:
+      quantidade: 1
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 0
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  Candói - Adutora - Espraiado:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 1
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  _cnes_estabelecimentos_municipio: 20
+hidrologia:
+  por_unidade:
+    Candói - Nova Captação:
+      rio_mais_proximo: Rio Três Palmeiras
+      distancia_m: 42
+      base: drenagem
+    Candói - ETA:
+      rio_mais_proximo: Rio Três Palmeiras
+      distancia_m: 1845
+      base: drenagem
+  rio_principal: Rio Três Palmeiras
+  uph: IGUACU 06
+  ottobacia: '86238323'
+  classe_sugerida: Classe 2

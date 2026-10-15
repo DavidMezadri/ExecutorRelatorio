@@ -1,41 +1,16 @@
+# Tudo do projeto é versionado (dados do cliente, gerados, áudios, CAD, fotos).
+# Ficam de fora só arquivos técnicos temporários, que se refazem sozinhos.
+
 # Python
 __pycache__/
 *.pyc
 .venv/
 
-# Dados recebidos do cliente (grandes/confidenciais) – ficam fora do repositório
-Jordana-*/
-
-# Cache de downloads (malha IBGE, páginas web, lista MMA etc.)
+# Cache de downloads (malha IBGE, páginas web, lista MMA, OpenStreetMap...)
 dados_comuns/cache/
 
-# PDFs de artigos baixados (direitos autorais/tamanho); o texto extraído (.md) e a referência ficam
-referencias/literatura/*.pdf
-
-# Projetos: versiona só a ficha e os textos; o resto é regenerável
-projetos/*/dados/
-projetos/*/extraido/
-projetos/*/saida/
+# Cache de imagens otimizadas/páginas de PDF renderizadas pelo montador
 projetos/*/.cache/
-projetos/*/INVENTARIO.md
 
-# Áudios de campo (grandes/pessoais); as transcrições .md são versionadas
-projetos/*/audios/**/*.m4a
-projetos/*/audios/**/*.mp3
-projetos/*/audios/**/*.ogg
-projetos/*/audios/**/*.opus
-projetos/*/audios/**/*.wav
-projetos/*/audios/**/*.aac
-projetos/*/audios/**/*.flac
-projetos/*/audios/**/*.mp4
-projetos/*/audios/**/*.webm
-projetos/*/audios/**/*.amr
-projetos/*/audios/**/*.3gp
-projetos/*/audios/**/*.wma
-
-# Arquivos temporários do Office
+# Arquivos temporários do Office (abertos no Word/Excel)
 ~$*
-
-# Projetos AutoCAD do cliente (grandes/confidenciais)
-projetos/*/cad/*.dwg
-projetos/*/cad/*.dxf

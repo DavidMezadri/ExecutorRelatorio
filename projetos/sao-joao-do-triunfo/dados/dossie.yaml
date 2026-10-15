@@ -1,0 +1,132 @@
+socioeconomia:
+  populacao_2022: 13726
+  area_km2: 720.41
+  densidade_hab_km2: 19.05
+  mesorregiao: Sudeste Paranaense
+  microrregiao: São Mateus do Sul
+  regiao_imediata: Ponta Grossa
+  regiao_intermediaria: Ponta Grossa
+  limitrofes:
+  - Antônio Olinto
+  - Fernandes Pinheiro
+  - Lapa
+  - Palmeira
+  - Rebouças
+  - São Mateus do Sul
+  - Teixeira Soares
+  pib_mil_rs: 875907.0
+  pib_ano: 2023
+  pib_per_capita_rs: null
+saneamento:
+  agua:
+    domicilios: 4908
+    distribuicao_pct:
+      Possui ligação à rede geral e a utiliza como forma principal: 65.9
+      Possui ligação à rede geral, mas utiliza principalmente outra forma: 7.7
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço profundo ou artesiano: 1.0
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço raso, freático ou cacimba: 5.8
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Fonte, nascente ou mina: 0.8
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Água da chuva armazenada: 0.0
+      Não possui ligação com a rede geral: 26.5
+      Não possui ligação com a rede geral - Poço profundo ou artesiano: 3.3
+      Não possui ligação com a rede geral - Poço raso, freático ou cacimba: 15.0
+      Não possui ligação com a rede geral - Fonte, nascente ou mina: 7.7
+      Não possui ligação com a rede geral - Carro-pipa: 0.4
+      Não possui ligação com a rede geral - Outra: 0.1
+  esgoto:
+    domicilios: 4908
+    distribuicao_pct:
+      Rede geral, rede pluvial ou fossa ligada à rede: 11.0
+      Rede geral ou pluvial: 10.8
+      Fossa séptica ou fossa filtro ligada à rede: 0.1
+      Fossa séptica ou fossa filtro não ligada à rede: 19.5
+      Fossa rudimentar ou buraco: 69.0
+      Vala: 0.3
+      Rio, lago, córrego ou mar: 0.1
+      Outra forma: 0.1
+      Não tinham banheiro nem sanitário: 0.1
+  lixo:
+    domicilios: 4908
+    distribuicao_pct:
+      Coletado: 82.7
+      Coletado no domicílio por serviço de limpeza: 34.5
+      Depositado em caçamba de serviço de limpeza: 48.2
+      Queimado na propriedade: 16.4
+      Enterrado na propriedade: 0.8
+      Outro destino: 0.1
+  esgoto_rede_pct: 10.8
+  esgoto_adequado_pct: 11.0
+  esgoto_fossa_rudimentar_pct: 69.0
+  agua_rede_pct: 65.9
+clima:
+  temp_media_anual_c: 18.5
+  temp_mes_mais_quente_c: 22.18
+  temp_mes_mais_frio_c: 13.64
+  temp_max_media_c: 36.4
+  temp_min_media_c: -5.15
+  precipitacao_anual_mm: 1480
+  precipitacao_mensal_mm:
+    jan: 179
+    fev: 151
+    mar: 109
+    abr: 88
+    mai: 105
+    jun: 117
+    jul: 95
+    ago: 84
+    set: 123
+    out: 158
+    nov: 125
+    dez: 146
+  koppen: Cfa
+  altitude_modelo_m: 866.52
+territorios:
+  terras_indigenas: []
+  ti_mais_proxima: null
+  unidades_conservacao: []
+_gerado_em: '2026-10-15'
+acesso:
+  distancia_capital_km: 127
+  tempo_capital_h: 1.9
+  rodovias_15km:
+  - PR-151
+entorno:
+  São João do Triunfo - ETE:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 0
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  _cnes_estabelecimentos_municipio: 20
+consultas_manuais:
+  lista:
+  - IPHAN – sítios arqueológicos (CNSA/SICG)
+  - IPHAN – bens tombados
+  - INCRA – territórios quilombolas
+  - Fundação Cultural Palmares – comunidades certificadas
+  - Plano Diretor / zoneamento de São João do Triunfo
+  - Plano Municipal de Saneamento Básico de São João do Triunfo
+  - CAR/SICAR – imóveis e Reserva Legal
+hidrologia:
+  por_unidade:
+    São João do Triunfo - ETE:
+      rio_mais_proximo: Rio da Vargem
+      distancia_m: 504
+      base: drenagem
+  rio_principal: Rio da Vargem
+  uph: IGUACU 04
+  ottobacia: '862822'
+  classe_sugerida: Classe 2

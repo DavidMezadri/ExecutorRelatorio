@@ -1,0 +1,63 @@
+municipio:
+  arquivo: municipio.gpkg
+  acesso: '2026-10-15'
+  citacao: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Malha Municipal Digital do Brasil. Rio de Janeiro: IBGE. Disponível em: https://servicodados.ibge.gov.br/api/docs/malhas. Acesso em: 15
+    out. 2026.'
+solos:
+  arquivo: solos.gpkg
+  acesso: '2026-10-15'
+  citacao: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Banco de Dados de Informações Ambientais (BDiA): Pedologia 1:250.000. Rio de Janeiro: IBGE, 2023. Disponível em: https://bdiaweb.ibge.gov.br.
+    Acesso em: 15 out. 2026.'
+geologia:
+  arquivo: geologia.gpkg
+  acesso: '2026-10-15'
+  citacao: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Banco de Dados de Informações Ambientais (BDiA): Geologia 1:250.000. Rio de Janeiro: IBGE, 2023. Disponível em: https://bdiaweb.ibge.gov.br.
+    Acesso em: 15 out. 2026.'
+geomorfologia:
+  arquivo: geomorfologia.gpkg
+  acesso: '2026-10-15'
+  citacao: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Banco de Dados de Informações Ambientais (BDiA): Geomorfologia 1:250.000. Rio de Janeiro: IBGE, 2023. Disponível em: https://bdiaweb.ibge.gov.br.
+    Acesso em: 15 out. 2026.'
+vegetacao:
+  arquivo: vegetacao.gpkg
+  acesso: '2026-10-15'
+  citacao: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Banco de Dados de Informações Ambientais (BDiA): Vegetação 1:250.000. Rio de Janeiro: IBGE, 2023. Disponível em: https://bdiaweb.ibge.gov.br.
+    Acesso em: 15 out. 2026.'
+litoestratigrafia:
+  arquivo: litoestratigrafia.gpkg
+  acesso: '2026-10-15'
+  citacao: 'SGB – SERVIÇO GEOLÓGICO DO BRASIL. Litoestratigrafia 1:1.000.000 (GeoSGB). Brasília: SGB/CPRM, [20--]. Disponível em: https://geosgb.sgb.gov.br. Acesso em: 15 out. 2026.'
+hidrogeologia:
+  arquivo: hidrogeologia.gpkg
+  acesso: '2026-10-15'
+  citacao: 'SGB – SERVIÇO GEOLÓGICO DO BRASIL. Domínios e subdomínios hidrogeológicos do Brasil, escala 1:2.500.000. Brasília: SGB/CPRM, [20--]. Disponível em: https://geosgb.sgb.gov.br. Acesso em: 15 out.
+    2026.'
+drenagem:
+  arquivo: drenagem.gpkg
+  acesso: '2026-10-15'
+  citacao: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Base Cartográfica Contínua do Brasil, escala 1:250.000 – BC250, versão 2023. Rio de Janeiro: IBGE, 2023. Acesso em: 15 out. 2026.'
+massa_dagua:
+  arquivo: massa_dagua.gpkg
+  acesso: '2026-10-15'
+  citacao: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Base Cartográfica Contínua do Brasil, escala 1:250.000 – BC250, versão 2023. Rio de Janeiro: IBGE, 2023. Acesso em: 15 out. 2026.'
+uph:
+  arquivo: uph.gpkg
+  acesso: '2026-10-15'
+  citacao: 'ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Unidades de Planejamento Hídrico (UPH). Brasília: ANA, [20--]. Disponível em: https://metadados.snirh.gov.br. Acesso em: 15 out. 2026.'
+rios_ana:
+  arquivo: rios_ana.gpkg
+  acesso: '2026-10-15'
+  citacao: 'ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Base Hidrográfica Ottocodificada – hidrografia nível 5. Brasília: ANA, [20--]. Disponível em: https://metadados.snirh.gov.br. Acesso em:
+    15 out. 2026.'
+ucs:
+  arquivo: null
+  acesso: '2026-10-15'
+  obs: sem feições na área
+dem:
+  arquivo: dem.tif
+  acesso: '2026-10-15'
+  citacao: 'EUROPEAN SPACE AGENCY. Copernicus Global Digital Elevation Model (GLO-30). Distribuído por OpenTopography/AWS, 2021. DOI: 10.5069/G9028PQB. Acesso em: 15 out. 2026.'
+mapbiomas:
+  arquivo: mapbiomas.tif
+  acesso: '2026-10-15'
+  citacao: 'PROJETO MAPBIOMAS. Coleção 9 da Série Anual de Mapas de Cobertura e Uso da Terra do Brasil. [S.l.]: MapBiomas, 2024. Disponível em: https://brasil.mapbiomas.org. Acesso em: 15 out. 2026.'

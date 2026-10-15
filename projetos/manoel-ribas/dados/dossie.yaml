@@ -1,0 +1,139 @@
+hidrologia:
+  por_unidade:
+    Manoel Ribas - ETE:
+      rio_mais_proximo: Água do Tigre
+      distancia_m: 2213
+      base: rios_ana
+  rio_principal: Água do Tigre
+  uph: Piquiri/Paraná2
+  ottobacia: '86369324'
+  classe_sugerida: Classe 2
+_gerado_em: '2026-10-15'
+socioeconomia:
+  populacao_2022: 14240
+  area_km2: 571.13
+  densidade_hab_km2: 24.93
+  mesorregiao: Norte Central Paranaense
+  microrregiao: Ivaiporã
+  regiao_imediata: Ivaiporã
+  regiao_intermediaria: Londrina
+  limitrofes:
+  - Arapuã
+  - Ariranha do Ivaí
+  - Cândido de Abreu
+  - Ivaiporã
+  - Nova Tebas
+  - Pitanga
+  pib_mil_rs: 656196.0
+  pib_ano: 2023
+  pib_per_capita_rs: null
+saneamento:
+  agua:
+    domicilios: 4939
+    distribuicao_pct:
+      Possui ligação à rede geral e a utiliza como forma principal: 62.1
+      Possui ligação à rede geral, mas utiliza principalmente outra forma: 1.9
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço profundo ou artesiano: 1.4
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço raso, freático ou cacimba: 0.0
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Fonte, nascente ou mina: 0.4
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Outra: 0.0
+      Não possui ligação com a rede geral: 36.0
+      Não possui ligação com a rede geral - Poço profundo ou artesiano: 16.3
+      Não possui ligação com a rede geral - Poço raso, freático ou cacimba: 1.3
+      Não possui ligação com a rede geral - Fonte, nascente ou mina: 18.3
+      Não possui ligação com a rede geral - Carro-pipa: 0.1
+      Não possui ligação com a rede geral - Rios, açudes, córregos, lagos e igarapés: 0.0
+  esgoto:
+    domicilios: 4939
+    distribuicao_pct:
+      Rede geral, rede pluvial ou fossa ligada à rede: 14.0
+      Rede geral ou pluvial: 13.6
+      Fossa séptica ou fossa filtro ligada à rede: 0.4
+      Fossa séptica ou fossa filtro não ligada à rede: 25.7
+      Fossa rudimentar ou buraco: 59.5
+      Vala: 0.3
+      Rio, lago, córrego ou mar: 0.1
+      Outra forma: 0.0
+      Não tinham banheiro nem sanitário: 0.4
+  lixo:
+    domicilios: 4939
+    distribuicao_pct:
+      Coletado: 77.7
+      Coletado no domicílio por serviço de limpeza: 74.2
+      Depositado em caçamba de serviço de limpeza: 3.5
+      Queimado na propriedade: 20.2
+      Enterrado na propriedade: 1.1
+      Jogado em terreno baldio, encosta ou área pública: 0.7
+      Outro destino: 0.3
+  esgoto_rede_pct: 13.6
+  esgoto_adequado_pct: 14.0
+  esgoto_fossa_rudimentar_pct: 59.5
+  agua_rede_pct: 62.1
+clima:
+  temp_media_anual_c: 19.8
+  temp_mes_mais_quente_c: 23.08
+  temp_mes_mais_frio_c: 15.03
+  temp_max_media_c: 37.43
+  temp_min_media_c: -3.37
+  precipitacao_anual_mm: 1585
+  precipitacao_mensal_mm:
+    jan: 184
+    fev: 162
+    mar: 114
+    abr: 92
+    mai: 138
+    jun: 117
+    jul: 96
+    ago: 76
+    set: 106
+    out: 182
+    nov: 146
+    dez: 172
+  koppen: Cfa
+  altitude_modelo_m: 715.32
+acesso:
+  distancia_capital_km: 374
+  tempo_capital_h: 4.8
+  rodovias_15km:
+  - PRC-466
+  - PRC-487
+entorno:
+  Manoel Ribas - ETE:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 0
+      nomes: []
+    edificacao:
+      quantidade: 49
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  _cnes_estabelecimentos_municipio: 20
+territorios:
+  terras_indigenas:
+  - Ivai
+  ti_mais_proxima:
+    nome: Ivai
+    distancia_km: 2.2
+    etnia_nome: Kaingang
+    fase_ti: Regularizada
+    municipio_nome: Manoel Ribas e Pitanga
+  unidades_conservacao: []
+consultas_manuais:
+  lista:
+  - IPHAN – sítios arqueológicos (CNSA/SICG)
+  - IPHAN – bens tombados
+  - INCRA – territórios quilombolas
+  - Fundação Cultural Palmares – comunidades certificadas
+  - Plano Diretor / zoneamento de Manoel Ribas
+  - Plano Municipal de Saneamento Básico de Manoel Ribas
+  - CAR/SICAR – imóveis e Reserva Legal
