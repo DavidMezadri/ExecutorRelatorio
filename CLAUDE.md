@@ -57,9 +57,13 @@ python -m ferramentas.ingestao.memorial <chave> [--aplicar]   # vazões, popula�
 python -m ferramentas.ingestao.cad <chave>                    # projetos/<chave>/cad/*.dxf|*.dwg -> camadas, extensão por DN,
                                                               # blocos (PV...), textos; se em UTM: cad_*.gpkg + comparação c/ KMZ
 ```
-- Memorial: lê `extraido/*.md` (PDFs convertidos) -> `dados/EXTRACAO_MEMORIAL.md` com valor, trecho e página. `--aplicar`
-  só preenche no projeto.yaml campos vazios com candidato ÚNICO (horizonte, portaria, capacidade nominal/máxima) e
-  registra em `dados/EXTRACAO_APLICADA.md`. Os demais: a IA escolhe lendo o trecho, citando a página.
+- Memoriais NÃO têm padrão: o extrator acha valores pela unidade (L/s, hab, DN…) e classifica pelo contexto
+  (palavras antes do valor pesam mais), convertendo unidades. `dados/EXTRACAO_MEMORIAL.md` traz: **Sugestões para a
+  ficha** (candidatos por campo com pontuação e página), **Mapa de páginas** (onde ler cada assunto) e todos os valores.
+  `--aplicar` só preenche campos VAZIOS com 1º candidato forte (pontos >= 5 e vantagem >= 2) -> `EXTRACAO_APLICADA.md`.
+  O resto: a IA lê as páginas indicadas no mapa e preenche citando a página.
+- PDF escaneado: OCR local em português (RapidOCR) automático nas páginas sem texto (marcadas "conferir números").
+  Word (.docx) e .txt da pasta do cliente também vão para `extraido/` no `iniciar_projeto`.
 - AutoCAD: DWG precisa do ODA File Converter (gratuito) ou exportar como DXF. Quantitativos em `dados/cad_quantitativos.xlsx`.
 
 ## Redação automática e conferências

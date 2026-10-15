@@ -4,7 +4,8 @@ Uso:
     python -m ferramentas.ingestao.pdf ARQUIVO.pdf [-o pasta_saida] [--tabelas] [--imagens]
 
 Gera <saida>/<nome>.md com o texto por página (marcador "## Página N").
-Páginas com pouco texto são marcadas como [ESCANEADA? precisa OCR].
+Páginas sem camada de texto (escaneadas) passam por OCR local em português (RapidOCR) e são marcadas
+"[página escaneada – texto obtido por OCR, conferir números]". --sem-ocr desliga.
 """
 import argparse
 from pathlib import Path
@@ -27,7 +28,23 @@ def _tabela_md(tabela) -> str:
     return "\n".join(out)
 
 
-def extrair(pdf: Path, saida: Path, tabelas=False, imagens=False) -> dict:
+_OCR = None
+
+
+def ocr_pagina(pag, dpi=200) -> str:
+    """OCR (RapidOCR, modelo português, local) de uma página sem camada de texto."""
+    global _OCR
+    import numpy as np
+    if _OCR is None:
+        from rapidocr import RapidOCR
+        _OCR = RapidOCR(params={"Rec.lang_type": "pt"})  # modelo de reconhecimento em português
+    pix = pag.get_pixmap(dpi=dpi)
+    img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)[:, :, :3]
+    r = _OCR(img)
+    return "\n".join(r.txts or [])
+
+
+def extrair(pdf: Path, saida: Path, tabelas=False, imagens=False, ocr=True) -> dict:
     pdf, saida = Path(pdf), Path(saida)
     saida.mkdir(parents=True, exist_ok=True)
     base = slug(pdf.stem)[:80]
@@ -45,7 +62,14 @@ def extrair(pdf: Path, saida: Path, tabelas=False, imagens=False) -> dict:
         partes.append(f"\n## Página {i}\n")
         if len(texto) < MIN_CHARS_PAGINA:
             escaneadas.append(i)
-            partes.append("[ESCANEADA? precisa OCR]\n")
+            if ocr:
+                try:
+                    texto = ocr_pagina(pag)
+                    partes.append("[página escaneada – texto obtido por OCR, conferir números]\n")
+                except Exception as e:
+                    partes.append(f"[ESCANEADA – OCR falhou: {e.__class__.__name__}]\n")
+            else:
+                partes.append("[ESCANEADA? precisa OCR]\n")
         partes.append(texto + "\n")
         if plumb is not None:
             for j, t in enumerate(plumb.pages[i - 1].extract_tables(), start=1):
@@ -75,9 +99,10 @@ def main():
     ap.add_argument("-o", "--saida", default="extraido")
     ap.add_argument("--tabelas", action="store_true")
     ap.add_argument("--imagens", action="store_true")
+    ap.add_argument("--sem-ocr", action="store_true")
     a = ap.parse_args()
     for p in a.pdf:
-        r = extrair(Path(p), Path(a.saida), a.tabelas, a.imagens)
+        r = extrair(Path(p), Path(a.saida), a.tabelas, a.imagens, not a.sem_ocr)
         aviso = f"  páginas sem texto: {r['escaneadas']}" if r["escaneadas"] else ""
         print(f"{r['paginas']:>4} págs -> {r['md']}{aviso}")
 

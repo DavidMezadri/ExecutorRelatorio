@@ -18,6 +18,9 @@ Gera: `dados/` (coordenadas, unidades, bases oficiais, RESUMO_TEMATICO.md, **DOS
 ## 2. Preencher a ficha `projetos/<chave>/projeto.yaml`
 Primeiro: `python -m ferramentas.ingestao.memorial <chave> --aplicar` (candidatos com página em
 `dados/EXTRACAO_MEMORIAL.md`) e, se houver `cad/`, `python -m ferramentas.ingestao.cad <chave>` (extensões por DN).
+Os memoriais não têm padrão: usar `dados/EXTRACAO_MEMORIAL.md` como guia – a tabela **Sugestões para a ficha**
+(conferir cada candidato no trecho/página) e o **Mapa de páginas** (ler primeiro as páginas indicadas para cada assunto).
+Em páginas marcadas "texto obtido por OCR", conferir números com cuidado (OCR pode trocar 1/7, 0/8, vírgulas).
 Ler TUDO em `extraido/` (memoriais, planilha "Lista de documentos e informações", matriz) e preencher os campos
 `null` com valores que tenham fonte. Nunca inventar: sem fonte, manter `null`. Registrar a origem de cada
 valor num comentário YAML (`# fonte: memorial descritivo p. 12`).

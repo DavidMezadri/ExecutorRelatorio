@@ -161,8 +161,21 @@ def main():
         aviso = f" (sem texto nas págs {r['escaneadas']} – OCR)" if r["escaneadas"] else ""
         inv.append(f"- PDF {p.name}: {r['paginas']} págs -> extraido/{Path(r['md']).name}{aviso}")
 
+    # 4b. Memoriais/relatórios em Word e texto
+    from ferramentas.ingestao import docx_texto
+    for doc in sorted(list(fontes.rglob("*.docx")) + list(fontes.rglob("*.txt"))):
+        if doc.name.startswith("~$"):
+            continue
+        destino_md = d / "extraido" / f"{slug(doc.stem)[:80]}.md"
+        try:
+            md = docx_texto.converter(doc) if doc.suffix.lower() == ".docx" else doc.read_text(encoding="utf-8", errors="replace")
+            destino_md.write_text(md, encoding="utf-8")
+            inv.append(f"- {doc.suffix[1:].upper()} {doc.name} -> extraido/{destino_md.name}")
+        except Exception as e:
+            inv.append(f"- {doc.name}: não convertido ({e.__class__.__name__})")
+
     # 5. Outros arquivos não tratados
-    tratados = {".kml", ".kmz", ".xlsx", ".pdf"}
+    tratados = {".kml", ".kmz", ".xlsx", ".pdf", ".docx", ".txt"}
     outros = [f for f in fontes.rglob("*") if f.is_file() and f.suffix.lower() not in tratados]
     for f in outros:
         inv.append(f"- NÃO TRATADO: {f.relative_to(fontes)}")
