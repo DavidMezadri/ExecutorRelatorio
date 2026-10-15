@@ -50,6 +50,16 @@ python-qgis.bat ferramentas\geo\qgis_projeto.py projetos\<chave>   # projeto .qg
 ```
 Serviços sem acesso automático: CAR/SICAR (baixar shapes manualmente → `dados/car/`); UCs vêm da ANA.
 
+## Áudios de campo (transcrição local, Whisper)
+Áudios em `projetos/<chave>/audios/AAAA-MM-DD/` (m4a, mp3, ogg/opus do WhatsApp, wav...). Skill `audio-campo`.
+```
+python -m ferramentas.audio.transcrever <chave> [--modelo small|medium|large-v3] [--observar]
+python -m ferramentas.audio.transcrever --arquivo gravacao.m4a
+```
+-> `audios/AAAA-MM-DD/<nome>.md` (com [mm:ss]) + `extraido/transcricoes.md`; notas organizadas em `dados/NOTAS_CAMPO.md`.
+No texto: "Durante a vistoria de campo realizada em DD/MM/AAAA, observou-se..." (data = nome da pasta).
+Arquivos de áudio não vão para o git; as transcrições (.md) vão.
+
 ## Garimpo de fontes oficiais (sempre com referência ABNT precisa)
 Toda informação externa entra no texto **com citação (AUTOR, ano) e referência no catálogo** – nunca escrever
 referência "de memória". Catálogo: `referencias/bibliografia.yaml`; por projeto: `projetos/<chave>/referencias.yaml`;

@@ -19,6 +19,9 @@ matplotlib>=3.9
 # Automação do Word (finalizar: atualizar sumário e gerar PDF) – só Windows
 pywin32>=306; sys_platform == "win32"
 
+# Transcrição de áudio (Whisper local; modelo baixado na primeira execução)
+faster-whisper>=1.2
+
 # Imagens / web
 pillow>=10.0
 requests>=2.32

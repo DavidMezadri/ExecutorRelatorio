@@ -19,5 +19,19 @@ projetos/*/saida/
 projetos/*/.cache/
 projetos/*/INVENTARIO.md
 
+# Áudios de campo (grandes/pessoais); as transcrições .md são versionadas
+projetos/*/audios/**/*.m4a
+projetos/*/audios/**/*.mp3
+projetos/*/audios/**/*.ogg
+projetos/*/audios/**/*.opus
+projetos/*/audios/**/*.wav
+projetos/*/audios/**/*.aac
+projetos/*/audios/**/*.flac
+projetos/*/audios/**/*.mp4
+projetos/*/audios/**/*.webm
+projetos/*/audios/**/*.amr
+projetos/*/audios/**/*.3gp
+projetos/*/audios/**/*.wma
+
 # Arquivos temporários do Office
 ~$*
