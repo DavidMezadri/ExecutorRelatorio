@@ -46,13 +46,13 @@ def ficha_inicial(cfg: dict, quadro, info_mun: dict) -> dict:
     ficha = {
         "documento": cfg["documento"],
         "sistema": cfg["sistema"],
-        "projeto_sanepar": cfg.get("projeto_sanepar"),
+        "numero_projeto": cfg.get("numero_projeto"),
         "municipio": cfg["municipio"],
         "localidade": cfg.get("localidade"),
-        "uf": "PR",
+        "uf": cfg["uf"],
         "cod_ibge": cfg.get("cod_ibge"),
         "municipio_info": info_mun or None,
-        # dados institucionais da Sanepar e da Biocerne vêm de dados_comuns/*.yaml ({{sanepar.cnpj}}, {{biocerne.cnpj}})
+        # dados institucionais do empreendedor e da consultora: {{empresa.cnpj}} (dados_comuns/empreendedores/) e {{biocerne.cnpj}}
         "empreendedor": {"responsavel": None, "telefone": None, "email": None},
         "cnae": "3600-6/01 (Captação, tratamento e distribuição de água)" if cfg["sistema"] == "SAA"
                 else "3701-1/00 (Gestão de redes de esgoto)",
@@ -105,7 +105,7 @@ def main():
     inv = [f"# Inventário – {cfg['documento']} {cfg['sistema']} {cfg['municipio']}\n"]
 
     try:
-        info_mun = ibge.info(cfg["municipio"])
+        info_mun = ibge.info(cfg["municipio"], cfg["uf"])
     except requests.RequestException as e:
         info_mun = {}
         inv.append(f"- IBGE indisponível ({e.__class__.__name__}); rode de novo com internet")
@@ -174,7 +174,7 @@ def main():
         except Exception as e:
             inv.append(f"- {doc.name}: não convertido ({e.__class__.__name__})")
 
-    # 4c. Unidades do sistema pelas plantas da Sanepar (código do arquivo + título do carimbo)
+    # 4c. Unidades do sistema pelas plantas do empreendedor (padrão em dados_comuns/empreendedores/<sigla>.yaml)
     from ferramentas.ingestao import unidades_sistema
     us = unidades_sistema.gerar(a.chave)
     inv.append(f"- Unidades nas plantas: {', '.join(u['codigo'] for u in us) or 'nenhuma'} -> dados/UNIDADES_SISTEMA.md")

@@ -557,8 +557,21 @@ def carregar_ficha(dir_proj: Path) -> dict:
         if rt.get(k) in (None, "") and v not in (None, ""):
             rt[k] = v
     ficha["responsavel_tecnico"] = rt
+    # empresa (empreendedor), órgão e UF do projeto (projetos.yaml): {{empresa.razao_social}}, {{orgao.norma}}, {{uf_de}}
+    from ferramentas.util import projeto as _projeto
+    from ferramentas.brasil import uf_de, nome_uf
+    try:
+        cfg = _projeto(dir_proj.name)
+        ficha["empresa"] = cfg["empresa"]
+        ficha["orgao"] = {k: v for k, v in cfg["orgao_info"].items() if k != "pasta"}
+        ficha["uf"] = cfg["uf"]
+        ficha["numero_projeto"] = ficha.get("numero_projeto") or cfg.get("numero_projeto")
+    except SystemExit:
+        ficha.setdefault("empresa", {})
+    ficha.setdefault("uf", "PR")
+    ficha["uf_nome"], ficha["uf_de"] = nome_uf(ficha["uf"]), uf_de(ficha["uf"])
     emp = ficha.setdefault("empreendedor", {}) or {}
-    rep = equipe.get("representante_sanepar") or {}
+    rep = (ficha.get("empresa") or {}).get("representante") or equipe.get("representante_sanepar") or {}
     for k_emp, k_rep in (("responsavel", "nome"), ("telefone", "telefone"), ("email", "email")):
         if emp.get(k_emp) in (None, "") and rep.get(k_rep):
             emp[k_emp] = rep[k_rep]

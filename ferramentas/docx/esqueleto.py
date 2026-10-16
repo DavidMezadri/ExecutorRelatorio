@@ -3,7 +3,7 @@
 Uso:
     python -m ferramentas.docx.esqueleto candoi [--forcar]
 
-Copia modelos/estruturas/<documento>_<sistema>/*.md para projetos/<chave>/texto/, preenchendo as
+Copia modelos/orgaos/<orgao>/estruturas/<documento>_<sistema>/*.md para projetos/<chave>/texto/, preenchendo as
 tabelas que dependem das unidades do projeto.yaml. Não sobrescreve arquivos existentes sem --forcar.
 """
 import argparse
@@ -49,10 +49,11 @@ def main():
     a = ap.parse_args()
 
     cfg = projeto(a.chave)
-    estrutura = RAIZ / "modelos" / "estruturas" / f"{cfg['documento']}_{cfg['sistema']}".lower()
+    base = cfg["orgao_info"]["pasta"] / "estruturas"  # textos-base do órgão licenciador (modelos/orgaos/<orgao>/)
+    estrutura = base / f"{cfg['documento']}_{cfg['sistema']}".lower()
     if not estrutura.exists():
-        disp = ", ".join(p.name for p in (RAIZ / "modelos" / "estruturas").iterdir())
-        raise SystemExit(f"Estrutura {estrutura.name} ainda não existe. Disponíveis: {disp}")
+        disp = ", ".join(p.name for p in base.iterdir()) if base.exists() else "nenhuma"
+        raise SystemExit(f"Estrutura {estrutura.name} não existe para o órgão {cfg['orgao']}. Disponíveis: {disp}")
     ficha_path = cfg["dir"] / "projeto.yaml"
     if not ficha_path.exists():
         raise SystemExit(f"Rode antes: python -m ferramentas.iniciar_projeto {a.chave}")

@@ -4,13 +4,13 @@
 
 ## Identificação do Empreendedor
 
-**Nome:** {{sanepar.nome_fantasia}}
+**Nome:** {{empresa.nome_fantasia}}
 
-**Razão Social:** {{sanepar.razao_social}}
+**Razão Social:** {{empresa.razao_social}}
 
-**Endereço completo:** {{sanepar.endereco_correspondencia}}
+**Endereço completo:** {{empresa.endereco_correspondencia}}
 
-**CNPJ:** {{sanepar.cnpj}} – **Inscrição Estadual:** {{sanepar.inscricao_estadual}}
+**CNPJ:** {{empresa.cnpj}} – **Inscrição Estadual:** {{empresa.inscricao_estadual}}
 
 **Pessoa para contato:** {{empreendedor.responsavel}} – {{empreendedor.telefone}} – {{empreendedor.email}}
 

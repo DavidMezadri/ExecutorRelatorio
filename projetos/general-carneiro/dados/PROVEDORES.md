@@ -1,0 +1,76 @@
+# Provedores temáticos – General Carneiro/PR
+
+## hidrologia
+
+### ANA – Base Hidrográfica Ottocodificada e divisão hidrográfica (nacional)
+
+- Jangada do Sul - General Carneiro Área do poço e tratamento: Rio Jangadinha (Federal), área a montante 1064.9635150147226 km²
+- Jangada do Sul - General Carneiro Adutora: Rio Jangadinha (Federal), área a montante 1064.426600354705 km²
+- Região hidrográfica: Paraná; UH estadual: Médio Iguaçu
+- Outorgas num raio de ~5 km: 9
+
+Segundo a Base Hidrográfica Ottocodificada (BHO 2017) da Agência Nacional de Águas e Saneamento Básico, o curso d'água principal mais próximo das unidades Jangada do Sul - General Carneiro Área do poço e tratamento e Jangada do Sul - General Carneiro Adutora é o Rio Jangadinha, de domínio federal, com área de drenagem de aproximadamente 1.065 km² a montante do trecho e extensão total de 137,7 km do curso d'água (ANA, 2018).
+Na divisão hidrográfica nacional, a área do empreendimento insere-se na Região Hidrográfica do Paraná (ANA, [20--]).
+No cadastro de outorgas de direito de uso de recursos hídricos disponibilizado pela ANA, constam 9 outorgas de captação superficial num raio de aproximadamente 5 km do empreendimento, entre elas outorga em nome de SANEPAR - General Carneiro - Jangada do Sul no Rio Jangada (ANA, [20--]).
+
+### PR – IAT, Carta das Águas Subterrâneas do Paraná e Mendes et al. (2002) (PR)
+
+- Bacias: Iguaçu
+
+No âmbito estadual, o empreendimento situa-se na Bacia Hidrográfica do Rio Iguaçu, que ocupa 55.758,09 km² do território paranaense (BRASIL, 2015), na Unidade Hidrográfica Afluentes do Médio Iguaçu, conforme a divisão estabelecida pela Resolução CERH/PR nº 49/2006 (IAT, [2020]). A bacia integra a Região Hidrográfica do Paraná, que abrange 92,2% do território paranaense (BRASIL, 2015).
+
+## geologia
+
+### SGB – Litoestratigrafia (melhor escala disponível) (nacional)
+
+- Jangada do Sul - General Carneiro Área do poço e tratamento: Formação Vale do Sol (1:600.000); Grupo Serra Geral (1:1.000.000)
+- Jangada do Sul - General Carneiro Adutora: Formação Vale do Sol (1:600.000); Grupo Serra Geral (1:1.000.000)
+
+Do ponto de vista geológico, segundo o Mapa geológico e de recursos minerais do Estado do Paraná (escala 1:600.000), as unidades do empreendimento assentam-se sobre a Formação Vale do Sol, do Cretáceo Inferior (Era Mesozoica), integrante do Grupo Serra Geral, com litotipos de andesito basáltico (SGB, [20--]).
+A unidade é descrita pelo Serviço Geológico do Brasil como sequência vulcânica com espessura real entre 40 e 500 m, formada principalmente por andesitos basálticos dispostos em derrames com geometria tabular simples, formados por lavas rubbly pahoehoe, os quais estão arquitetados em quarto partes: crosta basal vesiculada, núcleo maciço, crosta vesiculada coerente e superfície brechada (rubbly). Os derrames têm espessura entre 20 e 60 m (SGB, [20--]).
+Em escala regional (1:1.000.000), a área insere-se no Grupo Serra Geral, descrito como sequência vulcanossedimentar formada na base por arenitos eólicos depositados em grandes campos de dunas de ambiente desértico, sobrepostos por derrames toleíticos de lavas básicas, intermediárias e ácidas. Intercalações comuns entre lavas e depósitos sedimentares, arenitos e lamitos. Derrames de basaltos e andesitos basálticos extensos em morfologias pahoehoe simples e compostos e rubbly pahoehoe. Derrames, domos e coulées formados por riolitos e dacitos afíricos e traquidacitos porfiríticos. Depósitos vulcanoclásticos máficos, brechas, tufos, hialoclastitos e peperitos. Localmente pillow-lavas (SGB, [20--]).
+
+### PR – IAT, Carta das Águas Subterrâneas do Paraná e Mendes et al. (2002) (PR)
+
+- Formações: Grupo Serra Geral
+
+No Paraná, foram identificados depósitos hidrovulcanoclásticos na Formação Serra Geral, identificadas camadas de brechas constituídas por clastos juvenis de basalto ou basalto-andesítico, vesiculares, angulosos globulares, imersos em uma matriz areno-síltico-argilosa quartzo-feldspática-micácea, e também camadas decimétricas constituídas de material areno-síltico-argiloso quartzo-feldspático-micáceo intercaladas aos derrames de basalto ou basalto-andesítico (LICHT, 2012 apud BRASIL, 2015). A frequência, espessura e continuidade lateral das camadas destes depósitos hidrovulcanoclásticos, bem como a proporção relativa aos derrames, foram alguns dos critérios para definir quatro formações (Cascavel, Barracão, Candói e Covó) e 13 membros para a Formação Serra Geral do Estado do Paraná (ARIOLI; LICHT, 2013 apud BRASIL, 2015). Na região sudoeste do estado Arioli e Licht (2013 apud BRASIL, 2015) identificam estas quatro formações com a seguinte descrição: A Formação Cascavel é constituída por uma sequência de derrames lobados, lobos tabulares e derrames tabulares de basalto dominantemente avermelhado, com intercalações de rochas vulcanoclásticas e sedimentos terrígenos. A Formação Barracão compreende sequências de derrames dominantemente lobados, menos frequentemente derrames tabulares extensos de basalto vesicular avermelhado, com abundantes intercalações de brechas vulcanoclásticas e rochas sedimentares, boa parte de origem turfácea ou deposição química. A Formação Candói compreende uma sequência de derrames tabulares espessos de basalto cinza, sem cloritização ou oxidação visível em amostra de mão, com zona vesicular de topo descontínua e frequentemente ausente, disjunção colunar e entablamento sigmoidal bem desenvolvidos. Tanto os basaltos da Formação Barracão quanto da Formação Candói, em áreas diferentes, são recobertos pelos depósitos de ignimbrito reomórfico e lava riolítica da Formação Covó (BRASIL, 2015).
+
+## hidrogeologia
+
+### SGB – Domínios hidrogeológicos e SIAGAS (nacional)
+
+- Domínios: [('Vulcânicas', 'Vulcânicas', 'Serra Geral')]
+- SIAGAS (15 km): 17 poços tubulares
+
+Segundo o mapa de domínios e subdomínios hidrogeológicos do Brasil, a área do empreendimento insere-se no domínio Vulcânicas (unidade Serra Geral) (SGB, [20--]).
+No Sistema de Informações de Águas Subterrâneas (SIAGAS), mantido pelo Serviço Geológico do Brasil, constam 17 poços tubulares cadastrados num raio de aproximadamente 15 km do empreendimento, captando principalmente o aquífero Serra Geral; os registros com informação indicam profundidade mediana de 120 m, nível estático mediano de 85,0 m e vazão específica mediana de 0,43 (m³/h)/m (SGB, [20--]).
+
+### PR – IAT, Carta das Águas Subterrâneas do Paraná e Mendes et al. (2002) (PR)
+
+- Aquíferos: Serra Geral
+
+No mapeamento das unidades aquíferas do Paraná, o empreendimento situa-se na unidade Serra Geral Sul (IAT, [2020]), correspondente ao Aquífero Serra Geral descrito na Carta das Águas Subterrâneas do Paraná (BRASIL, 2015).
+A profundidade do Nível Estático (NE), observada a partir de 1.626 poços, variou de 0,28 m a 195,8 m, com mediana de 16 m. A vazão mediana dos poços que captam o Aquífero Serra Geral é 9 m³/h, com vazão mínima igual a 0,2 m³/h, no município de Capitão Leônidas Marques e, vazão máxima de 250 m³/h no município de Cascavel. A mediana da capacidade específica para os 1.626 poços que captam o aquífero é 0,54 (m³/h)/m, com valor mínimo de 0,01 (m³/h)/m e valor máximo de 45 (m³/h)/m. Sendo que, o valor da capacidade específica equivale a 0,16 (m³/h)/m para o percentil 25 e 1,62 (m³/h)/m para percentil 75. Assim como ocorre com os dados de vazão, a capacidade específica também apresenta um zoneamento de produtividade, predominando poços mais produtivos na “Província Hidroestrututural Jacutinga Noroeste”, proposta por Athayde et al. (2012 apud BRASIL, 2015), com destaque para a Bacia Hidrográfica do Paraná 3 (BP3), no extremo oeste da unidade aquífera. A região da bacia hidrográfica do rio Iguaçu apresenta o maior risco exploratório do Aquífero Serra Geral no Paraná (BRASIL, 2015).
+Quanto à vulnerabilidade natural à contaminação, no Aquífero Serra Geral predominam áreas com vulnerabilidade alta (58,5%) e secundariamente áreas com média vulnerabilidade (41,4%). A classe média de vulnerabilidade ocorre em maior área nas bacias do Paraná 3 e Iguaçu, nesta última, na região de Francisco Beltrão, Pato Branco e Dois Vizinhos. Nas demais bacias predominam áreas de alta vulnerabilidade (BRASIL, 2015).
+No abastecimento público, atualmente, a Sanepar opera 414 poços no Aquífero Serra Geral, que produziram cerca de 50,5 milhões m³ de água no ano de 2001. Esse volume representa cerca de 52% da produção total de água subterrânea da Sanepar, revelando a importância do Aquífero Serra Geral, principalmente para o abastecimento de pequenas e médias localidades (MENDES et al., 2002).
+
+## rodovias
+
+### DNIT – Sistema Nacional de Viação (SNV) (nacional)
+
+- SNV 202607A: BR-280: pavimentada, planejada; BR-153: pavimentada
+
+Segundo o Sistema Nacional de Viação (SNV, versão 202607A), mantido pelo Departamento Nacional de Infraestrutura de Transportes, as rodovias federais num raio de aproximadamente 15 km do empreendimento são a BR-153 (pavimentada) e a BR-280 (pavimentada e planejada) (DNIT, 2026).
+
+## geomorfologia
+
+### PR – Atlas Geomorfológico do Estado do Paraná (MINEROPAR/UFPR) (PR)
+
+- Jangada do Sul - General Carneiro Área do poço e tratamento: 2.4.2
+- Jangada do Sul - General Carneiro Adutora: 2.4.2
+
+Segundo o Atlas Geomorfológico do Estado do Paraná (OKA-FIORI et al., 2006), o empreendimento insere-se na unidade morfoestrutural Bacia Sedimentar do Paraná, unidade morfoescultural Terceiro Planalto Paranaense, subunidade morfoescultural Planalto do Foz do Areia/Ribeirão Claro (2.4.2).
+A Zona de Capeamento Areníto-Basáltico corresponde ao grande derrame mesozóico de rochas eruptivas básicas que, no território paranaense, apresenta-se como o Terceiro Planalto Paranaense, ou Planalto Areníto-Basáltico e abrange cerca de 2/3 do território paranaense. Esta unidade desenvolve-se como um conjunto de relevos planálticos, com inclinação geral para oeste-noroeste e subdivididos pelos principais afluentes do rio Paraná, atingindo altitudes médias de cimeira de 1100 a 1250m, na Serra da Esperança, declinando para altitudes entre 220 e 300 metros na calha do rio Paraná. Segundo Maack (1968) este planalto subdivide-se em a) Planalto de Cambará e São Jerônimo da Serra, localizado na parte nordeste do Estado, tendo seus limites nos rios Tibagi, Paranapanema e Itararé; b) Planalto de Apucarana, que se estende entre os rios Tibagi, Paranapanema, Ivaí e Paraná; c) Planalto de Campo Mourão, compreendido entre os rios Ivaí, Piquirí e Paraná; d) Planalto de Guarapuava, que ocupa terras entre os rios Piquiri, Iguaçu e Paraná e, e) Planalto de Palmas, que se estende entre o divisor norte da bacia do rio Uruguai e sul da bacia do Iguaçu até o vale deste (OKA-FIORI et al., 2006).
+A subunidade Planalto do Foz do Areia/Ribeirão Claro, situada no Terceiro Planalto Paranaense, apresenta dissecação alta. A classe de declividade predominante está entre 12-30%. Em relação ao relevo, apresenta um gradiente de 720 metros com altitudes variando entre 620 (mínima) e 1.340 (máxima) m. As formas predominantes são topos alongados, vertentes retilíneas e côncavas e vales em degraus. A direção geral da morfologia é NW/SE, modelada em rochas da Formação Serra Geral (OKA-FIORI et al., 2006). Nessa subunidade situam-se as unidades Jangada do Sul - General Carneiro Área do poço e tratamento e Jangada do Sul - General Carneiro Adutora.
+

@@ -15,33 +15,10 @@ responsavel_tecnico:            # responsável técnico (Biocerne) – assina MC
   email:
   art:                          # nº da ART (normalmente muda por projeto: preencher no projeto.yaml)
 
-representante_sanepar:          # quem assina pela Sanepar (declarações do empreendedor)
-  nome:
-  cpf:
-  rg:
-  nacionalidade: brasileiro(a)
-  estado_civil:
-  cargo:
-  endereco:
-  telefone:
-  email:
+# representante do empreendedor e equipe dele: dados_comuns/empreendedores/<sigla>.yaml
 
 equipe_tecnica:                 # demais membros (quadro de equipe do PCA)
   - nome:
     formacao:
     registro:
     funcao:
-
-envolvidos_sanepar:             # Quadro "Relação dos envolvidos no projeto – equipe Sanepar" (MCE) – igual ao MODELO Palmeira
-  - nome: Elaine Carvalho da Paz
-    funcao: Engenheira Civil — Análise/aprovação (SANEPAR/GPOSD)
-    registro: CREA AM-8645/D
-    telefone: (41) 3330-3910
-  - nome: Denis Schechtel Neves
-    funcao: Químico — Coordenador de Projetos, GPOSD
-    registro: CRQ PR-09402617
-    telefone: (41) 3330-3910
-  - nome: Priscila Koga
-    funcao: Engenheira Civil — Análise/aprovação (SANEPAR/GPOSD)
-    registro: CREA PR-98.487/D
-    telefone: (41) 3330-3910

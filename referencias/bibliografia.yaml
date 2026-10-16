@@ -15,10 +15,34 @@ abnt-nbr-12209-2011:
 alvares-2013-koppen:
   tipo: artigo
   abnt: 'ALVARES, Clayton Alcarde et al. Köppen''s climate classification map for Brazil. Meteorologische Zeitschrift, v. 22, n. 6, p. 711-728, 2013. DOI: 10.1127/0941-2948/2013/0507. Disponível em: https://doi.org/10.1127/0941-2948/2013/0507.
-    Acesso em: 15 out. 2026.'
+    Acesso em: 16 out. 2026.'
   url: https://doi.org/10.1127/0941-2948/2013/0507
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: ALVARES et al., 2013
+  verificado: true
+ana-bho-2017:
+  tipo: base
+  abnt: 'ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Base Hidrográfica Ottocodificada (BHO 2017), versão 1.05. Brasília, DF: ANA, 2018. Disponível em: https://metadados.snirh.gov.br. Acesso em:
+    16 out. 2026.'
+  url: https://metadados.snirh.gov.br
+  acesso: '2026-10-16'
+  citacao: ANA, 2018
+  verificado: true
+ana-cnarh-outorgas:
+  tipo: base
+  abnt: 'ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Outorgas de direito de uso de recursos hídricos (federais e estaduais) – Cadastro Nacional de Usuários de Recursos Hídricos (CNARH). Brasília,
+    DF: ANA, [20--]. Disponível em: https://www.snirh.gov.br. Acesso em: 16 out. 2026.'
+  url: https://www.snirh.gov.br
+  acesso: '2026-10-16'
+  citacao: ANA, [20--]
+  verificado: true
+ana-divisao-hidrografica:
+  tipo: base
+  abnt: 'ANA – AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO. Regiões hidrográficas e unidades hidrográficas estaduais. Brasília, DF: ANA, [20--]. Disponível em: https://www.snirh.gov.br. Acesso em: 16
+    out. 2026.'
+  url: https://www.snirh.gov.br
+  acesso: '2026-10-16'
+  citacao: ANA, [20--]
   verificado: true
 brasil-2015-carta-aguas-pr:
   tipo: base
@@ -32,9 +56,9 @@ brasil-portaria-mma-148-2022:
   tipo: lei
   abnt: 'BRASIL. Ministério do Meio Ambiente. Portaria MMA nº 148, de 7 de junho de 2022. Altera os Anexos da Portaria nº 443, de 17 de dezembro de 2014, da Portaria nº 444, de 17 de dezembro de 2014, e
     da Portaria nº 445, de 17 de dezembro de 2014, referentes à atualização da Lista Nacional de Espécies Ameaçadas de Extinção. Disponível em: https://www.in.gov.br/en/web/dou/-/portaria-mma-n-148-de-7-de-junho-de-2022-406272733.
-    Acesso em: 15 out. 2026.'
+    Acesso em: 16 out. 2026.'
   url: https://www.in.gov.br/en/web/dou/-/portaria-mma-n-148-de-7-de-junho-de-2022-406272733
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: BRASIL, 2022
   verificado: false
 candoi-embrapa-sibcs-cambissolos-haplicos:
@@ -94,7 +118,7 @@ conama-357-2005:
   abnt: BRASIL. Conselho Nacional do Meio Ambiente. Resolução CONAMA nº 357, de 17 de março de 2005. Dispõe sobre a classificação dos corpos de água e diretrizes ambientais para o seu enquadramento, bem
     como estabelece as condições e padrões de lançamento de efluentes, e dá outras providências. Brasília, DF, 2005.
   url: null
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: BRASIL, 2005
   verificado: false
 conama-430-2011:
@@ -105,6 +129,22 @@ conama-430-2011:
   acesso: '2026-10-15'
   citacao: BRASIL, 2011
   verificado: false
+dnit-snv-202601A:
+  tipo: base
+  abnt: 'DNIT – DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES. Sistema Nacional de Viação – SNV, versão 202601A. Brasília, DF: DNIT, 2026. Disponível em: https://servicos.dnit.gov.br/vgeo. Acesso
+    em: 16 out. 2026.'
+  url: https://servicos.dnit.gov.br/vgeo
+  acesso: '2026-10-16'
+  citacao: DNIT, 2026
+  verificado: true
+dnit-snv-202607A:
+  tipo: base
+  abnt: 'DNIT – DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES. Sistema Nacional de Viação – SNV, versão 202607A. Brasília, DF: DNIT, 2026. Disponível em: https://servicos.dnit.gov.br/vgeo. Acesso
+    em: 16 out. 2026.'
+  url: https://servicos.dnit.gov.br/vgeo
+  acesso: '2026-10-16'
+  citacao: DNIT, 2026
+  verificado: true
 doi-10-1590-2175-7860201566411:
   tipo: artigo
   abnt: 'ZAPPI, Daniela C. et al. Growing knowledge: an overview of Seed Plant diversity in Brazil. Rodriguésia, v. 66, n. 4, p. 1085-1113, 2015. DOI: 10.1590/2175-7860201566411. Disponível em: https://doi.org/10.1590/2175-7860201566411.
@@ -123,16 +163,16 @@ embrapa-1979-sumula:
   verificado: false
 flora-e-funga-do-brasil:
   tipo: base
-  abnt: 'FLORA E FUNGA DO BRASIL. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br/. Acesso em: 15 out. 2026.'
+  abnt: 'FLORA E FUNGA DO BRASIL. Jardim Botânico do Rio de Janeiro. Disponível em: http://floradobrasil.jbrj.gov.br/. Acesso em: 16 out. 2026.'
   url: http://floradobrasil.jbrj.gov.br/
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: FLORA E FUNGA DO BRASIL, 2026
   verificado: true
 funai-tis:
   tipo: base
-  abnt: 'FUNAI – FUNDAÇÃO NACIONAL DOS POVOS INDÍGENAS. Terras indígenas (polígonos): serviço WFS. Brasília, DF: FUNAI. Disponível em: https://geoserver.funai.gov.br. Acesso em: 15 out. 2026.'
+  abnt: 'FUNAI – FUNDAÇÃO NACIONAL DOS POVOS INDÍGENAS. Terras indígenas (polígonos): serviço WFS. Brasília, DF: FUNAI. Disponível em: https://geoserver.funai.gov.br. Acesso em: 16 out. 2026.'
   url: https://geoserver.funai.gov.br
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: FUNAI, 2026
   verificado: true
 gbif-candoi-animais:
@@ -227,43 +267,51 @@ ibge-historico-4108502:
   acesso: '2026-10-16'
   citacao: IBGE, [20--]
   verificado: true
+ibge-historico-4204202:
+  tipo: base
+  abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Biblioteca: histórico do município de Chapecó (PR). Rio de Janeiro: IBGE, [20--]. Disponível em: https://servicodados.ibge.gov.br/api/v1/biblioteca?aspas=3&codmun=420420.
+    Acesso em: 16 out. 2026.'
+  url: https://biblioteca.ibge.gov.br/visualizacao/dtbs/santacatarina/
+  acesso: '2026-10-16'
+  citacao: IBGE, [20--]
+  verificado: true
 ibge-sidra-5938:
   tipo: base
   abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Produto Interno Bruto dos Municípios. Tabela 5938. Rio de Janeiro: IBGE, 2025. Disponível em: https://sidra.ibge.gov.br/tabela/5938. Acesso
-    em: 15 out. 2026.'
+    em: 16 out. 2026.'
   url: https://sidra.ibge.gov.br/tabela/5938
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: IBGE, 2025
   verificado: true
 ibge-sidra-6803:
   tipo: base
   abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Censo Demográfico 2022. Tabela 6803: Domicílios particulares permanentes ocupados, por existência de ligação à rede geral de distribuição
-    de água e principal forma de abastecimento de água. Rio de Janeiro: IBGE, 2023. Disponível em: https://sidra.ibge.gov.br/tabela/6803. Acesso em: 15 out. 2026.'
+    de água e principal forma de abastecimento de água. Rio de Janeiro: IBGE, 2023. Disponível em: https://sidra.ibge.gov.br/tabela/6803. Acesso em: 16 out. 2026.'
   url: https://sidra.ibge.gov.br/tabela/6803
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: IBGE, 2023
   verificado: true
 ibge-sidra-6805:
   tipo: base
   abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Censo Demográfico 2022. Tabela 6805: Domicílios particulares permanentes ocupados, por tipo de esgotamento sanitário. Rio de Janeiro: IBGE,
-    2023. Disponível em: https://sidra.ibge.gov.br/tabela/6805. Acesso em: 15 out. 2026.'
+    2023. Disponível em: https://sidra.ibge.gov.br/tabela/6805. Acesso em: 16 out. 2026.'
   url: https://sidra.ibge.gov.br/tabela/6805
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: IBGE, 2023
   verificado: true
 ibge-sidra-6892:
   tipo: base
   abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Censo Demográfico 2022. Tabela 6892: Domicílios particulares permanentes ocupados, por destino do lixo. Rio de Janeiro: IBGE, 2023. Disponível
-    em: https://sidra.ibge.gov.br/tabela/6892. Acesso em: 15 out. 2026.'
+    em: https://sidra.ibge.gov.br/tabela/6892. Acesso em: 16 out. 2026.'
   url: https://sidra.ibge.gov.br/tabela/6892
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: IBGE, 2023
   verificado: true
 iucn-red-list:
   tipo: base
-  abnt: 'IUCN. The IUCN Red List of Threatened Species. Disponível em: https://www.iucnredlist.org. Acesso em: 15 out. 2026.'
+  abnt: 'IUCN. The IUCN Red List of Threatened Species. Disponível em: https://www.iucnredlist.org. Acesso em: 16 out. 2026.'
   url: https://www.iucnredlist.org
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: IUCN, 2026
   verificado: true
 maack-1968:
@@ -293,9 +341,9 @@ mendes-2002:
 ms-cnes:
   tipo: base
   abnt: 'BRASIL. Ministério da Saúde. Cadastro Nacional de Estabelecimentos de Saúde (CNES): API de dados abertos. Brasília, DF: Ministério da Saúde. Disponível em: https://apidadosabertos.saude.gov.br.
-    Acesso em: 15 out. 2026.'
+    Acesso em: 16 out. 2026.'
   url: https://apidadosabertos.saude.gov.br
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: BRASIL, 2026
   verificado: true
 nasa-power-candoi:
@@ -497,6 +545,29 @@ sao-joao-do-triunfo-embrapa-sibcs-gleissolos-haplicos:
   url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/gleissolos/gleissolos-haplicos
   acesso: '2026-10-16'
   citacao: EMBRAPA, [20--]
+  verificado: true
+sgb-dominios-hidrogeologicos:
+  tipo: base
+  abnt: 'SGB – SERVIÇO GEOLÓGICO DO BRASIL. Domínios e subdomínios hidrogeológicos do Brasil, escala 1:2.500.000. Brasília, DF: SGB/CPRM, [20--]. Disponível em: https://geosgb.sgb.gov.br. Acesso em: 16
+    out. 2026.'
+  url: https://geosgb.sgb.gov.br
+  acesso: '2026-10-16'
+  citacao: SGB, [20--]
+  verificado: true
+sgb-litoestratigrafia:
+  tipo: base
+  abnt: 'SGB – SERVIÇO GEOLÓGICO DO BRASIL. Litoestratigrafia (GeoSGB): mapas geológicos nas escalas 1:25.000 a 1:1.000.000 e mapas estaduais. Brasília, DF: SGB/CPRM, [20--]. Disponível em: https://geosgb.sgb.gov.br.
+    Acesso em: 16 out. 2026.'
+  url: https://geosgb.sgb.gov.br
+  acesso: '2026-10-16'
+  citacao: SGB, [20--]
+  verificado: true
+sgb-siagas:
+  tipo: base
+  abnt: 'SGB – SERVIÇO GEOLÓGICO DO BRASIL. SIAGAS – Sistema de Informações de Águas Subterrâneas. Brasília, DF: SGB/CPRM, [20--]. Disponível em: https://siagasweb.sgb.gov.br. Acesso em: 16 out. 2026.'
+  url: https://siagasweb.sgb.gov.br
+  acesso: '2026-10-16'
+  citacao: SGB, [20--]
   verificado: true
 web-pr-geologia-do-parana-historia-evolutiva:
   tipo: web

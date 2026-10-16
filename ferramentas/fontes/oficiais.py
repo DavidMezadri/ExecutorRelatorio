@@ -93,12 +93,12 @@ def bbox_projeto(cfg, margem_km=5.0):
     """BBox (SIRGAS 2000 geográfico) das unidades + margem; inclui o município se não houver unidades."""
     unidades = cfg["dir"] / "dados" / "unidades.gpkg"
     if unidades.exists():
-        g = gpd.read_file(unidades).to_crs("EPSG:31982")
+        g = gpd.read_file(unidades).to_crs("EPSG:5880")
     else:
-        m = ibge.malha_municipal()
-        g = m[m["cod_ibge"] == ibge.buscar(cfg["municipio"])["id"]].to_crs("EPSG:31982")
+        m = ibge.malha_municipal(cfg["uf"])
+        g = m[m["cod_ibge"] == ibge.buscar(cfg["municipio"], cfg["uf"])["id"]].to_crs("EPSG:5880")
     caixa = box(*g.total_bounds).buffer(margem_km * 1000, join_style=2)
-    return gpd.GeoSeries([caixa], crs="EPSG:31982").to_crs("EPSG:4674").total_bounds
+    return gpd.GeoSeries([caixa], crs="EPSG:5880").to_crs("EPSG:4674").total_bounds
 
 
 def wfs(endpoint, camada, bb) -> gpd.GeoDataFrame:
@@ -179,9 +179,9 @@ def baixar(cfg, margem_km=5.0, so=None, forcar=False):
 
     # limites municipais (mapa regional)
     if (not so or "municipio" in so) and (forcar or not (destino / "municipio.gpkg").exists()):
-        malha = ibge.malha_municipal()
+        malha = ibge.malha_municipal(cfg["uf"])
         malha.to_file(destino / "municipios_uf.gpkg", driver="GPKG")
-        cod = ibge.buscar(cfg["municipio"])["id"]
+        cod = ibge.buscar(cfg["municipio"], cfg["uf"])["id"]
         malha[malha["cod_ibge"] == cod].to_file(destino / "municipio.gpkg", driver="GPKG")
         fontes["municipio"] = {"arquivo": "municipio.gpkg", "acesso": str(HOJE), "citacao":
                                f"IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Malha Municipal Digital do Brasil. "

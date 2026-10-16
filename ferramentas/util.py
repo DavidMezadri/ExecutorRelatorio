@@ -52,7 +52,38 @@ def projeto(chave: str) -> dict:
         if cfg.get(k):
             cfg[k] = (RAIZ / cfg[k]).resolve()
     cfg["dir"] = PROJETOS_DIR / chave
+    # abrangência nacional: UF, empresa (empreendedor) e órgão licenciador configuráveis por projeto
+    # (padrões = Sanepar/IAT-PR, dos primeiros projetos)
+    from ferramentas.brasil import uf_do_codigo
+    cfg["uf"] = (cfg.get("uf") or uf_do_codigo(cfg.get("cod_ibge")) or "PR").upper()
+    cfg.setdefault("empreendedor", "sanepar")
+    cfg.setdefault("orgao", "iat-pr")
+    cfg["numero_projeto"] = cfg.get("numero_projeto") or cfg.get("projeto_sanepar")
+    cfg["empresa"] = empresa(cfg["empreendedor"])
+    cfg["orgao_info"] = orgao(cfg["orgao"])
     return cfg
+
+
+def empresa(sigla: str) -> dict:
+    """Dados do empreendedor (dados_comuns/empreendedores/<sigla>.yaml): razão social, CNPJ, equipe, padrão de plantas."""
+    arq = RAIZ / "dados_comuns" / "empreendedores" / f"{sigla}.yaml"
+    if not arq.exists():
+        raise SystemExit(f"Empreendedor '{sigla}' sem cadastro em {arq} – copie sanepar.yaml como modelo e preencha.")
+    dados = yaml.safe_load(arq.read_text(encoding="utf-8")) or {}
+    dados.setdefault("sigla", sigla)
+    return dados
+
+
+def orgao(sigla: str) -> dict:
+    """Órgão licenciador (modelos/orgaos/<sigla>/orgao.yaml): norma, termos de referência, estruturas e matrizes."""
+    pasta = RAIZ / "modelos" / "orgaos" / sigla
+    arq = pasta / "orgao.yaml"
+    if not arq.exists():
+        raise SystemExit(f"Órgão '{sigla}' sem cadastro em {arq} – crie a pasta com orgao.yaml, estruturas/ e matrizes/.")
+    dados = yaml.safe_load(arq.read_text(encoding="utf-8")) or {}
+    dados["pasta"] = pasta
+    dados.setdefault("sigla_pasta", sigla)
+    return dados
 
 
 def salvar_yaml(dados, caminho: Path):

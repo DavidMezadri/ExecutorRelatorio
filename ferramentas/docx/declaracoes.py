@@ -66,7 +66,7 @@ def _assinatura(d, nome, linha2):
 
 def _local_data(f):
     hoje = dt.date.today()
-    return f"{f['municipio']} – PR, {hoje.day} de {MESES[hoje.month - 1]} de {hoje.year}."
+    return f"{f['municipio']} – {f.get('uf', 'PR')}, {hoje.day} de {MESES[hoje.month - 1]} de {hoje.year}."
 
 
 def _qualificacao(p):
@@ -78,19 +78,19 @@ def _qualificacao(p):
 
 def atividade(f):
     return (f"{'Sistema de Abastecimento de Água' if f['sistema'] == 'SAA' else 'Sistema de Esgotamento Sanitário'} "
-            f"({f['sistema']}) de {f['municipio']}/PR – CNAE {v(f.get('cnae'))}")
+            f"({f['sistema']}) de {f['municipio']}/{f.get('uf', 'PR')} – CNAE {v(f.get('cnae'))}")
 
 
 def certidao(f, destino):
     d = _doc()
     _titulo(d, "ANEXO II", "CERTIDÃO DO MUNICÍPIO QUANTO AO USO E OCUPAÇÃO DO SOLO")
-    _par(d, "Declaramos ao INSTITUTO ÁGUA E TERRA, que o empreendimento abaixo descrito está localizado neste Município e "
+    _par(d, f"Declaramos ao {(f.get('orgao') or {}).get('nome', 'órgão ambiental').upper()}, que o empreendimento abaixo descrito está localizado neste Município e "
             "que o Local, o Tipo de Empreendimento e Atividade estão em conformidade com a legislação municipal aplicável "
             "ao uso e ocupação do solo, bem como, atende às demais exigências legais e administrativas relacionadas ao Município.")
-    s = f.get("sanepar") or {}
+    s = f.get("empresa") or {}
     unid = "; ".join(u["nome"] for u in (f.get("unidades") or []))
     linhas = [("EMPREENDEDOR", v(s.get("razao_social"))), ("CNPJ/CPF", v(s.get("cnpj"))), ("ATIVIDADE", atividade(f)),
-              ("LOCALIZAÇÃO", f"{v(f.get('endereco_unidade_principal'), '')} – Município de {f['municipio']}/PR. "
+              ("LOCALIZAÇÃO", f"{v(f.get('endereco_unidade_principal'), '')} – Município de {f['municipio']}/{f.get('uf', 'PR')}. "
                               f"Unidades: {unid}".strip(" –")),
               ("LEGISLAÇÃO Nº", ""), ("ZONA/MACROZONA", ""), ("PERÍMETRO URBANO/ ZONA RURAL", ""),
               ("ENQUADRAMENTO DA ATIVIDADE PERMITIDA/PERMISSÍVEL", "")]
@@ -101,7 +101,7 @@ def certidao(f, destino):
         c[0].text, c[1].text = a, b
         c[0].paragraphs[0].runs[0].bold = True
     d.add_paragraph()
-    _par(d, f"{f['municipio']} – PR, ____ de ______________ de ______.", WD_ALIGN_PARAGRAPH.RIGHT)
+    _par(d, f"{f['municipio']} – {f.get('uf', 'PR')}, ____ de ______________ de ______.", WD_ALIGN_PARAGRAPH.RIGHT)
     _assinatura(d, "Nome, assinatura e carimbo do Prefeito Municipal ou do Secretário de área", "")
     d.save(destino)
 
@@ -115,12 +115,12 @@ def veracidade(f, p, destino, quem):
     doc_nome = {"MCE": "Memorial de Caracterização do Empreendimento (MCE)", "PCA": "Plano de Controle Ambiental (PCA)"}.get(
         f["documento"], f["documento"])
     par.add_run(_qualificacao(p) + ", DECLARO, para os devidos fins de direito, sob as penas da lei, que as informações "
-                f"prestadas e documentos que apresento para o licenciamento ambiental junto ao Instituto Água e Terra do "
+                f"prestadas e documentos que apresento para o licenciamento ambiental junto ao {(f.get('orgao') or {}).get('nome', 'órgão ambiental')} do "
                 f"{atividade(f)}, relacionados abaixo, são verdadeiros e autênticos (fiéis à verdade e condizentes com a "
                 f"realidade dos fatos à época).")
     _par(d, "FATOS DECLARADOS:")
     _par(d, f"Informações técnicas e ambientais constantes do {doc_nome} do {atividade(f)}"
-            + (", elaborado sob minha responsabilidade técnica." if quem == "rt" else ", apresentado pela Companhia de Saneamento do Paraná – Sanepar."))
+            + (", elaborado sob minha responsabilidade técnica." if quem == "rt" else f", apresentado pela {(f.get('empresa') or {}).get('razao_social', 'empreendedor')}."))
     _par(d, "DOCUMENTOS APRESENTADOS:")
     _par(d, f"{doc_nome} e respectivos anexos" + (f"; ART nº {v(f.get('responsavel_tecnico', {}).get('art'))}." if quem == "rt" else "."))
     _par(d, "Fico ciente através desse documento que a falsidade dessa declaração configura crime previsto no Código Penal "
@@ -164,14 +164,14 @@ def gerar(cfg, com_lac=False):
     f.setdefault("documento", cfg["documento"])
     equipe = f.get("equipe") or {}
     rt = {**(equipe.get("responsavel_tecnico") or {}), **{k: x for k, x in (f.get("responsavel_tecnico") or {}).items() if x}}
-    rep = equipe.get("representante_sanepar") or {}
+    rep = (f.get("empresa") or {}).get("representante") or equipe.get("representante_sanepar") or {}
     out = cfg["dir"] / "saida" / "declaracoes"
     out.mkdir(parents=True, exist_ok=True)
     arqs = [out / "Anexo_II_Certidao_Uso_Solo.docx", out / "Anexo_III_Declaracao_Veracidade_RT.docx",
-            out / "Anexo_III_Declaracao_Veracidade_Sanepar.docx"]
+            out / f"Anexo_III_Declaracao_Veracidade_{(f.get('empresa') or {}).get('sigla', 'Empreendedor')}.docx"]
     certidao(f, arqs[0])
     veracidade(f, rt, arqs[1], "rt")
-    veracidade(f, rep, arqs[2], "sanepar")
+    veracidade(f, rep, arqs[2], "empreendedor")
     if com_lac:
         arqs += [out / "Anexo_IV_Declaracao_LAC_Empreendedor.docx", out / "Anexo_V_Declaracao_LAC_RT.docx"]
         lac(f, rep, arqs[3], "empreendedor")
@@ -186,7 +186,10 @@ def main():
     ap.add_argument("chave")
     ap.add_argument("--lac", action="store_true", help="gera também os Anexos IV e V (Licença por Adesão e Compromisso)")
     a = ap.parse_args()
-    arqs, faltam = gerar(projeto(a.chave), a.lac)
+    cfg = projeto(a.chave)
+    if not cfg["orgao_info"].get("declaracoes"):
+        raise SystemExit(f"O órgão {cfg['orgao']} não tem modelos de declaração cadastrados (orgao.yaml: declaracoes).")
+    arqs, faltam = gerar(cfg, a.lac)
     for x in arqs:
         print(x)
     if faltam:

@@ -2,11 +2,11 @@
 
 ## Tipo de Atividade do Empreendimento
 
-O empreendimento consiste na [A VERIFICAR: implantação/ampliação] do sistema de abastecimento de água do município de {{municipio}}. A Sanepar é a empresa responsável pela captação, tratamento e distribuição de água potável, além da coleta e do tratamento de esgoto sanitário. CNAE {{cnae}}.
+O empreendimento consiste na [A VERIFICAR: implantação/ampliação] do sistema de abastecimento de água do município de {{municipio}}. A {{empresa.sigla}} é a empresa responsável pela captação, tratamento e distribuição de água potável, além da coleta e do tratamento de esgoto sanitário. CNAE {{cnae}}.
 
 - Abastecimento de água: capta água de rios, lagos ou poços, trata em estações especializadas e distribui para residências e empresas;
 - Esgotamento sanitário: coleta o esgoto gerado e realiza o tratamento adequado antes de devolvê-lo ao meio ambiente;
-- Atuação geográfica: presta serviços em centenas de municípios no estado do Paraná e em Porto União, em Santa Catarina.
+- Atuação geográfica: {{empresa.atuacao}}.
 
 ## Descritivo da Obra a ser Implantada e Descrição das Intervenções Necessárias
 
@@ -43,7 +43,7 @@ O manancial de abastecimento do sistema projetado é o {{manancial.nome}} ({{man
 
 ### Descrição das Unidades que Compõem o Sistema
 
-::: quadro {#qua:unidades fonte="Sanepar, {{ano}}."} Descrição das unidades que compõem o sistema
+::: quadro {#qua:unidades fonte="{{empresa.sigla}}, {{ano}}."} Descrição das unidades que compõem o sistema
 | Unidade | Características principais |
 |---|---|
 | Candói - Nova Captação | Área aproximada de 2.305 m²; [A VERIFICAR: características – vazão, Hm, potência, volume, material, diâmetro] |
@@ -65,7 +65,7 @@ O manancial de abastecimento do sistema projetado é o {{manancial.nome}} ({{man
 
 A localização e a disposição das unidades que integram o empreendimento são apresentadas nas plantas constantes dos Anexos, conforme relação apresentada no @qua:anexos.
 
-::: quadro {#qua:anexos fonte="Sanepar, {{ano}}."} Relação das unidades que compõem o empreendimento e respectivos anexos
+::: quadro {#qua:anexos fonte="{{empresa.sigla}}, {{ano}}."} Relação das unidades que compõem o empreendimento e respectivos anexos
 | Unidade/ponto | Projeto |
 |---|---|
 | Candói - Nova Captação | Anexo I |

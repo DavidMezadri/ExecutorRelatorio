@@ -5,6 +5,8 @@ Gerado por `ferramentas.redacao.redator` a partir dos dados do projeto. Revisar 
 
 ## acessos
 
+Segundo o Sistema Nacional de Viação (SNV, versão 202607A), mantido pelo Departamento Nacional de Infraestrutura de Transportes, as rodovias federais num raio de aproximadamente 15 km do empreendimento são a BR-153 (pavimentada) e a BR-280 (pavimentada e planejada) (DNIT, 2026).
+
 O acesso final às unidades se dá pela Estrada Velha de Palmas (não pavimentada, em leito natural), a partir da BR-153, via pavimentada que constitui a principal ligação com a sede municipal (7,9 km do percurso de 10,4 km) (OSRM, 2026; OPENSTREETMAP, 2026).
 
 O acesso às unidades Jangada do Sul - General Carneiro Área do poço e tratamento e Jangada do Sul - General Carneiro Adutora (@fig:acesso-1) foi levantado a partir de rotas calculadas sobre a malha viária do OpenStreetMap (OSRM, 2026; OPENSTREETMAP, 2026), considerando diferentes pontos de origem do deslocamento. As alternativas de acesso identificadas são apresentadas a seguir:
@@ -59,21 +61,23 @@ Segundo o mapeamento de cobertura e uso da terra do Projeto MapBiomas (Coleção
 
 ## geomorfologia
 
+No mapeamento geomorfológico do IBGE, em escala 1:250.000, a área do empreendimento corresponde à unidade Planalto Dissecado Rio Iguaçu, da região Planalto das Araucárias e do domínio Bacias e Coberturas Sedimentares Fanerozóicas, com formas de topo aguçado (IBGE, 2023).
+
 Segundo o Atlas Geomorfológico do Estado do Paraná (OKA-FIORI et al., 2006), o empreendimento insere-se na unidade morfoestrutural Bacia Sedimentar do Paraná, unidade morfoescultural Terceiro Planalto Paranaense, subunidade morfoescultural Planalto do Foz do Areia/Ribeirão Claro (2.4.2).
 
 A Zona de Capeamento Areníto-Basáltico corresponde ao grande derrame mesozóico de rochas eruptivas básicas que, no território paranaense, apresenta-se como o Terceiro Planalto Paranaense, ou Planalto Areníto-Basáltico e abrange cerca de 2/3 do território paranaense. Esta unidade desenvolve-se como um conjunto de relevos planálticos, com inclinação geral para oeste-noroeste e subdivididos pelos principais afluentes do rio Paraná, atingindo altitudes médias de cimeira de 1100 a 1250m, na Serra da Esperança, declinando para altitudes entre 220 e 300 metros na calha do rio Paraná. Segundo Maack (1968) este planalto subdivide-se em a) Planalto de Cambará e São Jerônimo da Serra, localizado na parte nordeste do Estado, tendo seus limites nos rios Tibagi, Paranapanema e Itararé; b) Planalto de Apucarana, que se estende entre os rios Tibagi, Paranapanema, Ivaí e Paraná; c) Planalto de Campo Mourão, compreendido entre os rios Ivaí, Piquirí e Paraná; d) Planalto de Guarapuava, que ocupa terras entre os rios Piquiri, Iguaçu e Paraná e, e) Planalto de Palmas, que se estende entre o divisor norte da bacia do rio Uruguai e sul da bacia do Iguaçu até o vale deste (OKA-FIORI et al., 2006).
 
 A subunidade Planalto do Foz do Areia/Ribeirão Claro, situada no Terceiro Planalto Paranaense, apresenta dissecação alta. A classe de declividade predominante está entre 12-30%. Em relação ao relevo, apresenta um gradiente de 720 metros com altitudes variando entre 620 (mínima) e 1.340 (máxima) m. As formas predominantes são topos alongados, vertentes retilíneas e côncavas e vales em degraus. A direção geral da morfologia é NW/SE, modelada em rochas da Formação Serra Geral (OKA-FIORI et al., 2006). Nessa subunidade situam-se as unidades Jangada do Sul - General Carneiro Área do poço e tratamento e Jangada do Sul - General Carneiro Adutora.
 
-No mapeamento geomorfológico do IBGE, em escala 1:250.000, a área corresponde à unidade Planalto Dissecado Rio Iguaçu, da região Planalto das Araucárias, com formas de topo aguçado (IBGE, 2023).
-
 Localmente, o relevo apresenta-se predominantemente forte ondulado e ondulado, segundo as classes de relevo da EMBRAPA (EMBRAPA, 1979), conforme os mapas de altimetria e declividade.
 
 ## geologia
 
-Do ponto de vista geológico, as unidades do empreendimento assentam-se sobre o Grupo Serra Geral, do Cretáceo Inferior (Era Mesozoica), integrante do Supergrupo São Bento, na Bacia Sedimentar do Paraná, com litotipos de andesito basáltico, arenito, arenito lítico, basalto, basalto andesítico, dacito, diabásio, diorito, gabro, riodacito, riolito, traquiandesito, traquidacito, tufito (SGB, [20--]).
+Do ponto de vista geológico, segundo o Mapa geológico e de recursos minerais do Estado do Paraná (escala 1:600.000), as unidades do empreendimento assentam-se sobre a Formação Vale do Sol, do Cretáceo Inferior (Era Mesozoica), integrante do Grupo Serra Geral, com litotipos de andesito basáltico (SGB, [20--]).
 
-Segundo o Serviço Geológico do Brasil, o Grupo Serra Geral corresponde a uma sequência vulcanossedimentar formada na base por arenitos eólicos depositados em grandes campos de dunas de ambiente desértico, sobrepostos por derrames toleíticos de lavas básicas, intermediárias e ácidas. Intercalações comuns entre lavas e depósitos sedimentares, arenitos e lamitos. Derrames de basaltos e andesitos basálticos extensos em morfologias pahoehoe simples e compostos e rubbly pahoehoe. Derrames, domos e coulées formados por riolitos e dacitos afíricos e traquidacitos porfiríticos. Depósitos vulcanoclásticos máficos, brechas, tufos, hialoclastitos e peperitos. Localmente pillow-lavas (SGB, [20--]).
+A unidade é descrita pelo Serviço Geológico do Brasil como sequência vulcânica com espessura real entre 40 e 500 m, formada principalmente por andesitos basálticos dispostos em derrames com geometria tabular simples, formados por lavas rubbly pahoehoe, os quais estão arquitetados em quarto partes: crosta basal vesiculada, núcleo maciço, crosta vesiculada coerente e superfície brechada (rubbly). Os derrames têm espessura entre 20 e 60 m (SGB, [20--]).
+
+Em escala regional (1:1.000.000), a área insere-se no Grupo Serra Geral, descrito como sequência vulcanossedimentar formada na base por arenitos eólicos depositados em grandes campos de dunas de ambiente desértico, sobrepostos por derrames toleíticos de lavas básicas, intermediárias e ácidas. Intercalações comuns entre lavas e depósitos sedimentares, arenitos e lamitos. Derrames de basaltos e andesitos basálticos extensos em morfologias pahoehoe simples e compostos e rubbly pahoehoe. Derrames, domos e coulées formados por riolitos e dacitos afíricos e traquidacitos porfiríticos. Depósitos vulcanoclásticos máficos, brechas, tufos, hialoclastitos e peperitos. Localmente pillow-lavas (SGB, [20--]).
 
 No Paraná, foram identificados depósitos hidrovulcanoclásticos na Formação Serra Geral, identificadas camadas de brechas constituídas por clastos juvenis de basalto ou basalto-andesítico, vesiculares, angulosos globulares, imersos em uma matriz areno-síltico-argilosa quartzo-feldspática-micácea, e também camadas decimétricas constituídas de material areno-síltico-argiloso quartzo-feldspático-micáceo intercaladas aos derrames de basalto ou basalto-andesítico (LICHT, 2012 apud BRASIL, 2015). A frequência, espessura e continuidade lateral das camadas destes depósitos hidrovulcanoclásticos, bem como a proporção relativa aos derrames, foram alguns dos critérios para definir quatro formações (Cascavel, Barracão, Candói e Covó) e 13 membros para a Formação Serra Geral do Estado do Paraná (ARIOLI; LICHT, 2013 apud BRASIL, 2015). Na região sudoeste do estado Arioli e Licht (2013 apud BRASIL, 2015) identificam estas quatro formações com a seguinte descrição: A Formação Cascavel é constituída por uma sequência de derrames lobados, lobos tabulares e derrames tabulares de basalto dominantemente avermelhado, com intercalações de rochas vulcanoclásticas e sedimentos terrígenos. A Formação Barracão compreende sequências de derrames dominantemente lobados, menos frequentemente derrames tabulares extensos de basalto vesicular avermelhado, com abundantes intercalações de brechas vulcanoclásticas e rochas sedimentares, boa parte de origem turfácea ou deposição química. A Formação Candói compreende uma sequência de derrames tabulares espessos de basalto cinza, sem cloritização ou oxidação visível em amostra de mão, com zona vesicular de topo descontínua e frequentemente ausente, disjunção colunar e entablamento sigmoidal bem desenvolvidos. Tanto os basaltos da Formação Barracão quanto da Formação Candói, em áreas diferentes, são recobertos pelos depósitos de ignimbrito reomórfico e lava riolítica da Formação Covó (BRASIL, 2015).
 
@@ -81,7 +85,9 @@ No mapeamento geológico do IBGE, em escala 1:250.000, a área corresponde às u
 
 ## hidrogeologia
 
-Em termos hidrogeológicos, a área do empreendimento insere-se na unidade Serra Geral (domínio Vulcânicas, subdomínio Vulcânicas), segundo o mapa de domínios e subdomínios hidrogeológicos do Brasil (SGB, [20--]).
+Segundo o mapa de domínios e subdomínios hidrogeológicos do Brasil, a área do empreendimento insere-se no domínio Vulcânicas (unidade Serra Geral) (SGB, [20--]).
+
+No Sistema de Informações de Águas Subterrâneas (SIAGAS), mantido pelo Serviço Geológico do Brasil, constam 17 poços tubulares cadastrados num raio de aproximadamente 15 km do empreendimento, captando principalmente o aquífero Serra Geral; os registros com informação indicam profundidade mediana de 120 m, nível estático mediano de 85,0 m e vazão específica mediana de 0,43 (m³/h)/m (SGB, [20--]).
 
 No mapeamento das unidades aquíferas do Paraná, o empreendimento situa-se na unidade Serra Geral Sul (IAT, [2020]), correspondente ao Aquífero Serra Geral descrito na Carta das Águas Subterrâneas do Paraná (BRASIL, 2015).
 
@@ -93,9 +99,13 @@ No abastecimento público, atualmente, a Sanepar opera 414 poços no Aquífero S
 
 ## hidrologia
 
-O empreendimento situa-se na Bacia Hidrográfica do Rio Iguaçu, que ocupa 55.758,09 km² do território paranaense (BRASIL, 2015), na Unidade Hidrográfica Afluentes do Médio Iguaçu, conforme a divisão estabelecida pela Resolução CERH/PR nº 49/2006 (IAT, [2020]). Quanto às regiões hidrográficas nacionais (Resolução CNRH nº 32/2003), a bacia integra a Região Hidrográfica do Paraná, que abrange 92,2% do território paranaense (BRASIL, 2015), e, na divisão da Agência Nacional de Águas e Saneamento Básico, a Unidade de Planejamento Hídrico Afluentes-MD-IGÇ (ANA, [20--]).
+Segundo a Base Hidrográfica Ottocodificada (BHO 2017) da Agência Nacional de Águas e Saneamento Básico, o curso d'água principal mais próximo das unidades Jangada do Sul - General Carneiro Área do poço e tratamento e Jangada do Sul - General Carneiro Adutora é o Rio Jangadinha, de domínio federal, com área de drenagem de aproximadamente 1.065 km² a montante do trecho e extensão total de 137,7 km do curso d'água (ANA, 2018).
 
-Em escala local, o curso d'água nomeado mais próximo das unidades Jangada do Sul - General Carneiro Área do poço e tratamento e Jangada do Sul - General Carneiro Adutora é o Rio Jangada (ANA, [20--]), conforme o mapa de bacia hidrográfica.
+Na divisão hidrográfica nacional, a área do empreendimento insere-se na Região Hidrográfica do Paraná (ANA, [20--]).
+
+No cadastro de outorgas de direito de uso de recursos hídricos disponibilizado pela ANA, constam 9 outorgas de captação superficial num raio de aproximadamente 5 km do empreendimento, entre elas outorga em nome de SANEPAR - General Carneiro - Jangada do Sul no Rio Jangada (ANA, [20--]).
+
+No âmbito estadual, o empreendimento situa-se na Bacia Hidrográfica do Rio Iguaçu, que ocupa 55.758,09 km² do território paranaense (BRASIL, 2015), na Unidade Hidrográfica Afluentes do Médio Iguaçu, conforme a divisão estabelecida pela Resolução CERH/PR nº 49/2006 (IAT, [2020]). A bacia integra a Região Hidrográfica do Paraná, que abrange 92,2% do território paranaense (BRASIL, 2015).
 
 ## fitogeografia
 

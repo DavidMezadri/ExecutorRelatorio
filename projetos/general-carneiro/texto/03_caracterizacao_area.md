@@ -12,11 +12,11 @@ O empreendimento é composto pelas unidades delimitadas no arquivo georreferenci
      Completar área construída/livre com o projeto da Sanepar. -->
 O @qua:areas apresenta a área ocupada por cada unidade do sistema, obtida a partir da delimitação georreferenciada das unidades projetadas. A área total do empreendimento, correspondente à soma das áreas das unidades delimitadas, é de {{area.total_m2|num:2}} m² ({{area.total_ha|num:2}} ha). As áreas construída e livre correspondem, respectivamente, a {{area.construida_m2|num:2}} m² e {{area.livre_m2|num:2}} m².
 
-!quadro[Áreas ocupadas pelas unidades do sistema projetado](dados/coordenadas.xlsx){#qua:areas filtro="area_m2 == area_m2" colunas="unidade:Unidade,area_m2:Área (m²),area_ha:Área (ha)" fonte="Sanepar, {{ano}}; adaptado pelo autor, {{ano}}."}
+!quadro[Áreas ocupadas pelas unidades do sistema projetado](dados/coordenadas.xlsx){#qua:areas filtro="area_m2 == area_m2" colunas="unidade:Unidade,area_m2:Área (m²),area_ha:Área (ha)" fonte="{{empresa.sigla}}, {{ano}}; adaptado pelo autor, {{ano}}."}
 
 Complementarmente às áreas pontuais de cada unidade, o @qua:adutoras apresenta a extensão das adutoras que interligam o sistema.
 
-!quadro[Extensão das adutoras do sistema projetado](dados/coordenadas.xlsx){#qua:adutoras filtro="extensao_m == extensao_m and referencia == 'início'" colunas="unidade:Adutora,extensao_m:Extensão (m)" casas=0 fonte="Sanepar, {{ano}}; adaptado pelo autor, {{ano}}."}
+!quadro[Extensão das adutoras do sistema projetado](dados/coordenadas.xlsx){#qua:adutoras filtro="extensao_m == extensao_m and referencia == 'início'" colunas="unidade:Adutora,extensao_m:Extensão (m)" casas=0 fonte="{{empresa.sigla}}, {{ano}}; adaptado pelo autor, {{ano}}."}
 
 <!-- Material e diâmetro das adutoras: acrescentar a partir do memorial descritivo da Sanepar. -->
 

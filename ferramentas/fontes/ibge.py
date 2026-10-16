@@ -16,7 +16,7 @@ from ferramentas.util import console_utf8, slug, RAIZ
 from ferramentas.garimpo import web  # GET com cache e tolerância a certificado SSL inválido
 
 CACHE = RAIZ / "dados_comuns" / "cache"
-UF_COD = {"PR": 41, "SC": 42, "RS": 43, "SP": 35}
+from ferramentas.brasil import UF_COD  # todas as UFs
 TIMEOUT = 60
 
 
@@ -71,7 +71,7 @@ def censo2022(cod: int) -> dict:
 
 
 def limitrofes(cod: int, uf="PR") -> list[str]:
-    g = malha_municipal(uf).to_crs("EPSG:31982")
+    g = malha_municipal(uf).to_crs("EPSG:5880")  # SIRGAS 2000 / Brazil Polyconic (vale para todo o país)
     alvo = g[g["cod_ibge"] == cod].geometry.iloc[0].buffer(50)
     viz = g[g.geometry.intersects(alvo) & (g["cod_ibge"] != cod)]
     return sorted(viz["nome"].dropna().tolist())

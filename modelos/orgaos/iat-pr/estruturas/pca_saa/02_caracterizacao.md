@@ -4,11 +4,11 @@
 
 <!-- IN 37 Anexo X, 2.1 a) a h). Detalhes técnicos ficam no item 4 (Projeto Básico da ETA). -->
 
-**a) Nome do SAA:** Sistema de Abastecimento de Água de {{municipio}}/PR [A VERIFICAR: nome oficial do sistema].
+**a) Nome do SAA:** Sistema de Abastecimento de Água de {{municipio}}/{{uf}} [A VERIFICAR: nome oficial do sistema].
 
 **b) Características técnicas das unidades em licenciamento:** apresentadas no @qua:unidades-resumo.
 
-::: quadro {#qua:unidades-resumo fonte="Sanepar, {{ano}}."} Unidades do sistema em licenciamento
+::: quadro {#qua:unidades-resumo fonte="{{empresa.sigla}}, {{ano}}."} Unidades do sistema em licenciamento
 | Unidade | Características técnicas |
 |---|---|
 <<UNIDADES_LINHAS>>
@@ -36,7 +36,7 @@
 
 <!-- IN 37 2.2: populações residente e flutuante, início e alcance de plano, vazões ano a ano. -->
 
-::: quadro {#qua:populacao fonte="Sanepar, {{ano}}."} Estimativa de população atendida e vazões de projeto
+::: quadro {#qua:populacao fonte="{{empresa.sigla}}, {{ano}}."} Estimativa de população atendida e vazões de projeto
 | Ano | População residente (hab) | População flutuante (hab) | Demanda média (L/s) | Demanda máxima diária (L/s) |
 |---|---|---|---|---|
 | {{populacao.inicio_plano_ano}} | {{populacao.inicio_plano_hab|num:0}} | [A VERIFICAR] | [A VERIFICAR] | [A VERIFICAR] |

@@ -3,7 +3,7 @@
 Uso:
     python -m ferramentas.conferencia.matriz candoi
 
-Para cada item do TR (modelos/matrizes/<documento>_<sistema>.yaml), localiza a seção correspondente em
+Para cada item do TR (modelos/orgaos/<orgao>/matrizes/<documento>_<sistema>.yaml), localiza a seção correspondente em
 texto/*.md (com a mesma numeração do .docx), verifica pendências [A VERIFICAR], imagens e tabelas
 ausentes e classifica: ATENDIDO / PARCIALMENTE ATENDIDO / NÃO ATENDIDO.
 Gera saida/Matriz_<Anexo>_<municipio>.xlsx (abas Matriz e Resumo) e imprime o resumo.
@@ -82,8 +82,10 @@ def avaliar(item: dict, secs: list[dict], base: Path) -> dict:
 
 def gerar(cfg) -> Path:
     d = cfg["dir"]
-    defin = yaml.safe_load((RAIZ / "modelos" / "matrizes" / f"{cfg['documento']}_{cfg['sistema']}.yaml".lower())
-                           .read_text(encoding="utf-8"))
+    arq = cfg["orgao_info"]["pasta"] / "matrizes" / f"{cfg['documento']}_{cfg['sistema']}.yaml".lower()
+    if not arq.exists():
+        raise SystemExit(f"Sem matriz do termo de referência para {arq.stem} no órgão {cfg['orgao']} ({arq}).")
+    defin = yaml.safe_load(arq.read_text(encoding="utf-8"))
     ficha = carregar_ficha(d)
     texto = "\n\n".join(f.read_text(encoding="utf-8") for f in sorted((d / "texto").glob("*.md")))
     secs = secoes(substituir_variaveis(texto, ficha))
@@ -94,8 +96,9 @@ def gerar(cfg) -> Path:
     ws.title = "Matriz"
     fino = Side(style="thin", color="999999")
     borda = Border(left=fino, right=fino, top=fino, bottom=fino)
-    ws.append([f"MATRIZ DE ATENDIMENTO AO {defin['anexo'].upper()} DA INSTRUÇÃO NORMATIVA IAT Nº 37/2025"])
-    ws.append([f"Documento: {cfg['documento']} – {cfg['sistema']} {cfg['municipio']}/PR – Projeto Sanepar {cfg.get('projeto_sanepar', '')}"])
+    ws.append([f"MATRIZ DE ATENDIMENTO AO {defin['anexo'].upper()} DA {cfg['orgao_info'].get('norma', '').upper()}"])
+    ws.append([f"Documento: {cfg['documento']} – {cfg['sistema']} {cfg['municipio']}/{cfg['uf']} – Projeto "
+               f"{cfg['empresa'].get('sigla', '')} {cfg.get('numero_projeto') or ''}"])
     ws.append([f"Referência: {defin['titulo']}"])
     ws.append([])
     cab = ["Item", "Informação exigida", "Item correspondente no documento", "Situação", "Pendências / Observação"]

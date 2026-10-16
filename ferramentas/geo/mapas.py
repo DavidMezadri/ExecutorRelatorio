@@ -273,7 +273,7 @@ def m_localizacao_unidades(ctx):
     m = Mapa(ctx, "Localização das unidades do empreendimento", paisagem=True)
     m.satelite()
     m.unidades()
-    m.fontes.append(f"Sanepar ({ANO})")
+    m.fontes.append(f"{ctx['cfg']['empresa'].get('sigla', 'Empreendedor')} ({ANO})")
     m.salvar("localizacao_unidades")
 
 
@@ -281,7 +281,7 @@ def m_localizacao_regional(ctx):
     ctx2 = dict(ctx)
     mun = ctx["municipio"]
     ctx2["extent"] = tuple(mun.total_bounds + np.array([-8000, -8000, 8000, 8000]))
-    m = Mapa(ctx2, f"Localização regional – {ctx['cfg']['municipio']}/PR")
+    m = Mapa(ctx2, f"Localização regional – {ctx['cfg']['municipio']}/{ctx['cfg']['uf']}")
     uf = ctx["uf"]
     uf.plot(ax=m.ax, color="#f7f7f7", edgecolor="#999", lw=0.4, zorder=1)
     for _, r in uf[uf.intersects(m.janela())].iterrows():
@@ -293,7 +293,7 @@ def m_localizacao_regional(ctx):
     m.handles.append(Patch(facecolor="#f7f7f7", edgecolor="#999", label="Municípios limítrofes"))
     m.unidades(contorno="black")
     m._enquadrar()
-    m.fontes += ["IBGE (2022) – Malha Municipal", f"Sanepar ({ANO})"]
+    m.fontes += ["IBGE (2022) – Malha Municipal", f"{ctx['cfg']['empresa'].get('sigla', 'Empreendedor')} ({ANO})"]
     m.salvar("localizacao_regional")
 
 
@@ -305,7 +305,7 @@ def _tema(ctx, nome, camada, campo, titulo, fonte, cores=None, paisagem=False):
     m = Mapa(ctx, titulo, paisagem)
     m.vetor_categorico(g, campo, cores)
     m.unidades()
-    m.fontes += [fonte, f"Sanepar ({ANO})"]
+    m.fontes += [fonte, f"{ctx['cfg']['empresa'].get('sigla', 'Empreendedor')} ({ANO})"]
     m.salvar(nome)
 
 
@@ -369,7 +369,7 @@ def m_bacia(ctx):
     m.hidro()
     m.unidades(contorno="black")
     m._enquadrar()
-    m.fontes.append(f"Sanepar ({ANO})")
+    m.fontes.append(f"{ctx['cfg']['empresa'].get('sigla', 'Empreendedor')} ({ANO})")
     m.salvar("bacia")
 
 
@@ -392,7 +392,7 @@ def m_altimetria(ctx):
     m.hidro()
     m.unidades(contorno="black")
     m._enquadrar()
-    m.fontes += ["Copernicus DEM GLO-30 (ESA)", f"Sanepar ({ANO})"]
+    m.fontes += ["Copernicus DEM GLO-30 (ESA)", f"{ctx['cfg']['empresa'].get('sigla', 'Empreendedor')} ({ANO})"]
     m.salvar("altimetria")
 
 
@@ -410,7 +410,7 @@ def m_declividade(ctx):
         m.handles.append(Patch(facecolor=cor, edgecolor="#555", lw=0.3, label=nome))
     m.unidades(contorno="black")
     m._enquadrar()
-    m.fontes += ["Copernicus DEM GLO-30 (ESA)", "classes EMBRAPA (1979)", f"Sanepar ({ANO})"]
+    m.fontes += ["Copernicus DEM GLO-30 (ESA)", "classes EMBRAPA (1979)", f"{ctx['cfg']['empresa'].get('sigla', 'Empreendedor')} ({ANO})"]
     m.salvar("declividade")
 
 
@@ -433,7 +433,7 @@ def m_uso_solo(ctx):
         m.handles.append(Patch(facecolor=cor, edgecolor="#555", lw=0.3, label=nome))
     m.unidades(contorno="black")
     m._enquadrar()
-    m.fontes += ["MapBiomas Coleção 9 (2023)", f"Sanepar ({ANO})"]
+    m.fontes += ["MapBiomas Coleção 9 (2023)", f"{ctx['cfg']['empresa'].get('sigla', 'Empreendedor')} ({ANO})"]
     m.salvar("uso_solo")
 
 
@@ -475,7 +475,7 @@ def m_app_rl(ctx):
     m._enquadrar()
     if ctx.get("fonte_hidro"):
         m.fontes.append(f"Hidrografia: {ctx['fonte_hidro']}")
-    m.fontes.append(f"Sanepar ({ANO})")
+    m.fontes.append(f"{ctx['cfg']['empresa'].get('sigla', 'Empreendedor')} ({ANO})")
     m.salvar("app_rl")
 
 

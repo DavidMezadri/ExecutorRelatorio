@@ -1,6 +1,6 @@
 # Conferência de citações – General Carneiro
 
-55 citações no texto.
+59 citações no texto.
 
 
 ## Citações sem referência na lista (0)

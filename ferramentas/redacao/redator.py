@@ -96,16 +96,28 @@ class Redator:
         """Classes presentes (sem percentuais: os números ficam com os mapas do Felipe)."""
         return [k for k, v in self.ponderado(campo).items() if v >= minimo]
 
-    def aguas(self):
-        """Bacia, unidade hidrográfica, aquífero e formação de cada unidade + textos oficiais (garimpo.aguas_pr)."""
-        if not hasattr(self, "_aguas"):
-            from ferramentas.garimpo import aguas_pr
+    def prov(self):
+        """Provedores temáticos (ferramentas.provedores): nacionais + estaduais da UF do projeto."""
+        if not hasattr(self, "_prov"):
+            from ferramentas import provedores
             try:
-                self._aguas = aguas_pr.para_projeto(self.cfg["chave"])
+                self._prov = provedores.consultar(self.cfg)
             except Exception as e:
-                print(f"  (fontes oficiais de águas/geologia do PR indisponíveis: {e.__class__.__name__})")
-                self._aguas = {}
-        return self._aguas
+                print(f"  (provedores indisponíveis: {e.__class__.__name__})")
+                self._prov = {}
+        return self._prov
+
+    def par_prov(self, tema, mapa=None):
+        """Parágrafos dos provedores do tema; o da mesma base do mapa do Felipe vem primeiro."""
+        from ferramentas import provedores
+        bases = None
+        if mapa:
+            if not hasattr(self, "_felipe"):
+                self._felipe = _ler(self.cfg["dir"] / "dados" / "mapas_felipe.yaml") or {}
+            x = self._felipe.get(mapa) or {}
+            fonte = x.get("fonte") or x.get("fonte_ocr")
+            bases = [fonte] if fonte else None
+        return provedores.paragrafos(self.prov(), tema, bases)
 
     def cita(self, k):
         self.usados.add(k)
@@ -215,59 +227,29 @@ class Redator:
         return txt + " O uso do solo deve ser confirmado na vistoria de campo."
 
     def geomorfologia(self):
-        """Atlas Geomorfológico do Paraná (subunidade de cada unidade, texto do planalto e da subunidade) +
-        unidade do IBGE + relevo qualitativo. Com o mapa do Felipe confirmado, usa as classes da legenda dele."""
-        import re as _re
-        from ferramentas.garimpo import geomorfologia_pr as gpr
-        pr = None
-        try:
-            pr = gpr.para_projeto(self.cfg["chave"])
-        except Exception as e:
-            print(f"  (Atlas Geomorfológico do Paraná indisponível: {e.__class__.__name__})")
-        cit = gpr.CIT
+        """IBGE (nacional) + complementos estaduais (ex.: Atlas Geomorfológico do PR) + relevo qualitativo."""
         pars = []
         fel = self.felipe("geomorfologia")
-        subs = (pr or {}).get("subunidades") or []
         if fel:
-            # classes do mapa do Felipe; descrição do atlas quando o nome coincidir
             pars.append(f"Conforme o mapa geomorfológico (@fig:geomorfologia), a área do empreendimento insere-se nas "
                         f"seguintes unidades: {lista(fel)}.")
-            subs = [s for s in subs if any(s["nome"] and s["nome"].lower() in c.lower() for c in fel)]
-        if subs:
-            if not fel:
-                s0 = subs[0]
-                morfo = {"1": "Cinturão Orogênico do Atlântico", "2": "Bacia Sedimentar do Paraná",
-                         "3": "Bacias Sedimentares Cenozóicas e Depressões Tectônicas"}.get(s0["codigo"][0])
-                nomes = [f"{s['nome']} ({s['codigo']})" for s in subs]
-                pars.append(f"Segundo o Atlas Geomorfológico do Estado do Paraná ({cit}), o empreendimento insere-se na "
-                            f"unidade morfoestrutural {morfo}"
-                            + (f", unidade morfoescultural {s0['unidade']}" if s0.get("unidade") else "")
-                            + f", {'subunidades morfoesculturais' if len(subs) > 1 else 'subunidade morfoescultural'} "
-                            + f"{lista(nomes)}.")
-            for un, tx in ((pr or {}).get("planaltos") or {}).items():
-                if tx:
-                    pars.append(f"{tx if tx.endswith('s.n.m.') else tx.rstrip('.')} ({cit}).")
-            for s in subs:
-                tx = s.get("texto") or ""
-                # tira as estatísticas da folha 1:250.000 (área da subunidade na folha) e reescreve o início
-                tx = _re.sub(r",? e ocupa uma área de [\d.,]+ km²,? que corresponde a [\d.,]+ ?% desta Folha", "", tx)
-                tx = _re.sub(r" (?:em|de) (?:uma área|um total)(?: total)? de [\d.,]+ km ?2?²?", "", tx)
-                tx = _re.sub(r"^A sub-unidade morfoescultural número [\d.]+, denominada (.+?), situada no ([^,]+), ",
-                             r"A subunidade \1, situada no \2, ", tx)
-                tx = tx.replace("altitutudes", "altitudes").replace("m. s. n. m.", "m.").replace("m.. ", "m. ")
-                tx = _re.sub(r" \(metros sobre o nível do mar\)", "", tx)
-                un_proj = s.get("unidades_projeto") or []
-                pars.append(tx.rstrip(".") + f" ({cit}). Nessa subunidade "
-                            + ("situam-se as unidades " if len(un_proj) > 1 else "situa-se a unidade ") + f"{lista(un_proj)}.")
-        # IBGE (BDiA) como complemento, sem números
         dist = self.classes("geomorfologia")
         if dist and not fel:
             det = self.cam.get("geomorfologia", {}).get("classes", {})
             x = det.get(dist[0], {})
-            pars.append(f"No mapeamento geomorfológico do IBGE, em escala 1:250.000, a área corresponde à unidade {dist[0]}"
+            pars.append(f"No mapeamento geomorfológico do IBGE, em escala 1:250.000, a área do empreendimento corresponde à "
+                        f"unidade {dist[0]}"
                         + (f", da região {x.get('nm_regiao')}" if x.get("nm_regiao") else "")
+                        + (f" e do domínio {x.get('nm_dominio')}" if x.get("nm_dominio") else "")
                         + (f", com formas de {x.get('forma')}" if x.get("forma") else "")
-                        + f" ({self.cita('ibge')}).")
+                        + f" ({self.cita('ibge')})."
+                        + (f" Ocorre ainda a unidade {lista(dist[1:])}." if dist[1:] else ""))
+        estaduais = self.par_prov("geomorfologia", "geomorfologia")
+        if fel:  # só as subunidades estaduais que aparecem na legenda do mapa do Felipe
+            subs = [s for r in self.prov().get("geomorfologia") or [] for s in r.get("subunidades") or []]
+            nomes = [s["nome"] for s in subs if s.get("nome") and any(s["nome"].lower() in c.lower() for c in fel)]
+            estaduais = [p for p in estaduais if any(n in p for n in nomes)] if nomes else []
+        pars += estaduais
         relevo = [k.split(" (")[0].lower() for k in self.classes("declividade", minimo=15)]
         if relevo:
             pars.append(f"Localmente, o relevo apresenta-se predominantemente {lista(relevo)}, segundo as classes de relevo da "
@@ -275,116 +257,38 @@ class Redator:
         return "\n\n".join(pars) or None
 
     def geologia(self):
-        ag = self.aguas()
-        cit = (ag.get("citacoes") or {}).get("carta", "BRASIL, 2015")
-        lit = self.ponderado("litoestratigrafia")
-        geo = self.ponderado("geologia")
-        det = self.cam.get("litoestratigrafia", {}).get("classes", {})
         pars = []
         fel = self.felipe("geologia")
         if fel:
             pars.append(f"Conforme o mapa geológico (@fig:geologia), a área do empreendimento assenta-se sobre: {lista(fel)}.")
-        principais = [cl for cl, pct in lit.items() if pct >= 1]
-        sgb = ag.get("formacoes_sgb") or {}
-        if principais and not fel:
-            x = {**det.get(principais[0], {}), **(sgb.get(principais[0]) or {})}
-            idade = " ".join(v for v in (x.get("sistema_min"), x.get("epoca_min")) if v)
-            era = (x.get("era_min") or "").replace("ó", "o").replace("Mesozoico", "Mesozoica").replace("Paleozoico", "Paleozoica")                 .replace("Cenozoico", "Cenozoica").replace("Neoproterozoico", "Neoproterozoica")
-            pais = x.get("nome_pai")
-            pars.append(f"Do ponto de vista geológico, as unidades do empreendimento assentam-se sobre o {principais[0]}"
-                        + (f", do {idade}" + (f" (Era {era})" if era else "") if idade else "")
-                        + (f", integrante do {pais.split(' - ', 1)[-1]}" if pais else "")
-                        + (", na Bacia Sedimentar do Paraná" if x.get("era_min") in ("Mesozóico", "Paleozóico") else "")
-                        + (f", com litotipos de {x['litotipos'].lower()}" if x.get("litotipos") else "")
-                        + f" ({self.cita('sgb')}).")
-            if len(principais) > 1:
-                pars[-1] += f" Ocorre ainda {lista(principais[1:])} ({self.cita('sgb')})."
-        for cl in principais[:2]:
-            leg = ((sgb.get(cl) or {}).get("legenda") or (det.get(cl, {}) or {}).get("legenda") or "")
-            leg = re.split(r"\s\d{2,3},\d ?± ?|\s{2,}", leg)[0].strip().rstrip(".")  # sem as datações radiométricas
-            if leg:
-                pars.append(f"Segundo o Serviço Geológico do Brasil, o {cl} corresponde a uma "
-                            f"{leg[0].lower() + leg[1:]} ({self.cita('sgb')}).")
-        for f, frases in (ag.get("formacoes") or {}).items():
-            if frases:
-                txt = " ".join(frases[:6]).rstrip(".")
-                pars.append(f"No Paraná, {txt[0].lower() + txt[1:]} ({cit}).")
+        pars += self.par_prov("geologia", "geologia")
+        geo = self.ponderado("geologia")
         if geo and not fel:
             pars.append(f"No mapeamento geológico do IBGE, em escala 1:250.000, a área corresponde às unidades "
                         f"{lista([k for k, v in geo.items() if v >= 1])} ({self.cita('ibge')}).")
         return "\n\n".join(pars) or None
 
     def hidrogeologia(self):
-        ag = self.aguas()
-        cits = ag.get("citacoes") or {}
         pars = []
         fel = self.felipe("hidrogeologia")
         if fel:
             pars.append(f"Conforme o mapa hidrogeológico (@fig:hidrogeologia), a área do empreendimento insere-se em: {lista(fel)}.")
-        dist = self.ponderado("hidrogeologia")
-        det = self.cam.get("hidrogeologia", {}).get("classes", {})
-        partes = []
-        for cl, pct in dist.items():
-            if pct < 1:
-                continue
-            x = det.get(cl, {})
-            partes.append(f"unidade {cl}" + (f" (domínio {x.get('dom')}" + (f", subdomínio {x.get('subdom')}" if x.get("subdom") else "") + ")"
-                                            if x.get("dom") else ""))
-        if partes and not fel:
-            pars.append(f"Em termos hidrogeológicos, a área do empreendimento insere-se na {lista(partes)}, segundo o mapa de "
-                        f"domínios e subdomínios hidrogeológicos do Brasil ({self.cita('sgb')}).")
-        for aq, x in (ag.get("aquiferos") or {}).items():
-            iat = ", ".join(x.get("unidade_iat") or [])
-            pars.append(f"No mapeamento das unidades aquíferas do Paraná, o empreendimento situa-se na unidade {iat or aq} "
-                        f"({cits.get('iat', 'IAT, [2020]')}), correspondente ao Aquífero {aq} descrito na Carta das Águas "
-                        f"Subterrâneas do Paraná ({cits.get('carta', 'BRASIL, 2015')}).")
-            if x.get("hidrodinamica"):
-                pars.append(" ".join(x["hidrodinamica"]).rstrip(".") + f" ({cits.get('carta', 'BRASIL, 2015')}).")
-            if x.get("vulnerabilidade"):
-                pars.append("Quanto à vulnerabilidade natural à contaminação, " + (lambda s: s[0].lower() + s[1:])(
-                    " ".join(x["vulnerabilidade"]).rstrip(".")) + f" ({cits.get('carta', 'BRASIL, 2015')}).")
-            if x.get("sanepar"):
-                pars.append("No abastecimento público, " + (lambda s: s[0].lower() + s[1:])(x["sanepar"].rstrip("."))
-                            + f" ({cits.get('mendes', 'MENDES et al., 2002')}).")
+        pars += self.par_prov("hidrogeologia", "hidrogeologia")
         return "\n\n".join(pars) or None
 
     def hidrologia(self):
-        ag = self.aguas()
-        cits = ag.get("citacoes") or {}
-        h = (self.dos or {}).get("hidrologia") or {}
-        pars = []
-        rh = {"Litorânea": ("Atlântico Sul", "2,9%"), "Ribeira": ("Atlântico Sudeste", "4,9%")}
-        for bacia, x in (ag.get("bacias") or {}).items():
-            uhs = [u.title().replace(" Do ", " do ").replace(" Dos ", " dos ").replace(" Da ", " da ")
-                   for u in x.get("unidades_hidrograficas") or []]
-            reg, pct = rh.get(bacia, ("Paraná", "92,2%"))
-            pars.append(f"O empreendimento situa-se na Bacia Hidrográfica do Rio {bacia}"
-                        + (f", que ocupa {x['area_km2_carta']} km² do território paranaense ({cits.get('carta')})"
-                           if x.get("area_km2_carta") else "")
-                        + (f", na Unidade Hidrográfica {lista(uhs)}, conforme a divisão estabelecida pela Resolução CERH/PR "
-                           f"nº 49/2006 ({cits.get('iat')})" if uhs else "")
-                        + f". Quanto às regiões hidrográficas nacionais (Resolução CNRH nº 32/2003), a bacia integra a Região "
-                        f"Hidrográfica do {reg}, que abrange {pct} do território paranaense ({cits.get('carta')})"
-                        + (f", e, na divisão da Agência Nacional de Águas e Saneamento Básico, a Unidade de Planejamento "
-                           f"Hídrico {h['uph']} ({self.cita('ana')})" if h.get("uph") else "") + ".")
+        pars = list(self.par_prov("hidrologia", "bacia"))
         trav = sum(i.get("travessias", 0) for i in self.un.values())
         cursos = sorted({c for i in self.un.values() for c in (i.get("cursos_atravessados") or []) if "sem denominação" not in c})
         nasc = sum(i.get("nascentes_ate_100m", 0) for i in self.un.values())
         frases = []
-        rios = {}
-        for nome, x in (h.get("por_unidade") or {}).items():
-            rios.setdefault(x["rio_mais_proximo"], []).append(nome)
-        for rio, un in rios.items():
-            frases.append(f"o curso d'água nomeado mais próximo {'das unidades' if len(un) > 1 else 'da unidade'} "
-                          f"{lista(un)} é o {rio}")
         if trav:
             frases.append("o traçado das unidades lineares intercepta cursos d'água"
                           + (f", entre eles {lista(cursos)}" if cursos else ", em sua maioria sem denominação"))
         if nasc:
             frases.append("há nascentes nas proximidades das unidades")
         if frases:
-            txt = "; ".join(frases)
-            pars.append("Em escala local, " + txt + f" ({self.cita('ana')}), conforme o mapa de bacia hidrográfica.")
+            pars.append("Em escala local, " + "; ".join(frases) + f" ({self.cita('ibge')}), conforme o mapa de bacia hidrográfica.")
         return "\n\n".join(pars) or None
 
     def fitogeografia(self):
@@ -436,7 +340,7 @@ class Redator:
         from ferramentas.geo.mapas import tem_car
         d = self.cfg["dir"] / "dados"
         cliente = [p for p in d.glob("*.gpkg") if "rio" in p.stem.lower() and "nascente" not in p.stem.lower()]
-        hidro = ("na hidrografia fornecida pela Sanepar" if cliente else
+        hidro = (f"na hidrografia fornecida pela {self.cfg['empresa'].get('sigla', 'empreendedora')}" if cliente else
                  f"na hidrografia da Base Cartográfica Contínua do Brasil, escala 1:250.000 – BC250 ({self.cita('ibge')})")
         if tem_car(self.cfg):
             return (f"A delimitação das Áreas de Preservação Permanente (APP) e da Reserva Legal foi realizada com base "
@@ -575,7 +479,9 @@ class Redator:
         arq = self.cfg["dir"] / "dados" / "acessos.yaml"
         if not arq.exists():
             return None
-        return (yaml.safe_load(arq.read_text(encoding="utf-8")) or {}).get("texto")
+        texto = (yaml.safe_load(arq.read_text(encoding="utf-8")) or {}).get("texto")
+        dnit = self.par_prov("rodovias")
+        return ("\n\n".join(dnit) + "\n\n" + texto) if dnit and texto else texto
 
     def socio(self):
         """3.7.1 Residências e entorno no padrão do MCE de Entre Rios (ferramentas.geo.socio)."""

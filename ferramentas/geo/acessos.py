@@ -309,7 +309,7 @@ def mapa(cfg, g, rotas_utm, n):
     m.handles += [Line2D([], [], color="#444", lw=1.5, ls="-", label="Via pavimentada"),
                   Line2D([], [], color="#444", lw=1.5, ls=(0, (3, 2)), label="Via não pavimentada"),
                   Line2D([], [], color="#444", lw=1.5, ls=(0, (1, 1.5)), label="Revestimento sem informação")]
-    m.fontes += ["Vias: OpenStreetMap", "Rotas: OSRM", f"Sanepar ({ANO})"]
+    m.fontes += ["Vias: OpenStreetMap", "Rotas: OSRM", f"{cfg['empresa'].get('sigla', 'Empreendedor')} ({ANO})"]
     m._enquadrar()
     nome = f"acesso_{n}"
     m.salvar(nome)

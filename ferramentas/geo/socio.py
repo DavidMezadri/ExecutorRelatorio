@@ -324,7 +324,7 @@ def gerar(chave):
     cod = cfg.get("cod_ibge") or (yaml.safe_load((cfg["dir"] / "projeto.yaml").read_text(encoding="utf-8")) or {}).get("cod_ibge")
     if not cod:
         from ferramentas.fontes import ibge
-        cod = ibge.buscar(cfg["municipio"])["id"]
+        cod = ibge.buscar(cfg["municipio"], cfg["uf"])["id"]
     dados["historico"] = historico(cod)
     dados["socioeconomia"] = (dos or {}).get("socioeconomia")
     dados["saneamento"] = (dos or {}).get("saneamento")

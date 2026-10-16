@@ -1,0 +1,48 @@
+# Empreendedor – dados reaproveitados em todos os documentos dele ({{empresa.<campo>}} no texto).
+# Para outra empresa: copiar este arquivo como dados_comuns/empreendedores/<sigla>.yaml e indicar
+# `empreendedor: <sigla>` no projeto (projetos.yaml).
+# Origem: MCE modelo Palmeira (itens 2 e 6). VALIDAR com a Sanepar antes de protocolar.
+sigla: Sanepar
+razao_social: Companhia de Saneamento do Paraná – Sanepar
+nome_fantasia: Sanepar
+cnpj: 76.484.013/0001-45
+inscricao_estadual: 101.800.80-64
+endereco_correspondencia: Rua Engenheiros Rebouças, nº 1376, Curitiba/PR, CEP 80215-900
+cnae: 3600-6/01 (Captação, tratamento e distribuição de água)
+cnae_esgoto: 3701-1/00 (Gestão de redes de esgoto)
+atuacao: presta serviços em centenas de municípios no estado do Paraná e em Porto União, em Santa Catarina
+
+representante:                  # quem assina pelo empreendedor (declarações)
+  nome:
+  cpf:
+  rg:
+  nacionalidade: brasileiro(a)
+  estado_civil:
+  cargo:
+  endereco:
+  telefone:
+  email:
+
+envolvidos:                     # Quadro "Relação dos envolvidos no projeto" (MCE) – igual ao MODELO Palmeira
+  - nome: Elaine Carvalho da Paz
+    funcao: Engenheira Civil — Análise/aprovação (SANEPAR/GPOSD)
+    registro: CREA AM-8645/D
+    telefone: (41) 3330-3910
+  - nome: Denis Schechtel Neves
+    funcao: Químico — Coordenador de Projetos, GPOSD
+    registro: CRQ PR-09402617
+    telefone: (41) 3330-3910
+  - nome: Priscila Koga
+    funcao: Engenheira Civil — Análise/aprovação (SANEPAR/GPOSD)
+    registro: CREA PR-98.487/D
+    telefone: (41) 3330-3910
+
+plantas:                        # padrão das plantas de projeto (ferramentas.ingestao.unidades_sistema)
+  # código da unidade no nome do arquivo: 001-SAA-0674-9142-PBHI-DE-0000CSB01DETALHAMENTO-R0.pdf -> CSB-01
+  regex_arquivo: '-0000([A-Z]{3})(\d{2})[A-Z]'
+  # título do carimbo: "PROJETO BÁSICO HIDRÁULICO CAPTAÇÃO SUBTERRÂNEA - CSB-01 / EEB-01"
+  regex_titulo: 'HIDR[ÁA]ULICO\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ ]+?)\s+-\s+'
+  nao_unidade: [GER, PLA, SON, LEG]
+
+# poços próprios em estudos publicados (hidrogeologia) – só se houver publicação da empresa
+estudos_pocos: mendes-2002

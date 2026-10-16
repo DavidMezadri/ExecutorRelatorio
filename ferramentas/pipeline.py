@@ -29,6 +29,7 @@ ETAPAS = {
     "acessos": ["ferramentas.geo.acessos"],
     "socio": ["ferramentas.geo.socio"],
     "felipe": ["ferramentas.geo.mapas_felipe"],
+    "provedores": ["ferramentas.provedores"],
     "redacao": ["ferramentas.redacao.redator"],
     "mapas": ["ferramentas.geo.mapas"],
     "kmz": ["ferramentas.geo.google_earth", "exportar"],

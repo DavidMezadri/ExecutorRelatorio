@@ -2,11 +2,11 @@
 
 ## Tipo de Atividade do Empreendimento
 
-O empreendimento consiste na ampliação e melhoria do sistema de abastecimento de água do município de {{municipio}}. A Sanepar é a empresa responsável pela captação, tratamento e distribuição de água potável, além da coleta e do tratamento de esgoto sanitário. CNAE {{cnae}}.
+O empreendimento consiste na ampliação e melhoria do sistema de abastecimento de água do município de {{municipio}}. A {{empresa.sigla}} é a empresa responsável pela captação, tratamento e distribuição de água potável, além da coleta e do tratamento de esgoto sanitário. CNAE {{cnae}}.
 
 - Abastecimento de água: capta água de rios, lagos ou poços, trata em estações especializadas e distribui para residências e empresas;
 - Esgotamento sanitário: coleta o esgoto gerado e realiza o tratamento adequado antes de devolvê-lo ao meio ambiente;
-- Atuação geográfica: presta serviços em centenas de municípios no estado do Paraná e em Porto União, em Santa Catarina.
+- Atuação geográfica: {{empresa.atuacao}}.
 
 ## Descritivo da Obra a ser Implantada e Descrição das Intervenções Necessárias
 
@@ -45,7 +45,7 @@ O tratamento restringe-se à cloração e à fluoração da água do poço, sem 
 
 ### Descrição das Unidades que Compõem o Sistema
 
-::: quadro {#qua:unidades fonte="Sanepar, {{ano}}."} Descrição das unidades que compõem o sistema
+::: quadro {#qua:unidades fonte="{{empresa.sigla}}, {{ano}}."} Descrição das unidades que compõem o sistema
 | Unidade | Características principais |
 |---|---|
 | Jangada do Sul - General Carneiro Área do poço e tratamento | Área aproximada de 1.556 m². Poço profundo CSB-01 (120 m; 10 m³/h testados, operação em 7 m³/h); elevatória de água bruta EEB-01 (7,0 m³/h; Hm 63 mca; tubo edutor em aço carbono galvanizado Ø 2"); casa de química (31,70 m²); reservatório RAP-02 (30 m³, PRFV apoiado em base de concreto); elevatória de água tratada EET-01 (7,0 m³/h; Hm 55 mca; poço falso com bomba submersa, adução DN150). [A VERIFICAR: potências dos conjuntos motobomba.] |
@@ -74,7 +74,7 @@ Recomenda-se a conferência diária da quantidade de produto nos tanques e dos t
 
 A localização e a disposição das unidades que integram o empreendimento são apresentadas nas plantas constantes dos Anexos, conforme relação apresentada no @qua:anexos.
 
-::: quadro {#qua:anexos fonte="Sanepar, {{ano}}."} Relação das unidades que compõem o empreendimento e respectivos anexos
+::: quadro {#qua:anexos fonte="{{empresa.sigla}}, {{ano}}."} Relação das unidades que compõem o empreendimento e respectivos anexos
 | Unidade/ponto | Projeto |
 |---|---|
 | Jangada do Sul - General Carneiro Área do poço e tratamento | Anexo I |

@@ -1,8 +1,31 @@
-# ExecutorRelatorio – montagem de MCE/PCA (IN IAT 37/2025)
+# ExecutorRelatorio – montagem de MCE/PCA de saneamento (todo o Brasil)
 
 Ambiente para gerar documentos de licenciamento ambiental (MCE, PCA, RAP) de empreendimentos de
-saneamento Sanepar (SAA/SES) em .docx quase prontos, no layout Biocerne Ambiental, a partir de KMZ,
-planilhas e PDFs de projeto.
+saneamento (SAA/SES) em .docx quase prontos, no layout Biocerne Ambiental, a partir de KMZ, planilhas e PDFs
+de projeto. **Abrangência: qualquer município do Brasil e qualquer empreendedor/órgão** – começou com
+Sanepar/IAT-PR (IN IAT 37/2025), que hoje são só um cadastro de empresa e um de órgão.
+
+## Abrangência nacional (empresa, órgão e provedores)
+- Projeto (`projetos.yaml`): `uf` (padrão = pelo código IBGE), `empreendedor` (padrão `sanepar`) e `orgao`
+  (padrão `iat-pr`), `numero_projeto`.
+- Empresa: `dados_comuns/empreendedores/<sigla>.yaml` – razão social, CNPJ, atuação, representante, equipe
+  (`envolvidos`), padrão das plantas (`plantas.regex_arquivo/regex_titulo`) -> `{{empresa.<campo>}}` no texto.
+  Empresa nova: copiar `sanepar.yaml` e PEDIR os dados ao usuário.
+- Órgão: `modelos/orgaos/<sigla>/` – `orgao.yaml` (norma, anexos do TR, declarações), `estruturas/<doc>_<sist>/`
+  (textos-base) e `matrizes/` (itens do TR) -> `{{orgao.norma}}`. Órgão novo: PEDIR ao usuário o termo de
+  referência e montar estruturas/matrizes a partir dele (copiar iat-pr como ponto de partida).
+- Variáveis de UF: `{{uf}}`, `{{uf_nome}}`, `{{uf_de}}` ("do Paraná", "de Santa Catarina").
+- **Provedores** (`ferramentas/provedores/`, etapa `provedores`, `python -m ferramentas.provedores <chave>`):
+  cada tema tem fontes **nacionais** (sempre) + **estaduais** (só na UF delas); o redator junta nessa ordem.
+  - nacionais: `hidrografia_ana` (BHO 2017: rio, domínio, área de drenagem; região hidrográfica; UH estadual;
+    outorgas próximas), `geologia_sgb` (litoestratigrafia na melhor escala: 1:25k…estadual…1:1M, com a
+    descrição oficial), `hidrogeologia_sgb` (domínios + poços do SIAGAS), `rodovias_dnit` (SNV, superfície oficial).
+  - estaduais PR: `pr_aguas` (IAT/CERH, Carta das Águas, Mendes 2002 – só se a empresa tiver `estudos_pocos`),
+    `pr_geomorfologia` (Atlas Geomorfológico).
+  - novo estado: módulo em `provedores/estadual/` com `UFS={"XX"}` e incluir em `ESTADUAIS`. Parágrafo nacional
+    que um estadual substitui: o nacional o põe em `opcionais`, o estadual declara `cobre`.
+  - o provedor com a mesma base do mapa do Felipe (fonte lida em `mapas_felipe.yaml`) vem primeiro.
+  - resultado em `dados/PROVEDORES.md`.
 
 ## Fluxo para montar um documento
 Skills: `novo-projeto` (cadastrar), `montar-documento` (fluxo completo com redação), `conferir-documento` (revisão).
@@ -18,11 +41,12 @@ Depois de montar, **conferir visualmente** os painéis (Read nos PNG) antes de e
 
 ## Estrutura
 - `projetos.yaml` – registro dos empreendimentos + `correcoes_nomes` (erros de digitação do KMZ).
-- `dados_comuns/` – `sanepar.yaml`, `biocerne.yaml` (viram `{{sanepar.x}}`, `{{biocerne.x}}`), `cache/` (malha IBGE).
+- `dados_comuns/` – `empreendedores/<sigla>.yaml` (`{{empresa.x}}`), `biocerne.yaml` (`{{biocerne.x}}`), `equipe.yaml`
+  (responsável técnico), `cache/` (malhas IBGE, PDFs e shapefiles oficiais – fora do git).
 - `modelos/template_mce.docx` – template limpo derivado do MODELO Palmeira (logos, estilos, sumário/listas).
   Recriar: `python -m ferramentas.docx.template "<MODELO>.docx"`.
-- `modelos/estruturas/{mce_saa,mce_ses,pca_saa,pca_ses}/` – textos-base de cada documento (Anexos VI, VII, X, XI).
-- `modelos/matrizes/*.yaml` – itens de cada Termo de Referência ligados às seções (usado por `conferencia.matriz`).
+- `modelos/orgaos/<orgao>/estruturas/{mce_saa,mce_ses,pca_saa,pca_ses}/` – textos-base de cada documento
+  (IAT-PR: Anexos VI, VII, X, XI da IN 37) e `modelos/orgaos/<orgao>/matrizes/*.yaml` (itens do TR, `conferencia.matriz`).
 - `referencias/` – IN 37/2025 em Markdown (Anexo VI = MCE SAA, VII = MCE SES, X = PCA SAA, XI = PCA SES,
   XIV = PGRS; buscar `^ANEXO VI`) e `modelo_mce_saa_palmeira.md` (texto do modelo: **imitar o estilo de redação**).
 - `projetos/<chave>/` – `projeto.yaml` (ficha: **fonte única de dados**; `null` = falta), `dados/` (unidades.gpkg,
@@ -81,7 +105,7 @@ python -m ferramentas.ingestao.cad <chave>                    # projetos/<chave>
 - `python -m ferramentas.conferencia.citacoes <chave>` (etapa `citacoes`): citação sem referência, referência não citada,
   não conferidas -> `saida/CITACOES.md`.
 - `python -m ferramentas.docx.declaracoes <chave> [--lac]`: Anexos II–V da IN 37 pré-preenchidos em `saida/declaracoes/`.
-- `dados_comuns/equipe.yaml`: responsável técnico e representante da Sanepar – preencher uma vez (vale p/ todos os projetos).
+- `dados_comuns/equipe.yaml`: responsável técnico – preencher uma vez; representante do empreendedor fica no cadastro da empresa.
 
 ## Dossiê padrão da localidade (igual para todo município)
 `python -m ferramentas.dossie.gerar <chave> [--so bloco]` (também é etapa `dossie` do pipeline). Blocos fixos:
@@ -157,8 +181,8 @@ python -m ferramentas.garimpo.biblio abnt --projeto <chave> | usar <chave> CHAVE
   esquerda (título longo quebra alinhado); títulos de todos os níveis sem recuo de 1ª linha.
 - Diagramação (montar): parágrafo terminado em ":" fica junto do quadro/lista seguinte; quadro de até 15 linhas não
   se parte (legenda, linhas e fonte na mesma página); quadro longo mantém cabeçalho com a 1ª linha.
-- Envolvidos no projeto (Quadro 1 do MCE): equipe Sanepar igual à do MODELO Palmeira, em `dados_comuns/equipe.yaml`
-  (`envolvidos_sanepar`); sem linha de e-mail após o quadro.
+- Envolvidos no projeto (Quadro 1 do MCE): equipe do empreendedor (Sanepar = MODELO Palmeira), em
+  `dados_comuns/empreendedores/<sigla>.yaml` (`envolvidos`); sem linha de e-mail após o quadro.
 - **Nunca listar componentes genéricos** (captação, reservação, ETA, elevatórias...) no texto: as unidades vêm do KMZ
   (`{{unidades_nomes|lista}}`) e das plantas (`{{unidades_sistema|lista}}`, `dados/UNIDADES_SISTEMA.md`). Texto-base
   não pode afirmar nada sobre o sistema que não venha de variável ou de fonte do projeto.
@@ -194,6 +218,8 @@ python -m ferramentas.garimpo.biblio abnt --projeto <chave> | usar <chave> CHAVE
   **Texto sem números das nossas bases** (percentuais, áreas, altitudes, metragens em APP, hectares de
   supressão): a base do Felipe pode ser outra e os números conflitariam. Escrever o que dá para generalizar:
   classes presentes, características (Embrapa, legenda MapBiomas), relevo qualitativo, com a fonte citada.
+  **Números publicados por fonte oficial podem entrar, desde que citados** (atlas, Carta das Águas, IBGE, SGB) –
+  decisão do usuário em 16/10/2026. Proibido é número calculado pelos nossos scripts sobre a área do projeto.
   Quando os mapas chegarem: `python -m ferramentas.geo.mapas_felipe <chave>` (etapa `felipe`) lê legenda e fonte
   (texto do PDF ou OCR) -> `dados/mapas_felipe.yaml`; a IA confere cada mapa (Read), preenche `classes` e `fonte`
   e roda redator + montar: o texto passa a usar as classes do mapa do Felipe e a figura, a fonte dele.

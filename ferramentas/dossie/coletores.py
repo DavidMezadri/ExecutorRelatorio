@@ -57,7 +57,7 @@ def _ref_sidra(tabela, nome):
 
 def socioeconomia(ctx):
     from ferramentas.fontes import ibge
-    info = ibge.info(ctx["cfg"]["municipio"])
+    info = ibge.info(ctx["cfg"]["municipio"], ctx["cfg"]["uf"])
     dados = {k: info.get(k) for k in ("populacao_2022", "area_km2", "densidade_hab_km2", "mesorregiao", "microrregiao",
                                       "regiao_imediata", "regiao_intermediaria", "limitrofes")}
     fontes = ["ibge-2023-censo"]
@@ -203,19 +203,21 @@ def _ref_osm():
 
 def acesso(ctx):
     lon, lat = ctx["centro"]
-    rota = web.obter(f"https://router.project-osrm.org/route/v1/driving/{lon},{lat};{CURITIBA[0]},{CURITIBA[1]}",
+    from ferramentas.brasil import capital
+    nome_cap, (cap_lon, cap_lat) = capital(ctx["cfg"]["uf"])
+    rota = web.obter(f"https://router.project-osrm.org/route/v1/driving/{lon},{lat};{cap_lon},{cap_lat}",
                      params={"overview": "false"}, json=True, cache_horas=24 * 90)["routes"][0]
     q = (f"[out:json][timeout:60];way[\"highway\"~\"^(motorway|trunk|primary|secondary)$\"][\"ref\"]"
          f"(around:15000,{lat},{lon});out tags;")
     vias = overpass(q)["elements"]
     refs = sorted({r.strip() for v in vias for r in v["tags"].get("ref", "").split(";") if r.strip()},
                   key=lambda s: (not s.startswith("BR"), s))
-    dados = {"distancia_capital_km": round(rota["distance"] / 1000), "tempo_capital_h": round(rota["duration"] / 3600, 1),
+    dados = {"capital": nome_cap, "distancia_capital_km": round(rota["distance"] / 1000), "tempo_capital_h": round(rota["duration"] / 3600, 1),
              "rodovias_15km": refs}
-    abnt = (f"OSRM – OPEN SOURCE ROUTING MACHINE. Rota rodoviária entre o empreendimento e Curitiba/PR. "
+    abnt = (f"OSRM – OPEN SOURCE ROUTING MACHINE. Rota rodoviária entre o empreendimento e {nome_cap}/{ctx['cfg']['uf']}R. "
             f"[S.l.]: Project OSRM, {biblio.dt.date.today().year}. Disponível em: https://project-osrm.org. Acesso em: {biblio.data_acesso()}.")
     fontes = [_ref_osm(), biblio.registrar("osrm", abnt, "base", "https://project-osrm.org", f"OSRM, {biblio.dt.date.today().year}")]
-    lin = [f"- Distância rodoviária até Curitiba: {dados['distancia_capital_km']} km (~{dados['tempo_capital_h']} h)".replace(".", ","),
+    lin = [f"- Distância rodoviária até {nome_cap} (capital): {dados['distancia_capital_km']} km (~{dados['tempo_capital_h']} h)".replace(".", ","),
            f"- Rodovias num raio de 15 km: {', '.join(refs) or 'nenhuma com código'}"]
     return {"titulo": "Acessos", "dados": dados, "linhas": lin, "fontes": fontes,
             "pendencias": ["Confirmar a rodovia de acesso e as condições de tráfego (pavimentação) em campo/Google Earth."]}

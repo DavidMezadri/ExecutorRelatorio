@@ -1,0 +1,18 @@
+# Órgão licenciador – define a norma, os termos de referência e os textos-base dos documentos.
+# Para outro órgão (ex.: IMA-SC, CETESB, FEAM): criar modelos/orgaos/<sigla>/ com este arquivo,
+# estruturas/<documento>_<sistema>/*.md e matrizes/<documento>_<sistema>.yaml, e indicar `orgao: <sigla>` no projeto.
+sigla: IAT
+nome: Instituto Água e Terra
+uf: PR
+norma: Instrução Normativa IAT nº 37/2025
+norma_curta: IN IAT 37/2025
+referencia: referencias/                      # texto da norma em Markdown (buscar "^ANEXO VI")
+anexos:                                       # termo de referência de cada documento
+  mce_saa: Anexo VI
+  mce_ses: Anexo VII
+  pca_saa: Anexo X
+  pca_ses: Anexo XI
+declaracoes: true                             # Anexos II–V (ferramentas.docx.declaracoes)
+modelos_redacao:                              # documentos-modelo para imitar o estilo
+  - referencias/modelo_mce_saa_palmeira.md
+  - referencias/modelo_mce_saa_entre_rios.md

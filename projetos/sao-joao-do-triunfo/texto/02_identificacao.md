@@ -3,28 +3,28 @@
 <!-- IN 37 Anexo VII, item I: razão social, nome fantasia, CNPJ/IE, endereço completo da unidade,
      endereço para correspondência, responsável + telefone, e-mail. -->
 
-**Razão Social:** {{sanepar.razao_social}}
+**Razão Social:** {{empresa.razao_social}}
 
-**Nome Fantasia:** {{sanepar.nome_fantasia}}
+**Nome Fantasia:** {{empresa.nome_fantasia}}
 
-**CNPJ:** {{sanepar.cnpj}}
+**CNPJ:** {{empresa.cnpj}}
 
-**Inscrição Estadual:** {{sanepar.inscricao_estadual}}
+**Inscrição Estadual:** {{empresa.inscricao_estadual}}
 
 **Endereço Completo da Unidade a ser Licenciada**
 
 <!-- Padrão do modelo: o empreendimento tem várias unidades; citar o endereço da unidade principal (ETA),
      com rua e cruzamento de referência, e remeter às coordenadas do item 3.3. Fotos da via de acesso. -->
-O empreendimento é composto por múltiplas unidades distribuídas no território do município de {{municipio}}/PR, não se restringindo a um único endereço. A unidade principal do sistema está localizada em {{endereco_unidade_principal}}. As demais unidades do sistema estão distribuídas conforme detalhado no item 3 (Caracterização da Área) deste memorial, com as respectivas coordenadas geográficas e UTM.
+O empreendimento é composto por múltiplas unidades distribuídas no território do município de {{municipio}}/{{uf}}, não se restringindo a um único endereço. A unidade principal do sistema está localizada em {{endereco_unidade_principal}}. As demais unidades do sistema estão distribuídas conforme detalhado no item 3 (Caracterização da Área) deste memorial, com as respectivas coordenadas geográficas e UTM.
 
-**Endereço para Correspondência:** {{sanepar.endereco_correspondencia}}
+**Endereço para Correspondência:** {{empresa.endereco_correspondencia}}
 
 **Responsáveis envolvidos no projeto:**
 
-::: quadro {#qua:equipe fonte="Sanepar, {{ano}}."} Relação dos envolvidos no projeto – equipe Sanepar
+::: quadro {#qua:equipe fonte="{{empresa.sigla}}, {{ano}}."} Relação dos envolvidos no projeto – equipe {{empresa.sigla}}
 | Nome | Função / Vínculo | Registro profissional | Telefone |
 |---|---|---|---|
-| {{equipe.envolvidos_sanepar.0.nome}} | {{equipe.envolvidos_sanepar.0.funcao}} | {{equipe.envolvidos_sanepar.0.registro}} | {{equipe.envolvidos_sanepar.0.telefone}} |
-| {{equipe.envolvidos_sanepar.1.nome}} | {{equipe.envolvidos_sanepar.1.funcao}} | {{equipe.envolvidos_sanepar.1.registro}} | {{equipe.envolvidos_sanepar.1.telefone}} |
-| {{equipe.envolvidos_sanepar.2.nome}} | {{equipe.envolvidos_sanepar.2.funcao}} | {{equipe.envolvidos_sanepar.2.registro}} | {{equipe.envolvidos_sanepar.2.telefone}} |
+| {{empresa.envolvidos.0.nome}} | {{empresa.envolvidos.0.funcao}} | {{empresa.envolvidos.0.registro}} | {{empresa.envolvidos.0.telefone}} |
+| {{empresa.envolvidos.1.nome}} | {{empresa.envolvidos.1.funcao}} | {{empresa.envolvidos.1.registro}} | {{empresa.envolvidos.1.telefone}} |
+| {{empresa.envolvidos.2.nome}} | {{empresa.envolvidos.2.funcao}} | {{empresa.envolvidos.2.registro}} | {{empresa.envolvidos.2.telefone}} |
 :::

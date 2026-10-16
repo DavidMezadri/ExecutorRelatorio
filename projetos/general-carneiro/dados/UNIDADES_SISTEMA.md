@@ -1,6 +1,6 @@
 # Unidades do sistema – plantas de projeto (General Carneiro)
 
-Fonte: código no nome do arquivo e título do carimbo das plantas da Sanepar. Conferir antes de usar.
+Fonte: código no nome do arquivo e título do carimbo das plantas (Sanepar). Conferir antes de usar.
 
 | Código | Unidade | Plantas |
 |---|---|---|

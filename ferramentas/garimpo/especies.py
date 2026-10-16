@@ -200,7 +200,7 @@ def entorno(cfg, raio_km=10.0, reino="todos", maximo=400) -> pd.DataFrame:
             info["registros_gbif"] = c["count"]
             info["ameaca_mma_148"] = mma["categoria"].get(info["especie"]) if info["especie"] in mma.index else None
             if nome_reino == "plantas":
-                info.update({k: v for k, v in flora_brasil(info["especie"]).items() if k not in ("familia",)})
+                info.update({k: v for k, v in flora_brasil(info["especie"], cfg["uf"]).items() if k not in ("familia",)})
             return info
 
         from concurrent.futures import ThreadPoolExecutor
@@ -210,7 +210,7 @@ def entorno(cfg, raio_km=10.0, reino="todos", maximo=400) -> pd.DataFrame:
                urllib.parse.urlencode({"geometry": wkt, "taxon_key": kk, "has_coordinate": "true",
                                        "has_geospatial_issue": "false"}))
         ref_gbif(url, f"ocorrências de {'Plantae' if kk == 6 else 'Animalia'} em raio de {raio_km:g} km do "
-                      f"empreendimento em {cfg['municipio']}/PR", cfg["chave"], f"gbif-{cfg['chave']}-{nome_reino}")
+                      f"empreendimento em {cfg['municipio']}/{cfg['uf']}", cfg["chave"], f"gbif-{cfg['chave']}-{nome_reino}")
     ref_mma(cfg["chave"])
     ref_iucn(cfg["chave"])
     if any(r == "plantas" for r, _ in reinos):

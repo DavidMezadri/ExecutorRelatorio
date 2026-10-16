@@ -43,7 +43,18 @@ def _frase(txt):
     return txt.strip().lower()
 
 
-def levantar(dir_proj):
+def _regras(empresa):
+    """Padrão de plantas do empreendedor (dados_comuns/empreendedores/<sigla>.yaml: plantas.*); padrão Sanepar se ausente."""
+    pl = (empresa or {}).get("plantas") or {}
+    re_arq = re.compile(pl["regex_arquivo"], re.I) if pl.get("regex_arquivo") else RE_ARQ
+    re_tit = (re.compile(pl["regex_titulo"] + r"(" + RE_COD + r"(?:\s*/\s*" + RE_COD + r")*)")
+              if pl.get("regex_titulo") else RE_TITULO)
+    nao = set(pl.get("nao_unidade") or NAO_UNIDADE)
+    return re_arq, re_tit, nao
+
+
+def levantar(dir_proj, empresa=None):
+    RE_ARQ, RE_TITULO, NAO_UNIDADE = _regras(empresa)
     unidades = {}  # código -> {nome, plantas}
 
     def anotar(cod, nome, planta, do_titulo=False):
@@ -86,19 +97,20 @@ def levantar(dir_proj):
 def gerar(chave):
     cfg = projeto(chave)
     d = cfg["dir"]
-    unidades = levantar(d)
+    unidades = levantar(d, cfg["empresa"])
+    sigla = cfg["empresa"].get("sigla", "empreendedor")
     dados = d / "dados"
     dados.mkdir(parents=True, exist_ok=True)
     lista = [f"{u['nome']} ({u['codigo']})" for u in unidades]
     (dados / "unidades_sistema.yaml").write_text(
-        "# Gerado por ferramentas.ingestao.unidades_sistema – plantas de projeto da Sanepar. {{unidades_sistema|lista}}\n"
+        f"# Gerado por ferramentas.ingestao.unidades_sistema – plantas de projeto ({sigla}). {{{{unidades_sistema|lista}}}}\n"
         + yaml.safe_dump(lista or None, allow_unicode=True, sort_keys=False), encoding="utf-8")
     linhas = [f"# Unidades do sistema – plantas de projeto ({cfg['municipio']})\n",
-              "Fonte: código no nome do arquivo e título do carimbo das plantas da Sanepar. Conferir antes de usar.\n",
+              f"Fonte: código no nome do arquivo e título do carimbo das plantas ({sigla}). Conferir antes de usar.\n",
               "| Código | Unidade | Plantas |", "|---|---|---|"]
     linhas += [f"| {u['codigo']} | {u['nome']} | {', '.join(u['plantas'])} |" for u in unidades]
     if not unidades:
-        linhas.append("| – | nenhuma planta no padrão Sanepar em extraido/ | – |")
+        linhas.append(f"| – | nenhuma planta no padrão de plantas do cadastro {sigla} (plantas.regex_arquivo) em extraido/ | – |")
     (dados / "UNIDADES_SISTEMA.md").write_text("\n".join(linhas) + "\n", encoding="utf-8")
     return unidades
 

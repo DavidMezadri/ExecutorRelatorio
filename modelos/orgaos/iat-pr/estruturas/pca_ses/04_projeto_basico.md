@@ -9,7 +9,7 @@
 
 ## Bacias de Esgotamento
 
-[A VERIFICAR: bacias de esgotamento cujas contribuições serão encaminhadas à ETE (planta da Sanepar nos Anexos).]
+[A VERIFICAR: bacias de esgotamento cujas contribuições serão encaminhadas à ETE (planta do empreendedor nos Anexos).]
 
 ## Estimativa de Populações e Vazões
 

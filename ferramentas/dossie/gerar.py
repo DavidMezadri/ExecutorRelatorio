@@ -30,7 +30,7 @@ def contexto(cfg):
     u, _ = unidades(cfg)
     uw = u.to_crs("EPSG:4326")
     c = uw.geometry.union_all().centroid
-    cod = cfg.get("cod_ibge") or ibge.buscar(cfg["municipio"])["id"]
+    cod = cfg.get("cod_ibge") or ibge.buscar(cfg["municipio"], cfg["uf"])["id"]
     return {"cfg": cfg, "cod": int(cod), "unidades_utm": u, "unidades_wgs": uw, "centro": (c.x, c.y)}
 
 
@@ -75,7 +75,7 @@ def gerar(cfg, so=None, raio_entorno=500):
         if b.get("pendencias"):
             sec.append("\n*Ressalvas:*\n" + "\n".join(f"- {p}" for p in b["pendencias"]))
         (pasta / f"{nome}.md").write_text("\n".join(sec) + "\n", encoding="utf-8")
-    md = [f"# Dossiê da localidade – {cfg['municipio']}/PR ({cfg['documento']} {cfg['sistema']})\n",
+    md = [f"# Dossiê da localidade – {cfg['municipio']}/{cfg['uf']} ({cfg['documento']} {cfg['sistema']})\n",
           "Gerado por `ferramentas.dossie.gerar` (blocos padrão, iguais para todo município). Valores disponíveis no "
           "texto como `{{dossie.<bloco>.<campo>}}` (ver dados/dossie.yaml).\n"]
     for nome in COLETORES:

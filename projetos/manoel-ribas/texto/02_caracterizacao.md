@@ -4,11 +4,11 @@
 
 <!-- IN 37 Anexo XI, 2.1 a) a l). Detalhes técnicos ficam no item 4 (Projeto Básico). -->
 
-**a) Nome do SES:** Sistema de Esgotamento Sanitário de {{municipio}}/PR [A VERIFICAR: nome oficial do sistema].
+**a) Nome do SES:** Sistema de Esgotamento Sanitário de {{municipio}}/{{uf}} [A VERIFICAR: nome oficial do sistema].
 
 **b) Características técnicas das unidades em licenciamento:** as unidades que compõem o sistema são apresentadas no @qua:unidades-resumo. A ETE adota tratamento do tipo {{ete.processo}}; o lodo gerado será {{ete.lodo}}.
 
-::: quadro {#qua:unidades-resumo fonte="Sanepar, {{ano}}."} Unidades do sistema em licenciamento
+::: quadro {#qua:unidades-resumo fonte="{{empresa.sigla}}, {{ano}}."} Unidades do sistema em licenciamento
 | Unidade | Características técnicas |
 |---|---|
 | Manoel Ribas - ETE | Área aproximada de 15.960 m²; [A VERIFICAR: características – vazão, Hm, potência, volume, material, diâmetro] |
@@ -48,14 +48,14 @@
 
 ![Localização das unidades do sistema](mapas/localizacao_unidades.png){#fig:loc-unidades}
 
-[A VERIFICAR: bacias de esgotamento (planta Sanepar), faixa de domínio e interferências (viário, cursos d'água, adutoras, gasodutos, patrimônio), acessos provisórios e definitivos à ETE e ponto de lançamento – plantas nos Anexos.]
+[A VERIFICAR: bacias de esgotamento (planta do empreendedor), faixa de domínio e interferências (viário, cursos d'água, adutoras, gasodutos, patrimônio), acessos provisórios e definitivos à ETE e ponto de lançamento – plantas nos Anexos.]
 
 ## Estimativa de População e Vazões
 
 <!-- IN 37 2.3: populações residente e flutuante, início e alcance de plano, vazões ano a ano até a saturação.
      Copiar a tabela do estudo de concepção da Sanepar. -->
 
-::: quadro {#qua:populacao fonte="Sanepar, {{ano}}."} Estimativa de população atendida e vazões de projeto
+::: quadro {#qua:populacao fonte="{{empresa.sigla}}, {{ano}}."} Estimativa de população atendida e vazões de projeto
 | Ano | População residente (hab) | População flutuante (hab) | Vazão média (L/s) | Vazão máxima (L/s) |
 |---|---|---|---|---|
 | {{populacao.inicio_plano_ano}} | {{populacao.inicio_plano_hab|num:0}} | [A VERIFICAR] | [A VERIFICAR] | [A VERIFICAR] |
