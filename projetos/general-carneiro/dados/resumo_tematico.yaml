@@ -1,0 +1,120 @@
+crs_utm: EPSG:31982
+unidades:
+  Jangada do Sul - General Carneiro Área do poço e tratamento:
+    geometria: Polygon
+    solos:
+      CHa - Cambissolo Húmico Alumínico: 100.0
+    geologia:
+      Serra Geral: 100.0
+    litoestratigrafia:
+      Grupo Serra Geral: 100.0
+    geomorfologia:
+      Planalto Dissecado Rio Iguaçu: 100.0
+    hidrogeologia:
+      Serra Geral: 100.0
+    vegetacao:
+      Vegetação Secundária: 100.0
+    fitogeografia:
+      Floresta Ombrófila Mista: 100.0
+    uph:
+      Afluentes-MD-IGÇ: 100.0
+    altitude_m:
+      min: 848
+      max: 864
+      media: 855
+    declividade:
+      Ondulado (8–20%): 14.3
+      Forte ondulado (20–45%): 85.7
+    declividade_media_pct: 24.6
+    distancia_area_urbana_m: 207
+    uso_solo_mapbiomas:
+      Formação Florestal: 100.0
+    area_em_app_m2: 0
+  Jangada do Sul - General Carneiro Adutora:
+    geometria: LineString
+    solos:
+      CHa - Cambissolo Húmico Alumínico: 100.0
+    geologia:
+      Serra Geral: 100.0
+    litoestratigrafia:
+      Grupo Serra Geral: 100.0
+    geomorfologia:
+      Planalto Dissecado Rio Iguaçu: 100.0
+    hidrogeologia:
+      Serra Geral: 100.0
+    vegetacao:
+      Vegetação Secundária: 100.0
+    fitogeografia:
+      Floresta Ombrófila Mista: 100.0
+    uph:
+      Afluentes-MD-IGÇ: 100.0
+    altitude_m:
+      min: 845
+      max: 876
+      media: 863
+    declividade:
+      Plano (0–3%): 7.7
+      Suave ondulado (3–8%): 9.6
+      Ondulado (8–20%): 23.1
+      Forte ondulado (20–45%): 59.6
+    declividade_media_pct: 20.3
+    uso_solo_mapbiomas:
+      Mosaico de Usos: 73.1
+      Formação Florestal: 17.3
+      Área Urbanizada: 5.8
+      Rio, Lago e Oceano: 3.8
+    extensao_em_app_m: 0
+camadas:
+  solos:
+    rotulo: Pedologia (IBGE BDiA 1:250.000)
+    classes:
+      CHa - Cambissolo Húmico Alumínico:
+        relevo: ondulado e forte  ondulado
+        textura: argilosa e muito argilosa
+  geologia:
+    rotulo: Geologia (IBGE BDiA 1:250.000)
+    classes:
+      Serra Geral:
+        nm_tempo_g: Fanerozoico Mesozoica Cretáceo Inferior Valanginiano
+        nm_provincia: Paraná
+  litoestratigrafia:
+    rotulo: Litoestratigrafia (SGB 1:1.000.000)
+    classes:
+      Grupo Serra Geral:
+        hierarquia: Grupo
+        litotipos: Andesito basáltico, Arenito, Arenito lítico, Basalto, Basalto andesítico, Dacito, Diabásio, Diorito, Gabro, Riodacito, Riolito, Traquiandesito, Traquidacito, Tufito
+        era_min: Mesozóico
+        sistema_min: Cretáceo
+  geomorfologia:
+    rotulo: Geomorfologia (IBGE BDiA 1:250.000)
+    classes:
+      Planalto Dissecado Rio Iguaçu:
+        nm_regiao: Planalto das Araucárias
+        nm_dominio: Bacias e Coberturas Sedimentares Fanerozóicas
+        compartimento: Planaltos
+        forma: topo aguçado
+        dens_dren: média
+        aprof_inci: 'médio : > 100 a 150m'
+  hidrogeologia:
+    rotulo: Hidrogeologia (SGB 1:2.500.000)
+    classes:
+      Serra Geral:
+        dom: Vulcânicas
+        subdom: Vulcânicas
+  vegetacao:
+    rotulo: Vegetação atual (IBGE BDiA 1:250.000)
+    classes:
+      Vegetação Secundária:
+        nm_sec1: Floresta Ombrófila Mista Alto-Montana
+        leg_sup: Área Antrópica Dominante
+  fitogeografia:
+    rotulo: Vegetação original / fitogeografia (IBGE BDiA 1:250.000)
+    classes:
+      Floresta Ombrófila Mista: {}
+  uph:
+    rotulo: Unidade de Planejamento Hídrico (ANA)
+    classes:
+      Afluentes-MD-IGÇ: {}
+app:
+  fonte_hidrografia: IBGE BC250
+  criterio: 'Lei 12.651/2012 art. 4º: 30 m (<10 m de largura), 50 m (10–50 m), 100 m (50–200 m); raio de 50 m em nascentes'

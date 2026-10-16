@@ -40,6 +40,9 @@ PADROES = {
 }
 
 
+ROTULOS_EXTRA = {"portaria_florestal": "Portarias florestais/ambientais (NÃO são outorga)"}
+MESES = r"(?:janeiro|fevereiro|mar[çc]o|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)"
+FLORESTAL = re.compile(r"supress|ASV|vegeta|resgate|florest|Mata Atl[âa]ntica|flora|fauna|desmat", re.I)
 # Regras de classificação: campo da ficha <- (tipo de padrão, palavras com peso, sistemas)
 # Peso positivo = indica o campo; negativo = afasta. Vale a palavra até ~150 caracteres do valor.
 REGRAS = {
@@ -193,12 +196,22 @@ def extrair(arquivos):
                 ini, fim = max(0, m.start() - 110), min(len(texto), m.end() + 110)
                 ctx = re.sub(r"\s+", " ", texto[ini:fim]).strip()
                 valor = re.sub(r"\s+", " ", m.group(0)).strip()
-                achados[campo].append({"valor": valor, "arquivo": arq.name, "pagina": _pagina(marcas, m.start()),
+                resto = texto[m.end():m.end() + 30]
+                if campo == "diametro" and re.match(rf"\s*(?:de|DE)\s+{MESES}", resto, re.I):
+                    continue  # "DE 18 DE ABRIL" é data, não diâmetro
+                if campo == "curso_dagua" and (valor.lower() == "rio de janeiro" or
+                                               re.match(r"\s+do\s+(?:Sul|Norte)", resto)):
+                    continue  # estados/cidades, não cursos d'água
+                if campo == "outorga" and FLORESTAL.search(ctx):
+                    campo_dest = "portaria_florestal"
+                else:
+                    campo_dest = campo
+                achados[campo_dest].append({"valor": valor, "arquivo": arq.name, "pagina": _pagina(marcas, m.start()),
                                        "trecho": ctx})
     return achados
 
 
-def relatorio(achados, titulo, sugestoes=None, mapa=None):
+def relatorio(achados, titulo, sugestoes=None, mapa=None, diverg=None):
     out = [f"# Extração de dados técnicos – {titulo}\n",
            "Gerado por `ferramentas.ingestao.memorial`. Os memoriais não têm padrão: os valores são achados pela unidade "
            "(L/s, hab, DN...) e classificados pelo contexto. Conferir no documento de origem antes de usar.\n"]
@@ -216,14 +229,22 @@ def relatorio(achados, titulo, sugestoes=None, mapa=None):
                 val += f" (de {c['valor']})"
             org = f"{c['arquivo']}" + (f" p.{c['pagina']}" if c["pagina"] else "")
             outros = "; ".join(f"{o['normalizado']} ({o['pontuacao']})" for o in cands[1:])
+            if c.get("nota"):
+                val += f" – _{c['nota']}_"
+            if not c.get("aplicar", True):
+                val += " [só informativo]"
             out.append(f"| {campo} | **{val}** | {c['pontuacao']} | {org} | {outros} |")
+    if diverg:
+        out.append("\n## Divergências entre fontes\n")
+        out += [f"- {d}" for d in diverg]
     if mapa:
         out.append("\n## Mapa de páginas (onde ler cada assunto)\n")
         for assunto, pags in mapa.items():
             if pags:
                 out.append(f"- **{assunto}:** " + "; ".join(f"{a}" + (f" p.{p}" if p else "") + f" ({n})" for a, p, n in pags))
     out.append("\n## Todos os valores encontrados\n")
-    for campo, (_, rot) in PADROES.items():
+    rotulos = {**{c: r for c, (_, r) in PADROES.items()}, **ROTULOS_EXTRA}
+    for campo, rot in rotulos.items():
         itens = achados.get(campo, [])
         if not itens:
             continue
@@ -262,6 +283,8 @@ def aplicar(cfg, sugestoes, minimo=5, margem=2):
         if not cands:
             continue
         c = cands[0]
+        if c.get("aplicar") is False:
+            continue
         seg = cands[1]["pontuacao"] if len(cands) > 1 else 0
         if c["pontuacao"] < minimo or c["pontuacao"] - seg < margem:
             continue
@@ -276,6 +299,22 @@ def aplicar(cfg, sugestoes, minimo=5, margem=2):
         log.write_text("# Campos preenchidos automaticamente no projeto.yaml\n\nConferir na fonte indicada.\n\n"
                        + "\n".join(linhas) + "\n", encoding="utf-8")
     return feitos
+
+
+def _ficha(cfg):
+    """Ficha do projeto (projeto.yaml) ou {} se não houver projeto."""
+    if not cfg:
+        return {}
+    p = cfg["dir"] / "projeto.yaml"
+    return yaml.safe_load(p.read_text(encoding="utf-8")) or {} if p.exists() else {}
+
+
+def _compor_manancial(diretos):
+    """manancial.tipo ganha a profundidade do poço (ex.: 'subterrânea (poço profundo, 120 m)')."""
+    prof = next((d for d in diretos if d["campo"] == "manancial.profundidade_m"), None)
+    for d in diretos:
+        if d["campo"] == "manancial.tipo" and d["normalizado"] == "subterrânea" and prof:
+            d["normalizado"] = f"subterrânea (poço profundo, {prof['normalizado']} m de profundidade)"
 
 
 def main():
@@ -296,9 +335,22 @@ def main():
     else:
         ap.error("informe a chave do projeto ou --arquivo")
     sistema = a.sistema or (cfg["sistema"] if cfg else "SAA")
+    from ferramentas.ingestao import memorial_diretos as md_dir
     achados = extrair(arqs)
     sug = classificar(achados, sistema)
-    md = relatorio(achados, titulo, sug, mapa_paginas(arqs))
+    diretos = md_dir.extrair_diretos(arqs)
+    _compor_manancial(diretos)
+    for d in diretos:  # o achado direto passa à frente dos candidatos heurísticos do mesmo campo
+        sug.setdefault(d["campo"], [])
+        sug[d["campo"]] = [d] + sug[d["campo"]]
+    for campo, lst in sug.items():  # dois achados diretos para o mesmo campo = ambíguo; aplicar não decide
+        dir_c = [c for c in lst if c.get("pontuacao") == md_dir.PONTOS]
+        if len(dir_c) > 1 and campo != "imoveis_terceiros":
+            for c in dir_c:
+                c["aplicar"] = False
+                c["nota"] = (c.get("nota", "") + " [ambíguo: vários valores diretos]").strip()
+    diverg = md_dir.divergencias(_ficha(cfg), diretos, arqs)
+    md = relatorio(achados, titulo, sug, mapa_paginas(arqs), diverg)
     if cfg:
         (cfg["dir"] / "dados" / "EXTRACAO_MEMORIAL.md").write_text(md, encoding="utf-8")
         print(f"Relatório: {cfg['dir'] / 'dados' / 'EXTRACAO_MEMORIAL.md'}")

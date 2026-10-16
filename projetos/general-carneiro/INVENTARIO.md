@@ -1,0 +1,30 @@
+# Inventário – MCE SAA General Carneiro
+
+- Código IBGE: 4108502
+- IBGE: 11062 hab. (2022), 1071.18 km², limítrofes: Bituruna, Palmas, Porto Vitória
+- KMZ: 2 unidades em 'Jangada do sul SAA' -> dados/unidades.gpkg, dados/coordenadas.xlsx
+- Planilha Lista de documentos e informações MCE SAA - General Carneiro (Jangada do Sul).xlsx -> extraido/lista-de-documentos-e-informacoes-mce-saa-general-carneiro-jangada-do-sul.md
+- PDF 001-SAA-0674-0000-LEGA-DE-0000CSB01JANGADA-R0.pdf: 1 págs -> extraido/001-saa-0674-0000-lega-de-0000csb01jangada-r0.md
+- PDF 001-SAA-0674-0000-LEGA-MD-0000CSB01JANGADA-R0.pdf: 1 págs -> extraido/001-saa-0674-0000-lega-md-0000csb01jangada-r0.md
+- PDF 001-SAA-0674-9142-PBEN-MD-0000GER00INVFLORESTAL-R0.pdf: 78 págs -> extraido/001-saa-0674-9142-pben-md-0000ger00invflorestal-r0.md
+- PDF 001-SAA-0674-9142-SOND-DE-0000PLANSONDAGEM-R0.pdf: 94 págs -> extraido/001-saa-0674-9142-sond-de-0000plansondagem-r0.md
+- PDF 002-SAA-0674-0000-LEGA-DE-0000CSB01JANGADA-R0.pdf: 1 págs -> extraido/002-saa-0674-0000-lega-de-0000csb01jangada-r0.md
+- PDF 002-SAA-0674-0000-LEGA-MD-0000CSB01JANGADA-R0.pdf: 1 págs -> extraido/002-saa-0674-0000-lega-md-0000csb01jangada-r0.md
+- PDF 002-SAA-0674-9142-PBEN-MD-0000GER00PLANRESGERMO-R0.pdf: 30 págs -> extraido/002-saa-0674-9142-pben-md-0000ger00planresgermo-r0.md
+- PDF 004-SAA-0674-9142-PBHI-MD-0000GER00PLANOPERACAO-R0.pdf: 14 págs -> extraido/004-saa-0674-9142-pbhi-md-0000ger00planoperacao-r0.md
+- PDF Averbação de decreto.pdf: 2 págs -> extraido/averbacao-de-decreto.md (sem texto nas págs [1, 2] – OCR)
+- PDF 001-SAA-0674-9142-PBHI-DE-0000RDA01DETALHAMENTO-R0.pdf: 1 págs -> extraido/001-saa-0674-9142-pbhi-de-0000rda01detalhamento-r0.md
+- PDF 002-SAA-0674-9142-PBHI-DE-0000RDA01DETALHAMENTO-R0.pdf: 1 págs -> extraido/002-saa-0674-9142-pbhi-de-0000rda01detalhamento-r0.md
+- PDF 003-SAA-0674-9142-PBHI-DE-0000RDA01DETALHAMENTO-R0.pdf: 1 págs -> extraido/003-saa-0674-9142-pbhi-de-0000rda01detalhamento-r0.md
+- PDF 001-SAA-0674-9142-PBHI-DE-0000GER000PATIOAMARDRE-R0.pdf: 1 págs -> extraido/001-saa-0674-9142-pbhi-de-0000ger000patioamardre-r0.md
+- PDF 002-SAA-0674-9142-PBHI-DE-0000GER000PATIOINTERLI-R0.pdf: 1 págs -> extraido/002-saa-0674-9142-pbhi-de-0000ger000patiointerli-r0.md
+- PDF 003-SAA-0674-9142-PBHI-DE-0000CSB01DETALHAMENTO-R0.pdf: 1 págs -> extraido/003-saa-0674-9142-pbhi-de-0000csb01detalhamento-r0.md
+- PDF 004-SAA-0674-9142-PBHI-DE-0000EET01DETALHAMENTO-R0.pdf: 1 págs -> extraido/004-saa-0674-9142-pbhi-de-0000eet01detalhamento-r0.md
+- PDF 005-SAA-0674-9142-PBHI-DE-0000SCF01LAYOUTPROJET-R0.pdf: 1 págs -> extraido/005-saa-0674-9142-pbhi-de-0000scf01layoutprojet-r0.md
+- PDF 006-SAA-0674-9142-PBHI-DE-0000SCF01DETALHAMENTO-R0.pdf: 1 págs -> extraido/006-saa-0674-9142-pbhi-de-0000scf01detalhamento-r0.md
+- PDF 007-SAA-0674-9142-PBHI-DE-0000AAT01PLANTAPERF01-R1.pdf: 1 págs -> extraido/007-saa-0674-9142-pbhi-de-0000aat01plantaperf01-r1.md
+- PDF 008-SAA-0674-9142-PBHI-DE-0000VRP01DETALHAMENTO-R0.pdf: 1 págs -> extraido/008-saa-0674-9142-pbhi-de-0000vrp01detalhamento-r0.md
+- PDF 009-SAA-0674-9142-PBHI-DE-0000GER00FLUXHIDINSTR-R0.pdf: 1 págs -> extraido/009-saa-0674-9142-pbhi-de-0000ger00fluxhidinstr-r0.md
+- NÃO TRATADO: Informações do cliente\Projetos\Unid. Lineares.zip
+- NÃO TRATADO: Informações do cliente\Projetos\Unid. Localizadas.zip
+- projeto.yaml já existia (mantido)

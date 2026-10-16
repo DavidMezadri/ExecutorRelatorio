@@ -1,0 +1,161 @@
+socioeconomia:
+  populacao_2022: 11062
+  area_km2: 1071.18
+  densidade_hab_km2: 10.33
+  mesorregiao: Sudeste Paranaense
+  microrregiao: União da Vitória
+  regiao_imediata: União da Vitória
+  regiao_intermediaria: Curitiba
+  limitrofes:
+  - Bituruna
+  - Palmas
+  - Porto Vitória
+  pib_mil_rs: 437294.0
+  pib_ano: 2023
+  pib_per_capita_rs: null
+saneamento:
+  agua:
+    domicilios: 3835
+    distribuicao_pct:
+      Possui ligação à rede geral e a utiliza como forma principal: 79.0
+      Possui ligação à rede geral, mas utiliza principalmente outra forma: 1.2
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço profundo ou artesiano: 0.8
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço raso, freático ou cacimba: 0.1
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Fonte, nascente ou mina: 0.3
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Rios, açudes, córregos, lagos e igarapés: 0.0
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Outra: 0.0
+      Não possui ligação com a rede geral: 19.8
+      Não possui ligação com a rede geral - Poço profundo ou artesiano: 2.2
+      Não possui ligação com a rede geral - Poço raso, freático ou cacimba: 7.6
+      Não possui ligação com a rede geral - Fonte, nascente ou mina: 9.5
+      Não possui ligação com a rede geral - Carro-pipa: 0.3
+      Não possui ligação com a rede geral - Rios, açudes, córregos, lagos e igarapés: 0.1
+      Não possui ligação com a rede geral - Outra: 0.1
+  esgoto:
+    domicilios: 3835
+    distribuicao_pct:
+      Rede geral, rede pluvial ou fossa ligada à rede: 54.9
+      Rede geral ou pluvial: 52.4
+      Fossa séptica ou fossa filtro ligada à rede: 2.5
+      Fossa séptica ou fossa filtro não ligada à rede: 15.1
+      Fossa rudimentar ou buraco: 26.2
+      Vala: 0.9
+      Rio, lago, córrego ou mar: 2.5
+      Outra forma: 0.4
+  lixo:
+    domicilios: 3835
+    distribuicao_pct:
+      Coletado: 88.6
+      Coletado no domicílio por serviço de limpeza: 85.8
+      Depositado em caçamba de serviço de limpeza: 2.8
+      Queimado na propriedade: 10.4
+      Enterrado na propriedade: 0.7
+      Jogado em terreno baldio, encosta ou área pública: 0.2
+      Outro destino: 0.2
+  esgoto_rede_pct: 52.4
+  esgoto_adequado_pct: 54.9
+  esgoto_fossa_rudimentar_pct: 26.2
+  agua_rede_pct: 79.0
+clima:
+  temp_media_anual_c: 16.6
+  temp_mes_mais_quente_c: 20.47
+  temp_mes_mais_frio_c: 11.83
+  temp_max_media_c: 33.64
+  temp_min_media_c: -5.41
+  precipitacao_anual_mm: 1667
+  precipitacao_mensal_mm:
+    jan: 160
+    fev: 140
+    mar: 135
+    abr: 122
+    mai: 136
+    jun: 124
+    jul: 104
+    ago: 99
+    set: 130
+    out: 197
+    nov: 152
+    dez: 168
+  koppen: Cfb
+  altitude_modelo_m: 1054.81
+acesso:
+  distancia_capital_km: 265
+  tempo_capital_h: 3.5
+  rodovias_15km:
+  - BR-153
+  - PR-170
+entorno:
+  Jangada do Sul - General Carneiro Área do poço e tratamento:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 1
+      nomes:
+      - Capela de Nossa Senhora Aparecida
+    edificacao:
+      quantidade: 0
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 0
+      nomes: []
+  Jangada do Sul - General Carneiro Adutora:
+    escola:
+      quantidade: 0
+      nomes: []
+    saude:
+      quantidade: 0
+      nomes: []
+    igreja:
+      quantidade: 1
+      nomes:
+      - Capela de Nossa Senhora Aparecida
+    edificacao:
+      quantidade: 0
+      nomes: []
+    comercio:
+      quantidade: 0
+      nomes: []
+    cemiterio:
+      quantidade: 1
+      nomes: []
+  _cnes_estabelecimentos_municipio: 20
+territorios:
+  terras_indigenas: []
+  ti_mais_proxima:
+    nome: Rio dos Pardos
+    distancia_km: 27.3
+    etnia_nome: Xokléng
+    fase_ti: Regularizada
+    municipio_nome: Porto União
+  unidades_conservacao: []
+hidrologia:
+  por_unidade:
+    Jangada do Sul - General Carneiro Área do poço e tratamento:
+      rio_mais_proximo: Rio Jangada
+      distancia_m: 47
+      base: drenagem
+    Jangada do Sul - General Carneiro Adutora:
+      rio_mais_proximo: Rio Jangada
+      distancia_m: 40
+      base: drenagem
+  rio_principal: Rio Jangada
+  uph: Afluentes-MD-IGÇ
+  ottobacia: '8625832'
+  classe_sugerida: Classe 2
+consultas_manuais:
+  lista:
+  - IPHAN – sítios arqueológicos (CNSA/SICG)
+  - IPHAN – bens tombados
+  - INCRA – territórios quilombolas
+  - Fundação Cultural Palmares – comunidades certificadas
+  - Plano Diretor / zoneamento de General Carneiro
+  - Plano Municipal de Saneamento Básico de General Carneiro
+  - CAR/SICAR – imóveis e Reserva Legal
+_gerado_em: '2026-10-15'

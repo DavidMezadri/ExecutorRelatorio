@@ -134,7 +134,8 @@ def artigo(chave, numero, inciso=None, projeto_chave=None) -> str:
     if inciso:
         m = re.search(rf"(?m)^\s*{inciso}\s*[-–].*?(?=^\s*[IVXLC]+\s*[-–]|^\s*§|\Z)", txt, re.S)
         txt = m.group(0).strip() if m else f"Inciso {inciso} não localizado no art. {numero}."
-    return f"{re.sub(r'[ \t]+', ' ', txt)}\n\nFonte: {r['citacao']}.\nReferência: {r['abnt']}"
+    txt = re.sub(r"[ \t]+", " ", txt)
+    return f"{txt}\n\nFonte: {r['citacao']}.\nReferência: {r['abnt']}"
 
 
 def procurar(chave, termo, contexto=250):
@@ -145,7 +146,8 @@ def procurar(chave, termo, contexto=250):
     for n, t in arts.items():
         for m in re.finditer(re.escape(termo), t, re.I):
             a, b = max(0, m.start() - contexto), min(len(t), m.end() + contexto)
-            achados.append(f"Art. {n}: …{re.sub(r'\s+', ' ', t[a:b])}…")
+            trecho = re.sub(r"\s+", " ", t[a:b])
+            achados.append(f"Art. {n}: …{trecho}…")
     return achados
 
 

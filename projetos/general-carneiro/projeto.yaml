@@ -1,0 +1,86 @@
+documento: MCE
+sistema: SAA
+projeto_sanepar: '73349'
+municipio: General Carneiro
+localidade: Jangada do Sul
+uf: PR
+cod_ibge: 4108502
+municipio_info:
+  cod_ibge: 4108502
+  nome_oficial: General Carneiro
+  uf: PR
+  mesorregiao: Sudeste Paranaense
+  microrregiao: União da Vitória
+  regiao_imediata: União da Vitória
+  regiao_intermediaria: Curitiba
+  populacao_2022: 11062
+  area_km2: 1071.18
+  densidade_hab_km2: 10.33
+  limitrofes:
+  - Bituruna
+  - Palmas
+  - Porto Vitória
+  fonte: IBGE – Censo Demográfico 2022 (SIDRA 4714); API de Localidades e Malhas
+empreendedor:
+  responsavel: null
+  telefone: null
+  email: null
+cnae: 3600-6/01 (Captação, tratamento e distribuição de água)
+area_influencia: null
+acessos: null
+endereco_unidade_principal: null
+area:
+  total_m2: null
+  construida_m2: null
+  livre_m2: null
+unidades:
+- nome: Jangada do Sul - General Carneiro Área do poço e tratamento
+  descricao: null
+  geometria: Polygon
+  area_m2: 1555.73
+- nome: Jangada do Sul - General Carneiro Adutora
+  descricao: null
+  geometria: LineString
+  extensao_m: 594.2
+imoveis_terceiros:
+- matricula: '5.744'
+  cartorio: CRI DE UNIÃO DA VITÓRIA
+  intervencoes:
+  - descricao: LEGALIZAÇÃO DA FAIXA DE SERVIDÃO DE ACESSO À ÁREA DO POÇO CSB01
+    area_atingida_m2: 212.13
+    art_levantamento: '1720231599408'
+    responsavel_levantamento: Paulo Cezar Tosin (CREA PR-11.534/D)
+  - descricao: LEGALIZAÇÃO DA ÁREA DO POÇO CSB01
+    area_atingida_m2: 494.0
+    art_levantamento: '1720231599408'
+    responsavel_levantamento: Paulo Cezar Tosin (CREA PR-11.534/D)
+  area_m2: 440550.0
+  incra: 724.041.003.778-1
+  comarca: JANGADA DO SUL
+  proprietario: FELIPE CHABATURA E OUTROS OU A QUEM DE DIREITO PERTENCER
+populacao:
+  inicio_plano_ano: 2026
+  inicio_plano_hab: null
+  final_plano_ano: 2045
+  final_plano_hab: 294
+  demanda_m3_dia: 52.8
+manancial:
+  nome: Poço CSB-01
+  tipo: subterrânea (poço profundo, 120 m de profundidade)
+  bacia: Bacia do Rio Iguaçu
+  classe: null
+  outorga_captacao: null
+eta:
+  capacidade_nominal_ls: 1.94
+  capacidade_maxima_ls: 2.78
+  regime_operacao_h_dia: 8
+  processo: hipoclorito de sódio (cloração/desinfecção) e ácido fluossilícico (fluoração)
+outorga_lancamento: null
+horizonte_projeto_anos: 20
+bairros_atendidos: null
+responsavel_tecnico:
+  empresa: null
+  nome: null
+  cpf: null
+  registro: null
+  art: null

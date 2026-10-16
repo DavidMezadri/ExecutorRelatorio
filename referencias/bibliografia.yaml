@@ -109,6 +109,24 @@ gbif-candoi-plantas:
   citacao: GBIF.ORG, 2026
   verificado: true
   obs: URL completa da busca no campo url. Para publicação formal, o GBIF recomenda citar o DOI de um download
+gbif-general-carneiro-animais:
+  tipo: base
+  abnt: 'GBIF.ORG. GBIF Occurrence Search: ocorrências de Animalia em raio de 10 km do empreendimento em General Carneiro/PR. Copenhague: GBIF Secretariat, 2026. Disponível em: https://www.gbif.org/occurrence/search.
+    Acesso em: 15 out. 2026.'
+  url: https://www.gbif.org/occurrence/search?geometry=POLYGON+%28%28-51.25538659472563+-26.46534169999086%2C+-51.21621120066107+-26.458247575189894%2C+-51.18459605323541+-26.439596844492982%2C+-51.16239908815175+-26.410826140080555%2C+-51.15615138284488+-26.39355902492937%2C+-51.15386802194636+-26.37551516992796%2C+-51.15563955582867+-26.357424697949725%2C+-51.16139248274569+-26.340019286792735%2C+-51.18375431026515+-26.310021862063042%2C+-51.218314489487284+-26.28908596432522%2C+-51.257751911398486+-26.281915500130555%2C+-51.29667866968909+-26.28912141108128%2C+-51.32944358792656+-26.30939703254085%2C+-51.35089445447774+-26.339556514051573%2C+-51.35633481211344+-26.357264174778503%2C+-51.357723245303056+-26.375406199080523%2C+-51.35504753604686+-26.393430845257008%2C+-51.34841440247311+-26.410606785576825%2C+-51.32633218857333+-26.43893235089398%2C+-51.29378158640336+-26.458492765511018%2C+-51.25538659472563+-26.46534169999086%29%29&taxon_key=1&has_coordinate=true&has_geospatial_issue=false
+  acesso: '2026-10-15'
+  citacao: GBIF.ORG, 2026
+  verificado: true
+  obs: URL completa da busca no campo url. Para publicação formal, o GBIF recomenda citar o DOI de um download
+gbif-general-carneiro-plantas:
+  tipo: base
+  abnt: 'GBIF.ORG. GBIF Occurrence Search: ocorrências de Plantae em raio de 10 km do empreendimento em General Carneiro/PR. Copenhague: GBIF Secretariat, 2026. Disponível em: https://www.gbif.org/occurrence/search.
+    Acesso em: 15 out. 2026.'
+  url: https://www.gbif.org/occurrence/search?geometry=POLYGON+%28%28-51.25538659472563+-26.46534169999086%2C+-51.21621120066107+-26.458247575189894%2C+-51.18459605323541+-26.439596844492982%2C+-51.16239908815175+-26.410826140080555%2C+-51.15615138284488+-26.39355902492937%2C+-51.15386802194636+-26.37551516992796%2C+-51.15563955582867+-26.357424697949725%2C+-51.16139248274569+-26.340019286792735%2C+-51.18375431026515+-26.310021862063042%2C+-51.218314489487284+-26.28908596432522%2C+-51.257751911398486+-26.281915500130555%2C+-51.29667866968909+-26.28912141108128%2C+-51.32944358792656+-26.30939703254085%2C+-51.35089445447774+-26.339556514051573%2C+-51.35633481211344+-26.357264174778503%2C+-51.357723245303056+-26.375406199080523%2C+-51.35504753604686+-26.393430845257008%2C+-51.34841440247311+-26.410606785576825%2C+-51.32633218857333+-26.43893235089398%2C+-51.29378158640336+-26.458492765511018%2C+-51.25538659472563+-26.46534169999086%29%29&taxon_key=6&has_coordinate=true&has_geospatial_issue=false
+  acesso: '2026-10-15'
+  citacao: GBIF.ORG, 2026
+  verificado: true
+  obs: URL completa da busca no campo url. Para publicação formal, o GBIF recomenda citar o DOI de um download
 iat-in-37-2025:
   tipo: base
   abnt: 'PARANÁ. Instituto Água e Terra. Instrução Normativa nº 37, de 28 de abril de 2025. Estabelece critérios e procedimentos para o licenciamento ambiental de empreendimentos de saneamento. Curitiba:
@@ -196,6 +214,14 @@ ms-cnes:
 nasa-power-candoi:
   tipo: base
   abnt: 'NASA – NATIONAL AERONAUTICS AND SPACE ADMINISTRATION. Prediction Of Worldwide Energy Resources (POWER): climatologia mensal (1991-2020) no ponto -25.5399, -52.1045. Hampton: NASA Langley Research
+    Center. Disponível em: https://power.larc.nasa.gov. Acesso em: 15 out. 2026.'
+  url: https://power.larc.nasa.gov
+  acesso: '2026-10-15'
+  citacao: NASA, 2026
+  verificado: true
+nasa-power-general-carneiro:
+  tipo: base
+  abnt: 'NASA – NATIONAL AERONAUTICS AND SPACE ADMINISTRATION. Prediction Of Worldwide Energy Resources (POWER): climatologia mensal (1991-2020) no ponto -26.3724, -51.2573. Hampton: NASA Langley Research
     Center. Disponível em: https://power.larc.nasa.gov. Acesso em: 15 out. 2026.'
   url: https://power.larc.nasa.gov
   acesso: '2026-10-15'
