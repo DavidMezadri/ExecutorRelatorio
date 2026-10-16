@@ -30,7 +30,10 @@ def _norm(s):
 def citacoes_texto(texto):
     achadas = []
     for m in RX_PAR.finditer(texto):
-        for parte in m.group(1).split(";"):
+        conteudo = m.group(1)
+        # citação de citação (ABNT): só a obra consultada, depois de "apud", precisa estar nas referências
+        conteudo = re.sub(r"[^;]*?\bapud\s+", "", conteudo)
+        for parte in conteudo.split(";"):
             c = RX_CIT.search(parte.strip())
             if c:
                 autores = [a.strip() for a in parte.split(",")[0].split(";")]

@@ -43,10 +43,10 @@
      ponto de lançamento. Mapas automáticos abaixo + plantas da Sanepar nos Anexos. -->
 
 ::: paisagem
-![Delimitação da área do sistema, recursos hídricos e Áreas de Preservação Permanente](mapas/app_rl.png){#fig:app fonte="SICAR; IAT; elaborado pelo autor, {{ano}}."}
+![Delimitação da área do sistema, recursos hídricos e Áreas de Preservação Permanente](mapas/app_rl.png){#fig:app}
 :::
 
-![Localização das unidades do sistema](mapas/localizacao_unidades.png){#fig:loc-unidades fonte="Esri World Imagery; Sanepar, {{ano}}; elaborado pelo autor, {{ano}}."}
+![Localização das unidades do sistema](mapas/localizacao_unidades.png){#fig:loc-unidades}
 
 [A VERIFICAR: bacias de esgotamento (planta Sanepar), faixa de domínio e interferências (viário, cursos d'água, adutoras, gasodutos, patrimônio), acessos provisórios e definitivos à ETE e ponto de lançamento – plantas nos Anexos.]
 

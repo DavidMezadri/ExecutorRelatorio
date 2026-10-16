@@ -20,6 +20,14 @@ alvares-2013-koppen:
   acesso: '2026-10-15'
   citacao: ALVARES et al., 2013
   verificado: true
+brasil-2015-carta-aguas-pr:
+  tipo: base
+  abnt: 'BRASIL. Ministério do Meio Ambiente. Secretaria de Recursos Hídricos e Ambiente Urbano. Carta das águas subterrâneas do Paraná: resumo executivo. Brasília, DF: MMA, 2015. 337 p. ISBN 978-85-7738-260-6.
+    Disponível em: https://www.iat.pr.gov.br/sites/agua-terra/arquivos_restritos/files/documento/2020-07/livror5.pdf. Acesso em: 16 out. 2026.'
+  url: https://www.iat.pr.gov.br/sites/agua-terra/arquivos_restritos/files/documento/2020-07/livror5.pdf
+  acesso: '2026-10-16'
+  citacao: BRASIL, 2015
+  verificado: true
 brasil-portaria-mma-148-2022:
   tipo: lei
   abnt: 'BRASIL. Ministério do Meio Ambiente. Portaria MMA nº 148, de 7 de junho de 2022. Altera os Anexos da Portaria nº 443, de 17 de dezembro de 2014, da Portaria nº 444, de 17 de dezembro de 2014, e
@@ -29,6 +37,42 @@ brasil-portaria-mma-148-2022:
   acesso: '2026-10-15'
   citacao: BRASIL, 2022
   verificado: false
+candoi-embrapa-sibcs-cambissolos-haplicos:
+  tipo: web
+  abnt: 'EMBRAPA. Empresa Brasileira de Pesquisa Agropecuária. Cambissolos Háplicos. Autores: Humberto Gonçalves dos Santos, Maria José Zaroni, Eliane de Paula Clemente Almeida. In: Agência de Informação
+    Tecnológica (Ageitec) – Solos Tropicais, Sistema Brasileiro de Classificação de Solos (SiBCS). Brasília, DF: Embrapa, 2021d. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/cambissolos/cambissolos-haplicos.
+    Acesso em: 16 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/cambissolos/cambissolos-haplicos
+  acesso: '2026-10-16'
+  citacao: EMBRAPA, 2021d
+  verificado: true
+candoi-embrapa-sibcs-latossolos-brunos:
+  tipo: web
+  abnt: 'EMBRAPA. Empresa Brasileira de Pesquisa Agropecuária. Latossolos Brunos. Autores: Eliane de Paula Clemente Almeida, Humberto Gonçalves dos Santos, Maria José Zaroni. In: Agência de Informação Tecnológica
+    (Ageitec) – Solos Tropicais, Sistema Brasileiro de Classificação de Solos (SiBCS). Brasília, DF: Embrapa, 2021a. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-brunos.
+    Acesso em: 16 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-brunos
+  acesso: '2026-10-16'
+  citacao: EMBRAPA, 2021a
+  verificado: true
+candoi-embrapa-sibcs-latossolos-vermelhos:
+  tipo: web
+  abnt: 'EMBRAPA. Empresa Brasileira de Pesquisa Agropecuária. Latossolos Vermelhos. Autores: Humberto Gonçalves dos Santos, Maria José Zaroni. In: Agência de Informação Tecnológica (Ageitec) – Solos Tropicais,
+    Sistema Brasileiro de Classificação de Solos (SiBCS). Brasília, DF: Embrapa, 2021c. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-vermelhos.
+    Acesso em: 16 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-vermelhos
+  acesso: '2026-10-16'
+  citacao: EMBRAPA, 2021c
+  verificado: true
+candoi-embrapa-sibcs-neossolos-litolicos:
+  tipo: web
+  abnt: 'EMBRAPA. Empresa Brasileira de Pesquisa Agropecuária. Neossolos Litólicos. Autores: Humberto Gonçalves dos Santos, Maria José Zaroni, Eliane de Paula Clemente Almeida. In: Agência de Informação
+    Tecnológica (Ageitec) – Solos Tropicais, Sistema Brasileiro de Classificação de Solos (SiBCS). Brasília, DF: Embrapa, 2021b. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/neossolos/neossolos-litolicos.
+    Acesso em: 16 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/neossolos/neossolos-litolicos
+  acesso: '2026-10-16'
+  citacao: EMBRAPA, 2021b
+  verificado: true
 cerh-pr-49-2006:
   tipo: base
   abnt: PARANÁ. Conselho Estadual de Recursos Hídricos. Resolução CERH/PR nº 49, de 20 de dezembro de 2006. Dispõe sobre a instituição de Regiões Hidrográficas, Bacias Hidrográficas e Unidades Hidrográficas
@@ -127,6 +171,32 @@ gbif-general-carneiro-plantas:
   citacao: GBIF.ORG, 2026
   verificado: true
   obs: URL completa da busca no campo url. Para publicação formal, o GBIF recomenda citar o DOI de um download
+general-carneiro-embrapa-sibcs-cambissolos-humicos:
+  tipo: web
+  abnt: 'EMBRAPA. Empresa Brasileira de Pesquisa Agropecuária. Cambissolos Húmicos. Autores: Humberto Gonçalves dos Santos, Maria José Zaroni, Eliane de Paula Clemente Almeida. In: Agência de Informação
+    Tecnológica (Ageitec) – Solos Tropicais, Sistema Brasileiro de Classificação de Solos (SiBCS). Brasília, DF: Embrapa, 2021. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/cambissolos/cambissolos-humicos.
+    Acesso em: 16 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/cambissolos/cambissolos-humicos
+  acesso: '2026-10-16'
+  citacao: EMBRAPA, 2021
+  verificado: true
+general-carneiro-embrapa-sibcs-nitossolos-brunos:
+  tipo: web
+  abnt: 'EMBRAPA. Empresa Brasileira de Pesquisa Agropecuária. Nitossolos Brunos. Autores: Humberto Gonçalves dos Santos, Maria José Zaroni, Eliane de Paula Clemente Almeida. In: Agência de Informação Tecnológica
+    (Ageitec) – Solos Tropicais, Sistema Brasileiro de Classificação de Solos (SiBCS). Brasília, DF: Embrapa, 2021b. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/nitossolos/nitossolos-brunos.
+    Acesso em: 16 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/nitossolos/nitossolos-brunos
+  acesso: '2026-10-16'
+  citacao: EMBRAPA, 2021b
+  verificado: true
+iat-dados-espaciais:
+  tipo: base
+  abnt: 'PARANÁ. Instituto Água e Terra. Mapas e dados espaciais: unidades aquíferas, bacias hidrográficas e unidades hidrográficas do Paraná (shapefiles). Curitiba: IAT, [2020]. Disponível em: https://www.iat.pr.gov.br/Pagina/Mapas-e-Dados-Espaciais.
+    Acesso em: 16 out. 2026.'
+  url: https://www.iat.pr.gov.br/Pagina/Mapas-e-Dados-Espaciais
+  acesso: '2026-10-16'
+  citacao: IAT, [2020]
+  verificado: true
 iat-in-37-2025:
   tipo: base
   abnt: 'PARANÁ. Instituto Água e Terra. Instrução Normativa nº 37, de 28 de abril de 2025. Estabelece critérios e procedimentos para o licenciamento ambiental de empreendimentos de saneamento. Curitiba:
@@ -148,6 +218,14 @@ ibge-2023-censo:
   url: null
   acesso: '2026-10-15'
   citacao: IBGE, 2022
+  verificado: true
+ibge-historico-4108502:
+  tipo: base
+  abnt: 'IBGE – INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Biblioteca: histórico do município de General Carneiro (PR). Rio de Janeiro: IBGE, [20--]. Disponível em: https://servicodados.ibge.gov.br/api/v1/biblioteca?aspas=3&codmun=410850.
+    Acesso em: 16 out. 2026.'
+  url: https://biblioteca.ibge.gov.br/visualizacao/dtbs/parana/generalcarneiro.pdf
+  acesso: '2026-10-16'
+  citacao: IBGE, [20--]
   verificado: true
 ibge-sidra-5938:
   tipo: base
@@ -194,6 +272,15 @@ maack-1968:
   url: null
   acesso: '2026-10-15'
   citacao: MAACK, 1968
+  verificado: true
+manoel-ribas-embrapa-sibcs-latossolos-vermelhos:
+  tipo: web
+  abnt: 'EMBRAPA. Empresa Brasileira de Pesquisa Agropecuária. Latossolos Vermelhos. Autores: Humberto Gonçalves dos Santos, Maria José Zaroni. In: Agência de Informação Tecnológica (Ageitec) – Solos Tropicais,
+    Sistema Brasileiro de Classificação de Solos (SiBCS). Brasília, DF: Embrapa, 2021. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-vermelhos.
+    Acesso em: 16 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/latossolos/latossolos-vermelhos
+  acesso: '2026-10-16'
+  citacao: EMBRAPA, 2021
   verificado: true
 mendes-2002:
   tipo: base
@@ -382,25 +469,34 @@ norma-lei-9985-2000:
   titulo: Lei nº 9.985, de 18 de julho de 2000
 oka-fiori-2006:
   tipo: base
-  abnt: 'OKA-FIORI, C. et al. Atlas geomorfológico do estado do Paraná: escala base 1:250.000, modelos reduzidos 1:500.000. Curitiba: Minerais do Paraná – MINEROPAR; Universidade Federal do Paraná, 2006.
-    59 p.'
-  url: null
-  acesso: '2026-10-15'
-  citacao: MINEROPAR/UFPR, 2006
+  abnt: 'OKA-FIORI, C. et al. Atlas geomorfológico do Estado do Paraná: escala base 1:250.000, modelos reduzidos 1:500.000. Curitiba: Minerais do Paraná – MINEROPAR; Universidade Federal do Paraná, 2006.
+    63 p. Disponível em: https://www.iat.pr.gov.br/sites/agua-terra/arquivos_restritos/files/documento/2020-04/atlas_geomorforlogico_parana_2006.pdf. Acesso em: 16 out. 2026.'
+  url: https://www.iat.pr.gov.br/sites/agua-terra/arquivos_restritos/files/documento/2020-04/atlas_geomorforlogico_parana_2006.pdf
+  acesso: '2026-10-16'
+  citacao: OKA-FIORI et al., 2006
   verificado: true
 openstreetmap:
   tipo: base
-  abnt: 'OPENSTREETMAP CONTRIBUTORS. OpenStreetMap. Cambridge: OpenStreetMap Foundation, 2026. Disponível em: https://www.openstreetmap.org. Acesso em: 15 out. 2026.'
+  abnt: 'OPENSTREETMAP CONTRIBUTORS. OpenStreetMap. Cambridge: OpenStreetMap Foundation, 2026. Disponível em: https://www.openstreetmap.org. Acesso em: 16 out. 2026.'
   url: https://www.openstreetmap.org
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: OPENSTREETMAP, 2026
   verificado: true
 osrm:
   tipo: base
-  abnt: 'OSRM – OPEN SOURCE ROUTING MACHINE. Rota rodoviária entre o empreendimento e Curitiba/PR. [S.l.]: Project OSRM, 2026. Disponível em: https://project-osrm.org. Acesso em: 15 out. 2026.'
+  abnt: 'OSRM – OPEN SOURCE ROUTING MACHINE. Rotas rodoviárias de acesso às unidades do empreendimento. [S.l.]: Project OSRM, 2026. Disponível em: https://project-osrm.org. Acesso em: 16 out. 2026.'
   url: https://project-osrm.org
-  acesso: '2026-10-15'
+  acesso: '2026-10-16'
   citacao: OSRM, 2026
+  verificado: true
+sao-joao-do-triunfo-embrapa-sibcs-gleissolos-haplicos:
+  tipo: web
+  abnt: 'EMBRAPA. Empresa Brasileira de Pesquisa Agropecuária. Gleissolos Háplicos. Autores: Humberto Gonçalves dos Santos, Maria José Zaroni, Eliane de Paula Clemente Almeida. In: Agência de Informação
+    Tecnológica (Ageitec) – Solos Tropicais, Sistema Brasileiro de Classificação de Solos (SiBCS). Brasília, DF: Embrapa, [20--]. Disponível em: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/gleissolos/gleissolos-haplicos.
+    Acesso em: 16 out. 2026.'
+  url: https://www.embrapa.br/agencia-de-informacao-tecnologica/tematicas/solos-tropicais/sibcs/chave-do-sibcs/gleissolos/gleissolos-haplicos
+  acesso: '2026-10-16'
+  citacao: EMBRAPA, [20--]
   verificado: true
 web-pr-geologia-do-parana-historia-evolutiva:
   tipo: web

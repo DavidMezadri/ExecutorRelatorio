@@ -1,0 +1,149 @@
+gerado_em: '2026-10-16'
+sede:
+- -51.3146691
+- -26.422982
+localidade:
+- -51.256267
+- -26.3751013
+grupos:
+- unidades:
+  - Jangada do Sul - General Carneiro Área do poço e tratamento
+  - Jangada do Sul - General Carneiro Adutora
+  fig: acesso-1
+  mapa: acesso_1
+  titulo_mapa: unidades do empreendimento
+  alternativas:
+  - origens:
+    - sede
+    - O
+    km: 10.39
+    trechos:
+    - via: Rua Presidente Castelo Branco
+      revestimento: revestimento não informado
+      km: 0.56
+    - via: Rua Francisco Costa
+      revestimento: revestimento não informado
+      km: 0.36
+    - via: rodovia sem denominação
+      revestimento: revestimento não informado
+      km: 0.09
+    - via: Via Marginal
+      revestimento: revestimento não informado
+      km: 0.54
+    - via: BR-153
+      revestimento: pavimentada
+      km: 7.94
+    - via: Rua Bernardo Ribeiro Viana
+      revestimento: revestimento não informado
+      km: 0.5
+    - via: Estrada Velha de Palmas
+      revestimento: não pavimentada, em leito natural
+      km: 0.4
+    pavimento_pct:
+      pav: 76
+      nao: 4
+      si: 20
+  - origens:
+    - localidade
+    km: 0.64
+    trechos:
+    - via: Rua Bernardo Ribeiro Viana
+      revestimento: revestimento não informado
+      km: 0.24
+    - via: Estrada Velha de Palmas
+      revestimento: não pavimentada, em leito natural
+      km: 0.4
+    pavimento_pct:
+      pav: 0
+      nao: 62
+      si: 38
+  - origens:
+    - N
+    - S
+    - L
+    km: 5.11
+    trechos:
+    - via: BR-153
+      revestimento: pavimentada
+      km: 4.08
+    - via: via sem denominação
+      revestimento: revestimento não informado
+      km: 0.1
+    - via: Rua Bernardo Ribeiro Viana
+      revestimento: revestimento não informado
+      km: 0.53
+    - via: Estrada Velha de Palmas
+      revestimento: não pavimentada, em leito natural
+      km: 0.4
+    pavimento_pct:
+      pav: 80
+      nao: 8
+      si: 12
+  lineares:
+  - nome: Jangada do Sul - General Carneiro Adutora
+    km: 0.59
+    vias:
+    - via: Estrada Velha de Palmas
+      revestimento: não pavimentada, em leito natural
+      km: 0.45
+      pct: 75
+    - via: Rua Bernardo Ribeiro Viana
+      revestimento: revestimento não informado
+      km: 0.2
+      pct: 33
+    - via: BR-153
+      revestimento: pavimentada
+      km: 0.06
+      pct: 10
+texto: 'O acesso final às unidades se dá pela Estrada Velha de Palmas (não pavimentada,
+  em leito natural), a partir da BR-153, via pavimentada que constitui a principal
+  ligação com a sede municipal (7,9 km do percurso de 10,4 km) (OSRM, 2026; OPENSTREETMAP,
+  2026).
+
+
+  O acesso às unidades Jangada do Sul - General Carneiro Área do poço e tratamento
+  e Jangada do Sul - General Carneiro Adutora (@fig:acesso-1) foi levantado a partir
+  de rotas calculadas sobre a malha viária do OpenStreetMap (OSRM, 2026; OPENSTREETMAP,
+  2026), considerando diferentes pontos de origem do deslocamento. As alternativas
+  de acesso identificadas são apresentadas a seguir:
+
+
+  - A partir da sede municipal (também Acesso Oeste): percurso de 10,4 km, seguindo
+  pela Rua Presidente Castelo Branco (560 m, revestimento não informado), pela Rua
+  Francisco Costa (360 m, revestimento não informado), pela rodovia sem denominação
+  (90 m, revestimento não informado), pela Via Marginal (540 m, revestimento não informado),
+  pela BR-153 (7,9 km, pavimentada), pela Rua Bernardo Ribeiro Viana (500 m, revestimento
+  não informado) e pela Estrada Velha de Palmas (400 m, não pavimentada, em leito
+  natural), via que dá acesso à unidade; 76% do percurso em vias pavimentadas, 4%
+  em vias não pavimentadas e 20% em vias sem revestimento informado na base consultada;
+
+  - A partir do núcleo urbano da localidade: percurso de 640 m, seguindo pela Rua
+  Bernardo Ribeiro Viana (240 m, revestimento não informado) e pela Estrada Velha
+  de Palmas (400 m, não pavimentada, em leito natural), via que dá acesso à unidade;
+  0% do percurso em vias pavimentadas, 62% em vias não pavimentadas e 38% em vias
+  sem revestimento informado na base consultada;
+
+  - Acessos Norte, Sul e Leste: percurso de 5,1 km, seguindo pela BR-153 (4,1 km,
+  pavimentada), pela via sem denominação (100 m, revestimento não informado), pela
+  Rua Bernardo Ribeiro Viana (530 m, revestimento não informado) e pela Estrada Velha
+  de Palmas (400 m, não pavimentada, em leito natural), via que dá acesso à unidade;
+  80% do percurso em vias pavimentadas, 8% em vias não pavimentadas e 12% em vias
+  sem revestimento informado na base consultada.
+
+
+  O traçado da unidade Jangada do Sul - General Carneiro Adutora (590 m) acompanha
+  as seguintes vias, o que facilita o acesso para implantação e manutenção: Estrada
+  Velha de Palmas (450 m, 75% do traçado, não pavimentada, em leito natural); Rua
+  Bernardo Ribeiro Viana (200 m, 33% do traçado, revestimento não informado); BR-153
+  (60 m, 10% do traçado, pavimentada) (OPENSTREETMAP, 2026).
+
+
+  ![Alternativas de acesso às unidades Jangada do Sul - General Carneiro Área do poço
+  e tratamento e Jangada do Sul - General Carneiro Adutora](mapas/acesso_1.png){#fig:acesso-1
+  fonte="OpenStreetMap; OSRM; Esri World Imagery; elaborado pelo autor, 2026."}
+
+
+  <!-- Revestimento das vias conforme o OpenStreetMap (tag surface): conferir em campo/Google
+  Earth e, se divergir, corrigir no OSM ou no texto. -->
+
+  '

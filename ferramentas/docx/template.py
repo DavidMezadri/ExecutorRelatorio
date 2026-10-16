@@ -33,6 +33,37 @@ def _paragrafo_lista(estilo_entrada, rotulo):
     return p
 
 
+def padronizar_estilos(d):
+    """Padrão Biocerne para sumário, listas e títulos (aplicado no template e a cada montagem).
+
+    - Sumário (toc 1-9), Lista de Quadros e Lista de Figuras (table of figures): espaçamento 0 antes
+      e depois, entrelinhas 1,5, fonte do texto; listas sem negrito e alinhadas à esquerda.
+    - Títulos (Heading 1-9): sem recuo da primeira linha (o Normal tem recuo de 1,25 cm).
+    """
+    from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
+    from docx.shared import Emu, Pt
+    nomes = {s.name: s for s in d.styles if s.type == 1}
+    for nome, st in nomes.items():
+        n = nome.lower()
+        pf = st.paragraph_format
+        if (n.startswith("toc ") and n[4:].isdigit()) or n == "table of figures":
+            pf.space_before = Pt(0)
+            pf.space_after = Pt(0)
+            pf.line_spacing_rule = WD_LINE_SPACING.ONE_POINT_FIVE
+            st.font.size = None  # mesmo tamanho do texto (o modelo tinha níveis 2 e 3 em 10 pt)
+            if n.startswith("toc "):
+                # recuo à esquerda (não de 1ª linha, herdado do Normal): título longo quebra alinhado
+                nivel = int(n[4:])
+                pf.first_line_indent = 0
+                pf.left_indent = Emu(0 if nivel == 1 else 450215 + (nivel - 2) * 152400)
+            if n == "table of figures":
+                st.font.bold = False
+                pf.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                pf.first_line_indent = 0
+        elif n.startswith("heading ") and n[8:].isdigit():
+            pf.first_line_indent = 0
+
+
 def criar(modelo: Path, saida: Path):
     d = docx.Document(modelo)
     body = d.element.body
@@ -100,15 +131,7 @@ def criar(modelo: Path, saida: Path):
         if rel.reltype.endswith(("/image", "/hyperlink", "/chart", "/oleObject", "/package")) and f'"{rid}"' not in xml:
             part.drop_rel(rid)
 
-    # entradas da Lista de Figuras/Quadros: sem negrito, alinhadas à esquerda (o Word aplica o estilo ao atualizar)
-    try:
-        from docx.enum.text import WD_ALIGN_PARAGRAPH
-        st = d.styles["table of figures"]
-        st.font.bold = False
-        st.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
-        st.paragraph_format.first_line_indent = 0
-    except KeyError:
-        pass
+    padronizar_estilos(d)
 
     # Word atualiza sumário/listas/numeração ao abrir
     settings = d.settings.element

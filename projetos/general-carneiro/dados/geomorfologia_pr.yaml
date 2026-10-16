@@ -1,0 +1,44 @@
+fonte: OKA-FIORI et al., 2006
+por_unidade:
+  Jangada do Sul - General Carneiro Área do poço e tratamento:
+    codigo: 2.4.2
+    folha: Clevelândia
+    confianca: alta
+    outras: []
+  Jangada do Sul - General Carneiro Adutora:
+    codigo: 2.4.2
+    folha: Clevelândia
+    confianca: alta
+    outras: []
+subunidades:
+- codigo: 2.4.2
+  nome: Planalto do Foz do Areia/Ribeirão Claro
+  unidade: Terceiro Planalto Paranaense
+  folha: Clevelândia
+  texto: A sub-unidade morfoescultural número 2.4.2, denominada Planalto do Foz do
+    Areia/Ribeirão Claro, situada no Terceiro Planalto Paranaense, apresenta dissecação
+    alta e ocupa uma área de 2.411,20 km², que corresponde a 14,61% desta Folha. A
+    classe de declividade predominante está entre 12-30% em uma área de 1.007,65 km².
+    Em relação ao relevo, apresenta um gradiente de 720 metros com altitudes variando
+    entre 620 (mínima) e 1.340 (máxima) m. s. n. m. As formas predominantes são topos
+    alongados, vertentes retilíneas e côncavas e vales em degraus. A direção geral
+    da morfologia é NW/SE, modelada em rochas da Formação Serra Geral.
+  unidades_projeto:
+  - Jangada do Sul - General Carneiro Área do poço e tratamento
+  - Jangada do Sul - General Carneiro Adutora
+planaltos:
+  Terceiro Planalto Paranaense: A Zona de Capeamento Areníto-Basáltico corresponde
+    ao grande derrame mesozóico de rochas eruptivas básicas que, no território paranaense,
+    apresenta-se como o Terceiro Planalto Paranaense, ou Planalto Areníto-Basáltico
+    e abrange cerca de 2/3 do território paranaense. Esta unidade desenvolve-se como
+    um conjunto de relevos planálticos, com inclinação geral para oeste-noroeste e
+    subdivididos pelos principais afluentes do rio Paraná, atingindo altitudes médias
+    de cimeira de 1100 a 1250m, na Serra da Esperança, declinando para altitudes entre
+    220 e 300 metros na calha do rio Paraná. Segundo Maack (1968) este planalto subdivide-se
+    em a) Planalto de Cambará e São Jerônimo da Serra, localizado na parte nordeste
+    do Estado, tendo seus limites nos rios Tibagi, Paranapanema e Itararé; b) Planalto
+    de Apucarana, que se estende entre os rios Tibagi, Paranapanema, Ivaí e Paraná;
+    c) Planalto de Campo Mourão, compreendido entre os rios Ivaí, Piquirí e Paraná;
+    d) Planalto de Guarapuava, que ocupa terras entre os rios Piquiri, Iguaçu e Paraná
+    e, e) Planalto de Palmas, que se estende entre o divisor norte da bacia do rio
+    Uruguai e sul da bacia do Iguaçu até o vale deste.

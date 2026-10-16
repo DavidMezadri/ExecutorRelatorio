@@ -13,8 +13,8 @@ referencias:
     verificado: true
     docs: [mce_saa, mce_ses]
   oka-fiori-2006:
-    abnt: "OKA-FIORI, C. et al. Atlas geomorfológico do estado do Paraná: escala base 1:250.000, modelos reduzidos 1:500.000. Curitiba: Minerais do Paraná – MINEROPAR; Universidade Federal do Paraná, 2006. 59 p."
-    citacao: "MINEROPAR/UFPR, 2006"
+    abnt: "OKA-FIORI, C. et al. Atlas geomorfológico do Estado do Paraná: escala base 1:250.000, modelos reduzidos 1:500.000. Curitiba: Minerais do Paraná – MINEROPAR; Universidade Federal do Paraná, 2006. 63 p. Disponível em: https://www.iat.pr.gov.br/sites/agua-terra/arquivos_restritos/files/documento/2020-04/atlas_geomorforlogico_parana_2006.pdf."
+    citacao: "OKA-FIORI et al., 2006"
     verificado: true
     docs: [mce_saa, mce_ses, pca_saa, pca_ses]
   ibge-2012-vegetacao:

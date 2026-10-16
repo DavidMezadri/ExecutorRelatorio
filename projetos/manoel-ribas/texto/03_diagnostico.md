@@ -9,27 +9,27 @@ As informações apresentadas a seguir caracterizam a área afetada pelo empreen
 
 {{auto.uso_solo}}
 
-![Uso e cobertura do solo na área do empreendimento](mapas/uso_solo.png){#fig:uso-solo fonte="MapBiomas, Coleção 9; elaborado pelo autor, {{ano}}."}
+![Uso e cobertura do solo na área do empreendimento](mapas/uso_solo.png){#fig:uso-solo}
 
 ## Área do Empreendimento e sua Vizinhança
 
 O município de {{municipio}} possui área territorial de aproximadamente {{municipio_info.area_km2|num:0}} km² e população de {{municipio_info.populacao_2022|num:0}} habitantes (IBGE, 2022), fazendo divisa com os municípios de {{municipio_info.limitrofes|lista}}.
 
-{{auto.entorno}} [A VERIFICAR: registros fotográficos datados da vizinhança.]
+{{auto.socio}} [A VERIFICAR: registros fotográficos datados da vizinhança.]
 
-![Mapa de localização regional](mapas/localizacao_regional.png){#fig:loc-regional fonte="IBGE, 2022; elaborado pelo autor, {{ano}}."}
+![Mapa de localização regional](mapas/localizacao_regional.png){#fig:loc-regional}
 
 ## Recursos Hídricos Existentes na Área
 
 {{auto.hidrologia}}
 
-![Bacia hidrográfica e recursos hídricos da área do empreendimento](mapas/bacia.png){#fig:bacia fonte="ANA; IBGE, 2023; elaborado pelo autor, {{ano}}."}
+![Bacia hidrográfica e recursos hídricos da área do empreendimento](mapas/bacia.png){#fig:bacia}
 
 ## Descrição Geológico-Geotécnica da Área da ETE
 
 {{auto.geologia}} [A VERIFICAR: sondagens, nível do lençol freático e capacidade de suporte do terreno frente à alternativa tecnológica.]
 
-![Geologia da área do empreendimento](mapas/geologia.png){#fig:geologia fonte="IBGE, 2023 – BDiA; elaborado pelo autor, {{ano}}."}
+![Geologia da área do empreendimento](mapas/geologia.png){#fig:geologia}
 
 ## Feições da Área, Terrenos Alagadiços ou Sujeitos a Inundação
 
@@ -39,23 +39,23 @@ O município de {{municipio}} possui área territorial de aproximadamente {{muni
 
 {{auto.erosao}}
 
-![Declividade da área do empreendimento](mapas/declividade.png){#fig:declividade fonte="Copernicus DEM GLO-30; elaborado pelo autor, {{ano}}."}
+![Declividade da área do empreendimento](mapas/declividade.png){#fig:declividade}
 
-![Solos da área do empreendimento](mapas/solos.png){#fig:solos fonte="IBGE, 2023 – BDiA; elaborado pelo autor, {{ano}}."}
+![Solos da área do empreendimento](mapas/solos.png){#fig:solos}
 
 ## Caracterização da Geomorfologia e do Relevo
 
 {{auto.geomorfologia}}
 
-![Geomorfologia da área do empreendimento](mapas/geomorfologia.png){#fig:geomorfologia fonte="IBGE, 2023 – BDiA; elaborado pelo autor, {{ano}}."}
+![Geomorfologia da área do empreendimento](mapas/geomorfologia.png){#fig:geomorfologia}
 
-![Altimetria da área do empreendimento](mapas/altimetria.png){#fig:altimetria fonte="Copernicus DEM GLO-30; elaborado pelo autor, {{ano}}."}
+![Altimetria da área do empreendimento](mapas/altimetria.png){#fig:altimetria}
 
 ## Cobertura Vegetal na Área de Intervenção
 
 {{auto.fitogeografia}}
 
-![Enquadramento fitogeográfico da área do empreendimento](mapas/fitogeografia.png){#fig:fitogeografia fonte="IBGE, 2023 – BDiA; elaborado pelo autor, {{ano}}."}
+![Enquadramento fitogeográfico da área do empreendimento](mapas/fitogeografia.png){#fig:fitogeografia}
 
 ## Áreas de Preservação Permanente
 

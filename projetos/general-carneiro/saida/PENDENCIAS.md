@@ -1,30 +1,63 @@
-# Pendências – MCE_SAA_general_carneiro_2026-10-15.docx
+# Pendências – MCE_SAA_general_carneiro_2026-10-16.docx
 
 
 ## 2 IDENTIFICAÇÃO DO EMPREENDIMENTO
 - [A VERIFICAR: endereco_unidade_principal]
-- [A VERIFICAR: empreendedor.responsavel]
-- [A VERIFICAR: função]
-- [A VERIFICAR: registro]
-- [A VERIFICAR: empreendedor.telefone]
-- [A VERIFICAR: empreendedor.email]
 
 ## 3.2 Área Onde será Implantada a Atividade
-- [A VERIFICAR: area.total_m2]
 - [A VERIFICAR: area.construida_m2]
 - [A VERIFICAR: area.livre_m2]
 
+## 3.3 Coordenadas Geográficas e UTM
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/localizacao_unidades.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/localizacao_regional.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+
 ## 3.4 Alternativa de Acessos ao Empreendimento
-- [A VERIFICAR: rodovia de acesso principal e condições de tráfego/pavimentação até as unidades.]
-- [A VERIFICAR: alternativas de acesso a cada unidade (urbana e rural), com figuras.]
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/acesso_1.png]
+
+## 3.5.1 Pedologia
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/solos.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+
+## 3.5.1.1 Uso do Solo
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/uso_solo.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+
+## 3.5.2 Geomorfologia
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/geomorfologia.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/altimetria.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/declividade.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
 
 ## 3.5.3 Hidrologia
-- [A VERIFICAR: área de drenagem e uso do solo da bacia.]
 - [A VERIFICAR: manancial.classe]
 - [A VERIFICAR: área da bacia de contribuição no ponto de captação e cursos d'água interceptados pelas adutoras.]
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/bacia.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+
+## 3.5.4 Geologia
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/geologia.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+
+## 3.5.5 Hidrogeologia
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/hidrogeologia.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+
+## 3.6 Caracterização Meio Biótico (Cobertura Vegetal)
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/fitogeografia.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
 
 ## 3.6.1 Áreas de Preservação Permanente e Reserva Legal
-- [A VERIFICAR: ocorrência de Reserva Legal nos imóveis afetados, conforme CAR/SICAR – colocar os arquivos do CAR em dados/car/ e regenerar o mapa.]
+- [A VERIFICAR: Reserva Legal – baixar no SICAR os shapes do CAR dos imóveis atravessados para dados/car/ e regenerar o mapa e o texto.]
+- [A VERIFICAR: mapa do Felipe não entregue – mapas/app_rl.png]
+- [A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]
+
+## 3.7.1 Residências, condições do entorno
+- [A VERIFICAR: fotos de campo das vias de acesso e do entorno (pavimentação, residências, igrejas) – colocar em fotos/brutas/, rodar python -m ferramentas.imagens.fotos e o redator.]
 
 ## 4.2 Descritivo da Obra a ser Implantada e Descrição das Intervenções Necessárias
 - [A VERIFICAR: capacidade e déficit do sistema existente (mina), a confirmar com a Sanepar.]

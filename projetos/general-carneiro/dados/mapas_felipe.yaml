@@ -1,0 +1,49 @@
+# classes/fonte: CONFIRMAR olhando o mapa (o OCR pode errar). Vazio = texto genérico.
+localizacao_unidades:
+  arquivo: null
+  classes: null
+  fonte: null
+localizacao_regional:
+  arquivo: null
+  classes: null
+  fonte: null
+solos:
+  arquivo: null
+  classes: null
+  fonte: null
+uso_solo:
+  arquivo: null
+  classes: null
+  fonte: null
+geomorfologia:
+  arquivo: null
+  classes: null
+  fonte: null
+altimetria:
+  arquivo: null
+  classes: null
+  fonte: null
+declividade:
+  arquivo: null
+  classes: null
+  fonte: null
+bacia:
+  arquivo: null
+  classes: null
+  fonte: null
+geologia:
+  arquivo: null
+  classes: null
+  fonte: null
+hidrogeologia:
+  arquivo: null
+  classes: null
+  fonte: null
+fitogeografia:
+  arquivo: null
+  classes: null
+  fonte: null
+app_rl:
+  arquivo: null
+  classes: null
+  fonte: null

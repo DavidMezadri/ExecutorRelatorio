@@ -29,7 +29,7 @@
 !quadro[Coordenadas das unidades do sistema (SIRGAS 2000)](dados/coordenadas.xlsx){#qua:coordenadas colunas="unidade:Unidade,referencia:Ponto,latitude_gms:Latitude,longitude_gms:Longitude,utm_e:E (m),utm_n:N (m),fuso:Fuso" tamanho=9 fonte="Elaborado pelo autor, {{ano}}."}
 
 ::: paisagem
-![Localização das unidades do sistema](mapas/localizacao_unidades.png){#fig:loc-unidades fonte="Esri World Imagery; Sanepar, {{ano}}; elaborado pelo autor, {{ano}}."}
+![Localização das unidades do sistema](mapas/localizacao_unidades.png){#fig:loc-unidades}
 :::
 
 ## Estimativa de População e Vazões

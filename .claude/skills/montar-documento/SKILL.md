@@ -26,6 +26,16 @@ Ler TUDO em `extraido/` (memoriais, planilha "Lista de documentos e informaçõe
 valor num comentário YAML (`# fonte: memorial descritivo p. 12`).
 
 ## 3. Redigir `texto/*.md`
+- Seguir a seção **Correções da revisão** do CLAUDE.md. Correção pedida pelo usuário → ajustar script/template/
+  texto-base, registrar a regra no CLAUDE.md e propagar aos projetos já gerados; nunca só no .docx.
+- Mapas: são do Felipe (`mapas/`). Sem eles, o texto fica genérico (sem números). Quando chegarem: rodar
+  `python -m ferramentas.geo.mapas_felipe <chave>`, abrir cada mapa (Read), confirmar em `dados/mapas_felipe.yaml`
+  as `classes` (como na legenda) e a `fonte`, e rodar redator + montar.
+- Pedologia: `{{auto.pedologia}}` já traz as características das classes (Embrapa/Ageitec) – ver `dados/SOLOS_EMBRAPA.md`.
+- Socioeconômico (3.7.1): `{{auto.socio}}` (`dados/SOCIO.md`), padrão Entre Rios. Com fotos em `fotos/brutas/`: rodar
+  `imagens.fotos`, abrir as folhas de contato, conferir/corrigir legendas em `fotos/legendas.yaml` e rodar `geo.socio`.
+- Acessos (3.4): `{{auto.acessos}}` vem de `python -m ferramentas.geo.acessos <chave>` (ver `dados/ACESSOS.md`).
+- Unidades do sistema: ler `dados/UNIDADES_SISTEMA.md` (plantas) e o KMZ; nunca descrever componentes que não estejam lá.
 - Ler `referencias/modelo_mce_saa_palmeira.md` para imitar o estilo (técnico, impessoal, frases completas).
 - `dados/DOSSIE.md`: socioeconomia, saneamento do Censo 2022, clima, acessos, entorno por unidade (escolas, igrejas,
   saúde), terras indígenas – usar com a citação indicada em "Citar como"; itens de "Consultas manuais" ficam como

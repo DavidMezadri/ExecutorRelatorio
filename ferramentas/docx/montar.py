@@ -35,7 +35,7 @@ from docx.text.paragraph import Paragraph
 
 from ferramentas.util import console_utf8, projeto, slug, RAIZ
 from ferramentas.docx.ooxml import el, campo, paragrafo, quebra_pagina, run_texto, sectpr_orientado
-from ferramentas.docx.template import MARCADOR
+from ferramentas.docx.template import MARCADOR, padronizar_estilos
 
 ANO = dt.date.today().year
 FONTE_PADRAO = f"Autor, {ANO}."
@@ -182,6 +182,7 @@ def tabela_md(linhas):
 class Montador:
     def __init__(self, template: Path, base: Path, ficha: dict, numerar=True):
         self.doc = docx.Document(template)
+        padronizar_estilos(self.doc)
         self.base = base
         self.ficha = ficha
         self.numerar = numerar
@@ -191,6 +192,11 @@ class Montador:
         self.sect_base = body.find(qn("w:sectPr"))
         self.estilo = {n: self._estilo_id(n) for n in
                        ("Heading 1", "Heading 2", "Heading 3", "Heading 4", "Caption", "List Bullet", "List Paragraph")}
+        # mapas do documento = mapas do Felipe (mapas/); fonte confirmada em dados/mapas_felipe.yaml (geo.mapas_felipe)
+        self.mapas_felipe = {}
+        mf = base / "dados" / "mapas_felipe.yaml"
+        if mf.exists():
+            self.mapas_felipe = yaml.safe_load(mf.read_text(encoding="utf-8")) or {}
         self.cont_tit = [0, 0, 0, 0]
         self.cont = {"Figura": 0, "Quadro": 0}
         self.refs = {}
@@ -241,7 +247,8 @@ class Montador:
         self._runs(p, texto)
 
     def par(self, texto):
-        p = self.add(paragrafo())
+        # parágrafo que termina em ":" apresenta o quadro/lista seguinte: não fica sozinho no pé da página
+        p = self.add(paragrafo(manter_com_proximo=texto.rstrip().rstrip("*").endswith(":")))
         self._runs(p, texto)
 
     def _item(self, marcador, texto):
@@ -323,14 +330,27 @@ class Montador:
         Paragraph(p_el, self.doc._body).add_run().add_picture(str(caminho), width=Cm(larg))
 
     def figura(self, leg, caminho, at):
+        caminho = caminho.replace("\\", "/")
         arq = (self.base / caminho)
-        if arq.exists():
+        mapa = caminho.startswith("mapas/")
+        if mapa and not arq.exists():  # o Felipe pode entregar .jpg/.pdf no lugar de .png
+            alt = next((p for ext in (".png", ".jpg", ".jpeg", ".tif", ".pdf")
+                        for p in [arq.with_suffix(ext)] if p.exists()), None)
+            arq = alt or arq
+        if arq.exists() and arq.suffix.lower() == ".pdf":
+            self.pdf(None, str(arq.relative_to(self.base)).replace("\\", "/"), {"paginas": "1", "sem_legenda": True})
+        elif arq.exists():
             self._inserir_imagem(arq, at.get("largura"), at.get("altura"))
         else:
             p = self.add(paragrafo(alinhamento="center", recuo_primeira=0, manter_com_proximo=True))
-            self._runs(p, f"[A VERIFICAR: imagem não encontrada – {caminho}]")
+            self._runs(p, f"[A VERIFICAR: {'mapa do Felipe não entregue' if mapa else 'imagem não encontrada'} – {caminho}]")
         self.legenda("Figura", leg)
-        self.fonte(at.get("fonte"))
+        fonte = at.get("fonte")
+        if mapa:
+            info = self.mapas_felipe.get(Path(caminho).stem) or {}
+            fonte = info.get("fonte") or info.get("fonte_ocr") or fonte or \
+                "[A VERIFICAR: fonte do mapa – ver caixa de fontes do mapa do Felipe]"
+        self.fonte(fonte)
 
     def pdf(self, leg, caminho, at):
         import pymupdf
@@ -387,12 +407,16 @@ class Montador:
         for f in larguras:
             grid.append(el("w:gridCol", **{"w:w": int(8494 * f)}))
         tbl.append(grid)
+        # quadro curto não se parte (legenda, linhas e fonte na mesma página); longo: cabeçalho junto da 1ª linha
+        curto = len(linhas) <= 15
         for i, linha in enumerate(linhas):
             tr = el("w:tr")
+            trp = el("w:trPr")
+            trp.append(el("w:cantSplit"))
             if i == 0:
-                trp = el("w:trPr")
                 trp.append(el("w:tblHeader"))
-                tr.append(trp)
+            tr.append(trp)
+            junto = curto or i == 0
             for j, txt in enumerate(linha):
                 tc = el("w:tc")
                 tcp = el("w:tcPr")
@@ -407,7 +431,8 @@ class Montador:
                 tc.append(tcp)
                 txt = str(txt)
                 numerico = bool(re.fullmatch(r"[-\d.,%/ °'\"NSEW]+", txt)) and any(ch.isdigit() for ch in txt)
-                p = paragrafo(alinhamento="center" if i == 0 or numerico else "left", recuo_primeira=0, simples=True)
+                p = paragrafo(alinhamento="center" if i == 0 or numerico else "left", recuo_primeira=0, simples=True,
+                              manter_com_proximo=junto)
                 if i == 0:
                     p.append(run_texto(txt, negrito=True, tamanho=tamanho, fonte="Calibri"))
                 else:
@@ -538,9 +563,24 @@ def carregar_ficha(dir_proj: Path) -> dict:
         if emp.get(k_emp) in (None, "") and rep.get(k_rep):
             emp[k_emp] = rep[k_rep]
     ficha["empreendedor"] = emp
+    sist = dir_proj / "dados" / "unidades_sistema.yaml"  # {{unidades_sistema|lista}} (ferramentas.ingestao.unidades_sistema)
+    if sist.exists():
+        ficha.setdefault("unidades_sistema", yaml.safe_load(sist.read_text(encoding="utf-8")))
     redacao = dir_proj / "dados" / "redacao.yaml"  # {{auto.<bloco>}} (ferramentas.redacao.redator)
     if redacao.exists():
         ficha.setdefault("auto", yaml.safe_load(redacao.read_text(encoding="utf-8")))
+    # área total = soma dos polígonos do KMZ (unidades); livre = total - construída quando esta for informada
+    area = ficha.get("area") or {}
+    if area.get("total_m2") in (None, ""):
+        polig = [u["area_m2"] for u in ficha.get("unidades") or [] if u.get("area_m2")]
+        area["total_m2"] = round(sum(polig), 2) if polig else None
+    if area.get("total_m2") and area.get("total_m2") != "" and area.get("total_ha") in (None, ""):
+        area["total_ha"] = area["total_m2"] / 10000
+    if area.get("livre_m2") in (None, "") and area.get("total_m2") and area.get("construida_m2"):
+        area["livre_m2"] = area["total_m2"] - area["construida_m2"]
+    ficha["area"] = area
+    # {{unidades_nomes|lista}}: unidades reais do KMZ (nunca listar componentes genéricos que o projeto não tem)
+    ficha.setdefault("unidades_nomes", [u["nome"] for u in ficha.get("unidades") or [] if u.get("nome")] or None)
     ficha.setdefault("ano", ANO)
     ficha.setdefault("hoje", dt.date.today().strftime("%d/%m/%Y"))
     return ficha

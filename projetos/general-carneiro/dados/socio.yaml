@@ -1,0 +1,184 @@
+unidades:
+  Jangada do Sul - General Carneiro Área do poço e tratamento:
+    tipo: area
+    zona: rural
+    dist_nucleo_m: 283
+    acesso:
+      via: Estrada Velha de Palmas
+      rev: não pavimentada, em leito natural
+      dist_m: 1
+    pois:
+    - tipo: templo religioso
+      nome: Capela de Nossa Senhora Aparecida
+      dist_m: 408
+    - tipo: cemitério
+      nome: null
+      dist_m: 584
+  Jangada do Sul - General Carneiro Adutora:
+    tipo: linear
+    zona: predominantemente rural, com trechos em área urbana
+    dist_nucleo_m: 80
+    extensao_m: 594
+    percurso:
+    - - Estrada Velha de Palmas
+      - não pavimentada, em leito natural
+      - 427
+    - - Rua Bernardo Ribeiro Viana
+      - revestimento não informado
+      - 183
+    cruzadas:
+    - BR-153
+    pois:
+    - tipo: templo religioso
+      nome: Capela de Nossa Senhora Aparecida
+      dist_m: 265
+    - tipo: cemitério
+      nome: null
+      dist_m: 447
+fotos: []
+socioeconomia:
+  populacao_2022: 11062
+  area_km2: 1071.18
+  densidade_hab_km2: 10.33
+  mesorregiao: Sudeste Paranaense
+  microrregiao: União da Vitória
+  regiao_imediata: União da Vitória
+  regiao_intermediaria: Curitiba
+  limitrofes:
+  - Bituruna
+  - Palmas
+  - Porto Vitória
+  pib_mil_rs: 437294.0
+  pib_ano: 2023
+  pib_per_capita_rs: null
+saneamento:
+  agua:
+    domicilios: 3835
+    distribuicao_pct:
+      Possui ligação à rede geral e a utiliza como forma principal: 79.0
+      Possui ligação à rede geral, mas utiliza principalmente outra forma: 1.2
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço profundo ou artesiano: 0.8
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço raso, freático ou cacimba: 0.1
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Fonte, nascente ou mina: 0.3
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Rios, açudes, córregos, lagos e igarapés: 0.0
+      Possui ligação à rede geral, mas utiliza principalmente outra forma - Outra: 0.0
+      Não possui ligação com a rede geral: 19.8
+      Não possui ligação com a rede geral - Poço profundo ou artesiano: 2.2
+      Não possui ligação com a rede geral - Poço raso, freático ou cacimba: 7.6
+      Não possui ligação com a rede geral - Fonte, nascente ou mina: 9.5
+      Não possui ligação com a rede geral - Carro-pipa: 0.3
+      Não possui ligação com a rede geral - Rios, açudes, córregos, lagos e igarapés: 0.1
+      Não possui ligação com a rede geral - Outra: 0.1
+  esgoto:
+    domicilios: 3835
+    distribuicao_pct:
+      Rede geral, rede pluvial ou fossa ligada à rede: 54.9
+      Rede geral ou pluvial: 52.4
+      Fossa séptica ou fossa filtro ligada à rede: 2.5
+      Fossa séptica ou fossa filtro não ligada à rede: 15.1
+      Fossa rudimentar ou buraco: 26.2
+      Vala: 0.9
+      Rio, lago, córrego ou mar: 2.5
+      Outra forma: 0.4
+  lixo:
+    domicilios: 3835
+    distribuicao_pct:
+      Coletado: 88.6
+      Coletado no domicílio por serviço de limpeza: 85.8
+      Depositado em caçamba de serviço de limpeza: 2.8
+      Queimado na propriedade: 10.4
+      Enterrado na propriedade: 0.7
+      Jogado em terreno baldio, encosta ou área pública: 0.2
+      Outro destino: 0.2
+  esgoto_rede_pct: 52.4
+  esgoto_adequado_pct: 54.9
+  esgoto_fossa_rudimentar_pct: 26.2
+  agua_rede_pct: 79.0
+historico:
+  historico: O município de General Carneiro, situa-se na região sul do estado do
+    Paraná, nas margens da BR 153, rota do merco sul, ocupando a extrema extensão
+    sul do 3º planalto paranaense, faz parte da micro região 15º (décima quinta) zona
+    fisiográfica em que está dividido o estado do Paraná. Surgiu com advento das expedições
+    dos tropeiros que se deslocavam dos Campos Gerais em busca dos Campos de Palmas,
+    município que pertenceu até a sua emancipação política - administrativa no ano
+    de 1961. A vila já contava com várias famílias de desbravadores, atraídos pela
+    riqueza da cobertura florestal aqui existente. Iniciou-se com a ocupação da Vila
+    "Passo da Galinha", antigo pouso de tropeiros. As primeiras construções estabeleceram-se
+    em torno da primeira casa de comércio.
+  formacao: 'Distrito criado com a denominação de São José de Palmas (ex-povoado de
+    Passo de Galinha), pela lei estadual nº 3758, de 02-08-1958, subordinado ao município
+    de Palmas. Em divisão territorial datada de 1-VII-1960, o distrito de São José
+    de Palmas, figura no município de Palmas. Elevado à categoria de município com
+    a denominação de General Carneiro, pela lei estadual nº 4338 de 25-08-1961, desmembrado
+    de Palmas. Sede no atual distrito de General Carneiro (ex-povoado). Constituído
+    de 3 distritos: General Carneiro (ex-São José de Palmas), Colônia General Carneiro
+    (ex-General Carneiro) e Jangada do Sul. Instalado em 19-12-1961. Em divisão territorial
+    datada de 31-XII-1963, o município é constituído de 3 distritos: General Carneiro,
+    Colônia General Carneiro e Jangada do Sul. Assim permencendo em divisão territorial
+    datada de 1-I-1979. Pelo ofício nº 1717, de 16-06-1980, da DEGE, o distrito de
+    Colônia General Carneiro foi extinto, por não existir lei especifica que o tenha
+    criado como distrito administrativo. Em divisão territorial datada de 1-VII-1983,
+    o município é constituído de 2 distritos: General Carneiro e Jangada do Sul. Assim
+    permencendo em divisão territorial datada de 2007.'
+  distritos_atual: General Carneiro e Jangada do Sul
+  gentilico: carneirense
+  url: https://biblioteca.ibge.gov.br/visualizacao/dtbs/parana/generalcarneiro.pdf
+texto: 'A unidade Jangada do Sul - General Carneiro Área do poço e tratamento localiza-se
+  em área rural, a cerca de 280 m do núcleo urbano de Jangada do Sul, com acesso pela
+  Estrada Velha de Palmas (não pavimentada, em leito natural), lindeira à unidade
+  (OPENSTREETMAP, 2026).
+
+
+  O traçado da unidade Jangada do Sul - General Carneiro Adutora (590 m) desenvolve-se
+  em área predominantemente rural, com trechos em área urbana, a cerca de 80 m do
+  núcleo urbano de Jangada do Sul. Ao longo de seu percurso, segue margeando a Estrada
+  Velha de Palmas (não pavimentada, em leito natural) por cerca de 430 m e a Rua Bernardo
+  Ribeiro Viana (revestimento não informado) por cerca de 180 m (OPENSTREETMAP, 2026),
+  e cruza a BR-153. A classificação da área como urbana ou rural baseia-se no mapeamento
+  de uso do solo (PROJETO MAPBIOMAS, 2024).
+
+
+  Segundo o histórico municipal registrado pelo IBGE, o município de General Carneiro,
+  situa-se na região sul do estado do Paraná, nas margens da BR 153, rota do merco
+  sul, ocupando a extrema extensão sul do 3º planalto paranaense, faz parte da micro
+  região 15º (décima quinta) zona fisiográfica em que está dividido o estado do Paraná.
+  Surgiu com advento das expedições dos tropeiros que se deslocavam dos Campos Gerais
+  em busca dos Campos de Palmas, município que pertenceu até a sua emancipação política
+  - administrativa no ano de 1961. A vila já contava com várias famílias de desbravadores,
+  atraídos pela riqueza da cobertura florestal aqui existente. Iniciou-se com a ocupação
+  da Vila "Passo da Galinha", antigo pouso de tropeiros. As primeiras construções
+  estabeleceram-se em torno da primeira casa de comércio (IBGE, [20--]).
+
+
+  Na atual divisão territorial, o município é constituído pelos distritos de General
+  Carneiro e Jangada do Sul, sendo Jangada do Sul a localidade onde se insere o empreendimento
+  (IBGE, [20--]).
+
+
+  O município de General Carneiro possui população de 11.062 habitantes e densidade
+  demográfica de 10,33 hab/km² (IBGE, 2023). Quanto ao saneamento, 79,0% dos domicílios
+  utilizam a rede geral de abastecimento de água como forma principal e 52,4% destinam
+  o esgoto à rede geral ou pluvial (IBGE, 2023).
+
+
+  No entorno das unidades (raio de 600 m), a base colaborativa OpenStreetMap registra:
+  templo religioso Capela de Nossa Senhora Aparecida (a cerca de 410 m da unidade
+  Jangada do Sul - General Carneiro Área do poço e tratamento) e cemitério (a cerca
+  de 580 m da unidade Jangada do Sul - General Carneiro Área do poço e tratamento)
+  (OPENSTREETMAP, 2026). A identificação desses locais permite reconhecer os elementos
+  de relevância social, religiosa e cultural próximos ao empreendimento e subsidia
+  a avaliação de eventuais interferências das obras sobre eles e sobre seu acesso,
+  como alterações temporárias no tráfego, ruídos e poeira.
+
+
+  Nos trechos em vias não pavimentadas (Estrada Velha de Palmas), o tráfego de veículos
+  e máquinas da obra tende a gerar poeira em períodos secos e lama em períodos chuvosos,
+  devendo-se prever umectação das vias, sinalização e recomposição do leito ao final
+  das obras.
+
+
+  [A VERIFICAR: fotos de campo das vias de acesso e do entorno (pavimentação, residências,
+  igrejas) – colocar em fotos/brutas/, rodar python -m ferramentas.imagens.fotos e
+  o redator.]
+
+  '

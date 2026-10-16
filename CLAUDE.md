@@ -47,6 +47,10 @@ python -m ferramentas.geo.google_earth exportar <chave>   # KMZ p/ Google Earth 
 python -m ferramentas.geo.google_earth importar <chave> ARQ.kmz [--pasta X]   # pontos marcados no GE -> dados/pontos_ge.xlsx
 python -m ferramentas.geo.google_earth importar <chave> --meus-lugares        # lê o "Meus lugares" do GE Pro
 python-qgis.bat ferramentas\geo\qgis_projeto.py projetos\<chave>   # projeto .qgz (PC com QGIS; não testado)
+python -m ferramentas.geo.mapas_felipe <chave>            # mapas do Felipe (mapas/): legenda/fonte por OCR -> dados/mapas_felipe.yaml
+python -m ferramentas.geo.socio <chave>                   # 3.7.1 entorno: percurso/vias/revestimento, IBGE histórico, POIs, fotos
+python -m ferramentas.geo.acessos <chave> [--raio-km 3]   # acessos por unidade: rotas OSRM (sede, localidade, N/S/L/O),
+                                                          # vias e revestimento (OSM surface), vias ao longo das adutoras, mapa
 ```
 Serviços sem acesso automático: CAR/SICAR (baixar shapes manualmente → `dados/car/`); UCs vêm da ANA.
 
@@ -64,6 +68,9 @@ python -m ferramentas.ingestao.cad <chave>                    # projetos/<chave>
   O resto: a IA lê as páginas indicadas no mapa e preenche citando a página.
 - PDF escaneado: OCR local em português (RapidOCR) automático nas páginas sem texto (marcadas "conferir números").
   Word (.docx) e .txt da pasta do cliente também vão para `extraido/` no `iniciar_projeto`.
+- Unidades do sistema: `python -m ferramentas.ingestao.unidades_sistema <chave>` (roda no `iniciar_projeto`) lê o código
+  das plantas Sanepar (`...-0000CSB01...pdf`) e o título do carimbo -> `dados/UNIDADES_SISTEMA.md` e `{{unidades_sistema|lista}}`.
+  Unidades do KMZ: `{{unidades_nomes|lista}}`. **Nunca** listar componentes genéricos (captação, reservação...) no texto-base.
 - AutoCAD: DWG precisa do ODA File Converter (gratuito) ou exportar como DXF. Quantitativos em `dados/cad_quantitativos.xlsx`.
 
 ## Redação automática e conferências
@@ -109,6 +116,9 @@ python -m ferramentas.garimpo.legislacao adicionar <chave> <url> --jurisdicao PA
 python -m ferramentas.garimpo.literatura buscar "tema" --brasil --desde 2010 [--aberto]   # estudos de caso (OpenAlex)
 python -m ferramentas.garimpo.literatura doi <doi> --projeto <chave> [--baixar]          # ABNT via Crossref + PDF aberto
 python -m ferramentas.garimpo.pagina <url> --projeto <chave>                            # página/PDF oficial -> texto + ABNT
+python -m ferramentas.garimpo.solos classe "Cambissolo Húmico Alumínico" | projeto <chave>   # SiBCS na Embrapa/Ageitec
+python -m ferramentas.garimpo.geomorfologia_pr projeto <chave> | ponto <lat> <lon>   # subunidade do Atlas Geomorfológico PR
+python -m ferramentas.garimpo.aguas_pr <chave>                 # bacia/UH/aquífero/formação + textos oficiais (Carta das Águas PR)
 python -m ferramentas.garimpo.biblio abnt --projeto <chave> | usar <chave> CHAVE | listar
 ```
 - Leis: o texto vem do Planalto **sem a redação revogada** (riscada); citar artigo com `legislacao artigo`.
@@ -138,6 +148,59 @@ python -m ferramentas.garimpo.biblio abnt --projeto <chave> | usar <chave> CHAVE
 - Todo dado público citado precisa de fonte no texto (AUTOR, ano) e entrada em Referências (ABNT).
 - A "Lista de documentos e informações" de cada projeto (extraido/) diz o que a equipe tem e o que falta.
 - Após montar, revisar PENDENCIAS.md e informar ao usuário o que ainda depende dele.
+
+## Correções da revisão (regras permanentes)
+**Toda correção apontada pelo usuário vira ajuste no script/template/texto-base E uma regra aqui** – nunca corrigir só o
+.docx de um projeto. Aplicar também aos outros projetos já gerados (texto/*.md) e remontar para conferir.
+- Formatação (template + `docx.template.padronizar_estilos`, aplicada a cada montagem): Sumário, Lista de Quadros e
+  Lista de Figuras com espaçamento 0 antes/depois e entrelinhas 1,5, níveis com o mesmo tamanho de fonte e recuo à
+  esquerda (título longo quebra alinhado); títulos de todos os níveis sem recuo de 1ª linha.
+- Diagramação (montar): parágrafo terminado em ":" fica junto do quadro/lista seguinte; quadro de até 15 linhas não
+  se parte (legenda, linhas e fonte na mesma página); quadro longo mantém cabeçalho com a 1ª linha.
+- Envolvidos no projeto (Quadro 1 do MCE): equipe Sanepar igual à do MODELO Palmeira, em `dados_comuns/equipe.yaml`
+  (`envolvidos_sanepar`); sem linha de e-mail após o quadro.
+- **Nunca listar componentes genéricos** (captação, reservação, ETA, elevatórias...) no texto: as unidades vêm do KMZ
+  (`{{unidades_nomes|lista}}`) e das plantas (`{{unidades_sistema|lista}}`, `dados/UNIDADES_SISTEMA.md`). Texto-base
+  não pode afirmar nada sobre o sistema que não venha de variável ou de fonte do projeto.
+- Acessos (item 3.4): **não deixar como pendência** – `geo.acessos` (etapa `acessos` do pipeline) gera rotas, vias,
+  revestimento e mapa por unidade -> `dados/ACESSOS.md` e `{{auto.acessos}}`. Revestimento sem tag no OSM sai como
+  "revestimento não informado" (nunca supor). Regra geral: se existe base pública/serviço que responde, automatizar
+  em script em vez de deixar `[A VERIFICAR]`.
+- Pedologia: além das classes do IBGE (mapa 1:250.000), **descrever as características de cada classe** pelas
+  páginas da Embrapa/Ageitec (SiBCS) – `garimpo.solos`, chamado pelo redator: texto da subordem + 3º nível
+  (grande grupo) + foto do perfil "Acervo da Embrapa Solos" depois do mapa (`{{auto.pedologia_fotos}}`),
+  citando (EMBRAPA, ano[a,b]) com referência ABNT completa (autores, Ageitec, URL, acesso).
+- Fonte das figuras de mapa: sempre a de `mapas/MAPAS.md` (o montador aplica sozinho); nunca escrever no texto
+  uma fonte diferente da base usada (ex.: "Embrapa; IAT" num mapa feito com IBGE BDiA).
+- Geomorfologia (PR): `garimpo.geomorfologia_pr` (chamado pelo redator) localiza a subunidade morfoescultural de
+  cada unidade nas cartas do Atlas Geomorfológico do Paraná (OKA-FIORI et al., 2006 – moldura georreferenciada +
+  cor da legenda) e traz o texto do planalto e da subunidade (dissecação, declividade, gradiente, topos/vertentes/
+  vales, rochas) -> `dados/GEOMORFOLOGIA_PR.md`. Conferir na carta quando a confiança for baixa.
+- Hidrologia, geologia e hidrogeologia (PR): `garimpo.aguas_pr` (chamado pelo redator) identifica bacia, unidade
+  hidrográfica e unidade aquífera de cada unidade (shapefiles oficiais do IAT) e a formação (SGB), e traz os textos da
+  Carta das Águas Subterrâneas do Paraná (BRASIL, 2015 – MMA/IAT/SGB), a descrição oficial do SGB e os poços da Sanepar
+  (MENDES et al., 2002). Citações de terceiros da Carta saem como "(AUTOR, ano apud BRASIL, 2015)". Mínimo de 3
+  parágrafos por item do meio físico, sempre com fonte oficial -> `dados/AGUAS_PR.md`.
+- Socioeconômico (3.7.1): seguir o MCE de Entre Rios (`referencias/modelo_mce_saa_entre_rios.md`, mais completo que
+  Palmeira nesse item). `geo.socio` (etapa `socio`, `{{auto.socio}}`) descreve o percurso de cada unidade (zona urbana/
+  rural, vias que margeia/cruza com revestimento), histórico e distritos (IBGE Biblioteca), indicadores, pontos de
+  interesse com distância e interferências da obra. **Fotos das vias são obrigatórias**: fotos em `fotos/brutas/` ->
+  `imagens.fotos` -> cada foto com GPS é ligada à via e entra com legenda "Via X – via pavimentada/não pavimentada";
+  conferir cada foto (folhas de contato) e corrigir/completar em `fotos/legendas.yaml` (arquivo: legenda).
+- Mapas: conferir se legenda, coordenadas e escala aparecem (fonte sem glifos apaga o texto – `geo.mapas` testa
+  o Calibri e cai para DejaVu Sans).
+- **Mapas do documento são do Felipe** (QGIS), salvos em `mapas/<nome>.png|jpg|pdf` com o nome usado no texto.
+  Os mapas que `geo.mapas`/`geo.acessos` geram vão para `dados/mapas_conferencia/` (só conferência/rascunho).
+  **Texto sem números das nossas bases** (percentuais, áreas, altitudes, metragens em APP, hectares de
+  supressão): a base do Felipe pode ser outra e os números conflitariam. Escrever o que dá para generalizar:
+  classes presentes, características (Embrapa, legenda MapBiomas), relevo qualitativo, com a fonte citada.
+  Quando os mapas chegarem: `python -m ferramentas.geo.mapas_felipe <chave>` (etapa `felipe`) lê legenda e fonte
+  (texto do PDF ou OCR) -> `dados/mapas_felipe.yaml`; a IA confere cada mapa (Read), preenche `classes` e `fonte`
+  e roda redator + montar: o texto passa a usar as classes do mapa do Felipe e a figura, a fonte dele.
+- APP/Reserva Legal: o texto só cita CAR/SICAR e Reserva Legal se houver shapes em `dados/car/`
+  (`{{auto.app_metodo}}`, `{{auto.app_titulo}}`, título do mapa); sem CAR, cita a hidrografia realmente usada.
+- Áreas: a área total sai da soma dos polígonos do KMZ (automático no montar); construída vem das plantas/cliente;
+  livre = total − construída. Antes de deixar `[A VERIFICAR]`, procurar o dado no KMZ, nas plantas e no memorial.
 
 ## Roteiro (status)
 - [x] Ingestão: KMZ/KML, coordenadas/áreas/extensões, planilhas, PDFs, docx, ficha

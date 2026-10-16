@@ -174,6 +174,11 @@ def main():
         except Exception as e:
             inv.append(f"- {doc.name}: não convertido ({e.__class__.__name__})")
 
+    # 4c. Unidades do sistema pelas plantas da Sanepar (código do arquivo + título do carimbo)
+    from ferramentas.ingestao import unidades_sistema
+    us = unidades_sistema.gerar(a.chave)
+    inv.append(f"- Unidades nas plantas: {', '.join(u['codigo'] for u in us) or 'nenhuma'} -> dados/UNIDADES_SISTEMA.md")
+
     # 5. Outros arquivos não tratados
     tratados = {".kml", ".kmz", ".xlsx", ".pdf", ".docx", ".txt"}
     outros = [f for f in fontes.rglob("*") if f.is_file() and f.suffix.lower() not in tratados]

@@ -24,7 +24,7 @@ O empreendimento é composto por múltiplas unidades distribuídas no territóri
 ::: quadro {#qua:equipe fonte="Sanepar, {{ano}}."} Relação dos envolvidos no projeto – equipe Sanepar
 | Nome | Função / Vínculo | Registro profissional | Telefone |
 |---|---|---|---|
-| {{empreendedor.responsavel}} | [A VERIFICAR: função] | [A VERIFICAR: registro] | {{empreendedor.telefone}} |
+| {{equipe.envolvidos_sanepar.0.nome}} | {{equipe.envolvidos_sanepar.0.funcao}} | {{equipe.envolvidos_sanepar.0.registro}} | {{equipe.envolvidos_sanepar.0.telefone}} |
+| {{equipe.envolvidos_sanepar.1.nome}} | {{equipe.envolvidos_sanepar.1.funcao}} | {{equipe.envolvidos_sanepar.1.registro}} | {{equipe.envolvidos_sanepar.1.telefone}} |
+| {{equipe.envolvidos_sanepar.2.nome}} | {{equipe.envolvidos_sanepar.2.funcao}} | {{equipe.envolvidos_sanepar.2.registro}} | {{equipe.envolvidos_sanepar.2.telefone}} |
 :::
-
-**E-mail:** {{empreendedor.email}}

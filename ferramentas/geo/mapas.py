@@ -3,7 +3,8 @@
 Uso:
     python -m ferramentas.geo.mapas candoi [--so solos,uso_solo] [--dpi 200]
 
-Requer: iniciar_projeto (unidades) + fontes.oficiais (bases). Grava em projetos/<chave>/mapas/:
+Requer: iniciar_projeto (unidades) + fontes.oficiais (bases). Grava em projetos/<chave>/dados/mapas_conferencia/
+(SÓ PARA CONFERÊNCIA/rascunho: os mapas do documento são os do Felipe, em mapas/ – ver geo.mapas_felipe):
     localizacao_unidades, localizacao_regional, solos, uso_solo, geomorfologia, altimetria, declividade,
     bacia, geologia, hidrogeologia, fitogeografia, app_rl  (.png) + MAPAS.md (fontes de cada mapa)
 
@@ -40,12 +41,24 @@ COR_UNIDADE = ["#e31a1c", "#ff7f00", "#6a3d9a", "#1f78b4", "#b15928", "#33a02c",
 CORES_SOLO = {"L": "#c2523c", "LB": "#a0522d", "LV": "#b22222", "C": "#e5c07b", "R": "#f2e6c9", "N": "#7f2704",
               "P": "#f28e2b", "G": "#8fa8c8", "O": "#3b3b3b", "M": "#6b8e23", "E": "#fff5cc", "F": "#d95f02",
               "S": "#bcbddc", "T": "#984ea3", "V": "#66a61e"}
-plt.rcParams.update({"font.family": "Calibri", "font.size": 7})
-try:
-    from matplotlib import font_manager
-    font_manager.findfont("Calibri", fallback_to_default=False)
-except Exception:
-    plt.rcParams["font.family"] = "DejaVu Sans"
+def _calibri_ok():
+    """Calibri regular E negrito com todos os caracteres usados. Num PC o Calibri resolveu para um arquivo sem os
+    glifos e os mapas saíram sem legenda/coordenadas (só o título em negrito aparecia) – então testa os glifos."""
+    try:
+        from matplotlib import font_manager
+        from matplotlib.ft2font import FT2Font
+        for peso in ("normal", "bold"):
+            arq = font_manager.findfont(font_manager.FontProperties(family="Calibri", weight=peso),
+                                        fallback_to_default=False)
+            f = FT2Font(arq)
+            if any(f.get_char_index(ord(c)) == 0 for c in "abcxyzABCÁÇÃõé0123456789.,–"):
+                return False
+        return True
+    except Exception:
+        return False
+
+
+plt.rcParams.update({"font.family": "Calibri" if _calibri_ok() else "DejaVu Sans", "font.size": 7})
 
 
 # ------------------------------------------------------------------ leiaute
@@ -424,8 +437,15 @@ def m_uso_solo(ctx):
     m.salvar("uso_solo")
 
 
+def tem_car(cfg):
+    car_dir = cfg["dir"] / "dados" / "car"
+    return car_dir.exists() and any(list(car_dir.glob("*.shp")) + list(car_dir.glob("*.gpkg")))
+
+
 def m_app_rl(ctx):
-    m = Mapa(ctx, "Áreas de Preservação Permanente e Reserva Legal", paisagem=True)
+    # sem shapes do CAR não há Reserva Legal no mapa: o título não pode prometer o que o mapa não mostra
+    titulo = "Áreas de Preservação Permanente e Reserva Legal" if tem_car(ctx["cfg"]) else "Áreas de Preservação Permanente"
+    m = Mapa(ctx, titulo, paisagem=True)
     m.satelite()
     # só o entorno das unidades (1 km): na escala do sistema a hidrografia inteira polui o mapa
     entorno = ctx["unidades"].geometry.buffer(1000).union_all()
@@ -483,8 +503,8 @@ def contexto(cfg, dpi=200):
     ctx = {"cfg": cfg, "epsg": epsg, "unidades": u, "of": of, "dpi": dpi, "uf": uf, "municipio": mun,
            "rios": rios[rios.intersects(janela)], "nascentes": nasc[nasc.intersects(janela)] if len(nasc) else nasc,
            "fonte_hidro": fonte_r, "extent": (x0 - pad, y0 - pad, x1 + pad, y1 + pad),
-           "dir_mapas": cfg["dir"] / "mapas", "gerados": {}}
-    ctx["dir_mapas"].mkdir(exist_ok=True)
+           "dir_mapas": cfg["dir"] / "dados" / "mapas_conferencia", "gerados": {}}
+    ctx["dir_mapas"].mkdir(parents=True, exist_ok=True)
     return ctx
 
 
